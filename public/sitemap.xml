@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+    <url>
+        <loc>https://xoss.games/</loc>
+        <lastmod>2023-09-05T18:25:26+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0000</priority>
+    </url>
+    <url>
+        <loc>https://xoss.games/login</loc>
+        <lastmod>2023-09-05T18:25:26+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8000</priority>
+    </url>
+    <url>
+        <loc>https://xoss.games/packages</loc>
+        <lastmod>2023-09-05T18:25:26+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8000</priority>
+    </url>
+    <url>
+        <loc>https://xoss.games/about-us</loc>
+        <lastmod>2023-09-05T18:25:26+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8000</priority>
+    </url>
+    <url>
+        <loc>https://xoss.games/terms-condition</loc>
+        <lastmod>2023-09-05T18:25:26+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8000</priority>
+    </url>
+    <url>
+        <loc>https://xoss.games/privacy-policy</loc>
+        <lastmod>2023-09-05T18:25:26+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8000</priority>
+    </url>
+    <url>
+        <loc>https://xoss.games/faq</loc>
+        <lastmod>2023-09-05T18:25:26+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8000</priority>
+    </url>
+    <url>
+        <loc>https://xoss.games/contact</loc>
+        <lastmod>2023-09-05T18:25:26+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8000</priority>
+    </url>
+    <url>
+        <loc>https://xoss.games/support</loc>
+        <lastmod>2023-09-05T18:25:26+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8000</priority>
+    </url>
+</urlset>
