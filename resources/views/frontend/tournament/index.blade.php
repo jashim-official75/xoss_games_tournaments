@@ -13,30 +13,32 @@
 @section('content')
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
     <!-- --------------------------TOURNAMENT HEADER  START ------------------------ -->
-  <section id="tournament_header" class="section-top">
-    <div class="container">
-        <div class="tournament_slider">
-            @foreach ($games as $game)
-                <div class="single_slider-item"
-                    style="background-image: url('{{ asset('uploads/Tournamant/GameBanner/' . $game->game_banner) }}')">
-                    <div class="slider_content">
-                    @if (auth()->guard('subscriber')->check())
-                        <h1><a href="{{ route('tournament.game.details', $game->slug) }}">{{ $game->game_name }}</a></h1>
-                        @else
-                        <h1><a href="{{ route('user.sign_in') }}">{{ $game->game_name }}</a></h1>
-                        @endif
-                        <h2>Join now for the ultimate gaming clash and earn rewards</h2>
-                         @if (auth()->guard('subscriber')->check())
-                        <a href="{{ route('tournament.game.details', $game->slug) }}" class="primary_btn mt-5">Join Now</a>
-                        @else
-                        <a href="{{ route('user.sign_in') }}" class="primary_btn mt-5">Join Now</a>
-                        @endif
+    <section id="tournament_header" class="section-top">
+        <div class="container">
+            <div class="tournament_slider">
+                @foreach ($games as $game)
+                    <div class="single_slider-item"
+                        style="background-image: url('{{ asset('uploads/Tournamant/GameBanner/' . $game->game_banner) }}')">
+                        <div class="slider_content">
+                            @if (auth()->guard('subscriber')->check())
+                                <h1><a href="{{ route('tournament.game.details', $game->slug) }}">{{ $game->game_name }}</a>
+                                </h1>
+                            @else
+                                <h1><a href="{{ route('user.sign_in') }}">{{ $game->game_name }}</a></h1>
+                            @endif
+                            <h2>Join now for the ultimate gaming clash and earn rewards</h2>
+                            @if (auth()->guard('subscriber')->check())
+                                <a href="{{ route('tournament.game.details', $game->slug) }}" class="primary_btn mt-5">Join
+                                    Now</a>
+                            @else
+                                <a href="{{ route('user.sign_in') }}" class="primary_btn mt-5">Join Now</a>
+                            @endif
+                        </div>
                     </div>
-                </div>
-            @endforeach
+                @endforeach
+            </div>
         </div>
-    </div>
-  </section>
+    </section>
     <!-- --------------------------TOURNAMENT HEADER  END ------------------------ -->
 
     <!-- --------------------------TOURNAMENT CARD START ------------------------ -->
@@ -138,41 +140,27 @@
                                     </svg>
                                 </div>
                             </div>
-                            @if (auth()->guard('subscriber')->check())
-                                <div class="card_body">
-                                    <div class="game_title">
-                                        <a
-                                            href="{{ route('tournament.game.details', $game->slug) }}">{{ $game->game_name }}</a>
-                                    </div>
-                                    <div class="date">
-                                        <img src="{{ asset('assets/frontend/img/calendar.png') }}" alt="">
-                                        <span>Registration Starts </span> <span><b>
-                                                @php
-                                                    $stringDate = $game->start_date; // Your string date
-                                                    $date = \Carbon\Carbon::parse($stringDate);
-                                                    echo $formattedDate = $date->format('j F, Y');
-                                                @endphp
-                                            </b></span>
-                                    </div>
-                                    <div class="play_now-btn">
-                                        <a href="{{ route('tournament.game.details', $game->slug) }}"
-                                            class="primary_btn">Join
-                                            Now</a>
-                                    </div>
-
+                            <div class="card_body">
+                                <div class="game_title">
+                                    <a
+                                        href="{{ route('tournament.game.details', $game->slug) }}">{{ $game->game_name }}</a>
                                 </div>
-                            @else
-                                <div class="card_body">
-                                    <div class="game_title">
-                                        <a href="">{{ $game->game_name }}</a>
-                                    </div>
-                                    <div class="play_now-btn">
-                                        <a href="{{ route('user.sign_in') }}" class="primary_btn">Join
-                                            Now</a>
-                                    </div>
-
+                                <div class="date">
+                                    <img src="{{ asset('assets/frontend/img/calendar.png') }}" alt="">
+                                    <span>Registration Starts </span> <span><b>
+                                            @php
+                                                $stringDate = $game->start_date; // Your string date
+                                                $date = \Carbon\Carbon::parse($stringDate);
+                                                echo $formattedDate = $date->format('j F, Y');
+                                            @endphp
+                                        </b></span>
                                 </div>
-                            @endif
+                                <div class="play_now-btn">
+                                    <a href="{{ route('tournament.game.details', $game->slug) }}" class="primary_btn">Join
+                                        Now</a>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
                 @endforeach

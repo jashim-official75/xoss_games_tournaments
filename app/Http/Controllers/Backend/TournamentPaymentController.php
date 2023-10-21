@@ -150,7 +150,7 @@ class TournamentPaymentController extends Controller
         if (!auth()->guard('subscriber')->check()) {
             return redirect()->route('home');
         }
-        
+    
         return redirect()->route('tournament.game.details', $slug)->with('error', 'Payment Error! Please try again.');
     }
 }

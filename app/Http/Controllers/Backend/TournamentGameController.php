@@ -24,8 +24,7 @@ class TournamentGameController extends Controller
     public function create()
     {
         return view('backend.pages.tournament.create');
-    }
-
+    } 
     //---store
     public function store(Request $request)
     {
@@ -40,7 +39,6 @@ class TournamentGameController extends Controller
             'game_thumbnail' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
             'game_zip_file' => 'required|mimes:zip,rar'
         ]);
-
         $game_link = route('home') . '/' . 'tournament' . '/' . 'game' . '/' . Str::slug($request->game_name, '-');
         if ($request->hasFile('game_banner')) {
             $request->validate([
@@ -53,13 +51,11 @@ class TournamentGameController extends Controller
         $zip->open($file->path());
         $pathName = 'Tournament/' . Str::slug($request->game_name, '-');
         $zip->extractTo($pathName);
-
         //--game thumbnail image upload
         if ($request->hasFile('game_thumbnail')) {
             $first_image_name = uniqid() . '_' . 'tournament' . '.' . $request->file('game_thumbnail')->extension();
             $request->file('game_thumbnail')->move(public_path('uploads/Tournamant/GameImage'), $first_image_name);
         }
-
         $tournament_game = TournamentGame::create([
             'game_name' => $request->game_name,
             'slug' => Str::slug($request->game_name, '-'),
@@ -77,7 +73,6 @@ class TournamentGameController extends Controller
             'third_price' => $request->third_price,
             'fourth_price' => $request->fourth_price,
         ]);
-
         if ($tournament_game) {
             //--game banner upload
             if ($request->hasFile('game_banner')) {
@@ -88,10 +83,8 @@ class TournamentGameController extends Controller
                 ]);
             }
         }
-
         return redirect()->route('tournament.game.index')->with('success', 'Tournamant Game Uploaded Successfully!');
     }
-
     //---edit
     public function edit($id)
     {
@@ -100,7 +93,6 @@ class TournamentGameController extends Controller
             't_game' => $t_game,
         ]);
     }
-
     //---update
     public function update(Request $request, $id)
     {
@@ -113,14 +105,12 @@ class TournamentGameController extends Controller
             'end_date' => 'required',
             'f_price' => 'required',
         ]);
-
         if ($request->hasFile('game_banner')) {
             $request->validate([
                 'game_banner' => 'image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
             ]);
         }
         $t_game = TournamentGame::findOrFail($id);
-
         if ($request->hasFile('game_zip_file') == '') {
             $t_game->update([
                 'game_name' => $request->game_name,
@@ -136,7 +126,6 @@ class TournamentGameController extends Controller
                 'fourth_price' => $request->fourth_price,
             ]);
         }
-
         //--delete old thumbnail image and new image update
         if ($request->hasFile('game_thumbnail')) {
             $request->validate([
@@ -147,30 +136,25 @@ class TournamentGameController extends Controller
             if ($oldPath) {
                 File::delete(public_path($oldPath));
             }
-
             $NewName = uniqid() . '_' . 'thumbnail_image_update' . '.' . $request->file('game_thumbnail')->extension();
             $request->file('game_thumbnail')->move(public_path('uploads/Tournamant/GameImage'), $NewName);
             $t_game->update([
                 'image' => $NewName,
             ]);
         }
-
         //--delete old banner image and new banner image update
         if ($request->hasFile('game_banner')) {
-
             $oldBanner = $t_game->game_banner;
             $oldBannerPath = 'uploads/Tournamant/GameBanner/' . $oldBanner;
             if ($oldBannerPath) {
                 File::delete(public_path($oldBannerPath));
             }
-
             $NewBannerName = uniqid() . '_' . 'banner_image_update' . '.' . $request->file('game_banner')->extension();
             $request->file('game_banner')->move(public_path('uploads/Tournamant/GameBanner'), $NewBannerName);
             $t_game->update([
                 'game_banner' => $NewBannerName,
             ]);
         }
-
         //--delete old game asset and new game file update
         if ($request->hasFile('game_zip_file')) {
             $game_link = route('home') . '/' . 'tournament' . '/' . 'game' . '/' . Str::slug($request->game_name, '-');
@@ -182,7 +166,6 @@ class TournamentGameController extends Controller
             if ($oldFilePath) {
                 File::deleteDirectory(public_path($oldFilePath));
             }
-
             $file = $request->file('game_zip_file');
             $zip = new ZipArchive();
             $zip->open($file->path());
@@ -206,10 +189,8 @@ class TournamentGameController extends Controller
                 'fourth_price' => $request->fourth_price,
             ]);
         }
-
         return redirect()->route('tournament.game.index')->with('success', 'Tournamant Game Updated Successfully!');
     }
-
     //--delete
     public function delete($id)
     {
@@ -229,7 +210,6 @@ class TournamentGameController extends Controller
                 File::delete(public_path($oldPath));
             }
         }
-
         //---delete zip file
         if ($t_game->game_zip_file) {
             $oldFile = $t_game->slug;
