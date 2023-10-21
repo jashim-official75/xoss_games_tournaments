@@ -21,9 +21,9 @@
                             <thead>
                                 <tr>
                                     <th>No</th>
+                                    <th>Participation</th>
                                     <th>Game</th>
                                     <th>Banner</th>
-                                    <th>Game File</th>
                                     <th>Fee</th>
                                     <th>First Price</th>
                                     <th>Action</th>
@@ -34,23 +34,28 @@
                                     <tr>
                                         <td>{{ $loop->index + 1 }}</td>
                                         <td>
+                                            <a href="{{ route('admin.current_game.participation', $game->id) }}">View Details</a>
+                                        </td>
+                                        <td>
                                             <img src="{{ asset('uploads/Tournamant/GameImage/' . $game->image) }}"
                                                 alt="user" width="40" class="img-circle" /> {{ $game->game_name }}
                                         </td>
+
                                         <td>
-                                        @if ($game->game_banner)
-                                            <img src="{{ asset('uploads/Tournamant/GameBanner/' . $game->game_banner) }}"
-                                                alt="user" width="40" class="img-circle" /> 
-                                        
-                                        @endif
+                                            @if ($game->game_banner)
+                                                <img src="{{ asset('uploads/Tournamant/GameBanner/' . $game->game_banner) }}"
+                                                    alt="user" width="40" class="img-circle" />
+                                            @endif
                                         </td>
-                                        <td>{{ $game->game_zip_file }}</td>
                                         <td>{{ $game->game_fee }}</td>
                                         <td>{{ $game->first_price }}</td>
+
                                         <td>
+
                                             <a href="{{ route('tournament.game.edit', $game) }}" data-toggle="tooltip"
                                                 data-original-title="Edit" style="background: transparent; border: none;">
                                                 <i class="fa fa-pencil text-inverse m-r-10"></i> </a>
+
                                             <form action="{{ route('tournament.game.destroy', $game) }}" method="post"
                                                 style="display: inline">
                                                 @csrf

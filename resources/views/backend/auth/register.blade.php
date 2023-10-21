@@ -1,9 +1,7 @@
 @extends('backend.layouts.app')
-
 @section('pageName')
     Admin Register
 @endsection
-
 @section('content')
     <div class="row">
         <div class="col-md-8 m-auto">
