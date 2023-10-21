@@ -39,12 +39,13 @@ class ResetPasswordController extends Controller
                 'phone_number' => $phone_num,
                 'otp' => $otp,
             ]);
-            $url = Http::get('https://api.infobuzzer.net/v3.1/TransmitSMS?username=hosain@naptechlabs.com&password=@npllt4079$&from=09610537609&to=' . $phone_num . '&text=XossGames password reset OTP : ' . $otp);
+            $url = Http::get('https://api.infobuzzer.net/v3.1/TransmitSMS?username=hosain@naptechlabs.com&password=NapTechLabs&from=09610537609&to=' . $phone_num . '&text=XossGames password reset OTP : ' . $otp);
             return redirect()->route('otp');
         } else {
             return back()->with('error', 'plz valid number');
         }
     }
+
 
     //--otp---
     public function otp()
