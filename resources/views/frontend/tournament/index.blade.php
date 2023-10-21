@@ -69,45 +69,29 @@
                                     </svg>
                                 </div>
                             </div>
-                            @if (auth()->guard('subscriber')->check())
-                                <div class="card_body">
-                                    <div class="game_title">
-                                        <a
-                                            href="{{ route('tournament.game.details', $game->slug) }}">{{ $game->game_name }}</a>
-                                    </div>
-                                    <div class="date">
-                                        <img src="{{ asset('assets/frontend/img/calendar.png') }}" alt="">
-                                        <span>Registration Starts </span> <span><b>
-                                                @php
-                                                    $stringDate = $game->start_date; // Your string date
-                                                    $date = \Carbon\Carbon::parse($stringDate);
-                                                    echo $formattedDate = $date->format('j F, Y');
-                                                @endphp
-                                            </b></span>
-                                    </div>
-                                    <div class="play_now-btn">
-                                        <a href="{{ route('tournament.game.details', $game->slug) }}"
-                                            class="primary_btn">Join
-                                            Now</a>
-                                    </div>
-
+                            <div class="card_body">
+                                <div class="game_title">
+                                    <a
+                                        href="{{ route('tournament.game.details', $game->slug) }}">{{ $game->game_name }}</a>
                                 </div>
-                            @else
-                                <div class="card_body">
-                                    <div class="game_title">
-                                        <a href="">{{ $game->game_name }}</a>
-                                    </div>
-                                    <div class="play_now-btn">
-                                        <a href="{{ route('user.sign_in') }}" class="primary_btn">Join
-                                            Now</a>
-                                    </div>
-
+                                <div class="date">
+                                    <img src="{{ asset('assets/frontend/img/calendar.png') }}" alt="">
+                                    <span>Registration Starts </span> <span><b>
+                                            @php
+                                                $stringDate = $game->start_date; // Your string date
+                                                $date = \Carbon\Carbon::parse($stringDate);
+                                                echo $formattedDate = $date->format('j F, Y');
+                                            @endphp
+                                        </b></span>
                                 </div>
-                            @endif
+                                <div class="play_now-btn">
+                                    <a href="{{ route('tournament.game.details', $game->slug) }}" class="primary_btn">Join
+                                        Now</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 @endforeach
-
             </div>
         </div>
     </section>
