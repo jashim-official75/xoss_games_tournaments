@@ -517,12 +517,13 @@ z-index: 1;
   animation: bounce-in 1s ease-in-out;
 }
 
-.slider_content  h1 
+.slider_content  h1 a
 {
   font-size: clamp(1.6rem, 5vw,3.5rem);
   color: #0099ff;
   margin-bottom: 2rem;
   font-weight: 700;
+  display: block;
 }
 .slider_content h2 
 {
@@ -1055,10 +1056,11 @@ main#questions {
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  background: #3C1E6E;
+  background: #582f9b;
   z-index: 1000;
   transition: transform 500ms ease-in-out;
-  border: 1px solid #fff;
+  border: 2px solid #fff;
+  
 
 }
 .slick-dots li.slick-active 
