@@ -13,30 +13,34 @@
 @section('content')
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
     <!-- --------------------------TOURNAMENT HEADER  START ------------------------ -->
-    <div class="tournament_slider">
-        @foreach ($games as $game)
-            <div class="single_slider-item"
-                style="background-image: url('{{ asset('uploads/Tournamant/GameBanner/' . $game->game_banner) }}')">
-                <div class="slider_content">
-                @if (auth()->guard('subscriber')->check())
-                    <h1><a href="{{ route('tournament.game.details', $game->slug) }}">{{ $game->game_name }}</a></h1>
-                    @else
-                    <h1><a href="{{ route('user.sign_in') }}">{{ $game->game_name }}</a></h1>
-                    @endif
-                    <h2>Join now for the ultimate gaming clash and earn rewards</h2>
-                     @if (auth()->guard('subscriber')->check())
-                    <a href="{{ route('tournament.game.details', $game->slug) }}" class="primary_btn mt-5">Join Now</a>
-                    @else
-                    <a href="{{ route('user.sign_in') }}" class="primary_btn mt-5">Join Now</a>
-                    @endif
+  <section id="tournament_header" class="section-top">
+    <div class="container">
+        <div class="tournament_slider">
+            @foreach ($games as $game)
+                <div class="single_slider-item"
+                    style="background-image: url('{{ asset('uploads/Tournamant/GameBanner/' . $game->game_banner) }}')">
+                    <div class="slider_content">
+                    @if (auth()->guard('subscriber')->check())
+                        <h1><a href="{{ route('tournament.game.details', $game->slug) }}">{{ $game->game_name }}</a></h1>
+                        @else
+                        <h1><a href="{{ route('user.sign_in') }}">{{ $game->game_name }}</a></h1>
+                        @endif
+                        <h2>Join now for the ultimate gaming clash and earn rewards</h2>
+                         @if (auth()->guard('subscriber')->check())
+                        <a href="{{ route('tournament.game.details', $game->slug) }}" class="primary_btn mt-5">Join Now</a>
+                        @else
+                        <a href="{{ route('user.sign_in') }}" class="primary_btn mt-5">Join Now</a>
+                        @endif
+                    </div>
                 </div>
-            </div>
-        @endforeach
+            @endforeach
+        </div>
     </div>
+  </section>
     <!-- --------------------------TOURNAMENT HEADER  END ------------------------ -->
 
     <!-- --------------------------TOURNAMENT CARD START ------------------------ -->
-    <section id="tournament_card">
+    <section id="tournament_card" class="section">
         <div class="container">
             <div class="title pb-5">
                 <h1 class="mostPopular__title__text"> <img src="{{ asset('assets/frontend/img/tournament-icon.png') }}"

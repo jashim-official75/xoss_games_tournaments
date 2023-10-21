@@ -347,7 +347,6 @@ z-index: 1;
   padding: 1rem;
 }
 #tournament_prizes {
-  /* background: linear-gradient(#3f89fc,#686EF9); */
   padding: 5rem 0;
 }
 #tournament_prizes .prize_inner 
@@ -464,7 +463,6 @@ z-index: 1;
   border-radius: 50%;
   box-shadow: 0 0 15px rgba(0, 153, 255, 0.68);
 }
-/* tournament details */
 
 .single_slider-item 
 {
@@ -472,7 +470,9 @@ z-index: 1;
   background-size: cover;
   background-position: center;
   z-index: 2;
-  height: 600px;
+  height: 500px;
+  border-radius: 15px;
+  overflow: hidden;
 }
 .single_slider-item::before 
 {
@@ -489,16 +489,21 @@ z-index: 1;
 .slider_content 
 {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   flex-direction: column;
-  text-align: center;
+  text-align: left;
   height: 100%;
   opacity: 0;
   transform: scale(0);
   transition: all 1s ease-in-out;
   transform-origin: bottom;
+  padding-left: 10%;
 
+}
+.slider_content .primary_btn
+{
+  margin: 0;
 }
 .slick-active .slider_content 
 {
@@ -1042,113 +1047,6 @@ main#questions {
 
 
 
-/* tournament slider */
-#tournament .tournament_slide 
-{
- position: relative;
-}
-#tournament .tournament_slide .tournament_slide-img 
-{
-  position: relative;
-  width: 100%;
-  height: 98vh;
-  min-height: 300px;
-  background-image: url("https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80");
-  z-index: -1;
-  background-size: cover;
-}
-#tournament .tournament_slide .overlay
-{
-  position: relative;
-  width: 100%;
-  height: 98vh;
-  min-height: 300px;
-  background-image: url("https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80");
-  z-index: -1;
-  background-size: cover;
-
-}
-.trophy_illustration {
-  /* position: absolute;
-  right: 5%; */
-  /* top: 30%; */
-  /* transform: translateY(-30%); */
-  width: 300px;
-
-}
-
-.money_illustration {
-  left: 5%;
-   transform: rotate(-45deg);
-}
-.trophy_illustration img 
-{
-  width: 100%;
-}
-
-#tournament .tournament_slide .overlay::after 
-{
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), #0099ff);
-  z-index: 1;
-}
-
-
-
-#tournament .tournament_slide.slick-active .tournament_slide-content h1 
-{
-  animation: bounce-in 1s ease-in-out;
-  color: #fff;
-} 
-
-#tournament .tournament_slide.slick-active .tournament_slide-content .primary_btn 
-{
-  animation: dancing 0.8s ease-in-out forwards;
-  animation-delay: 1.3s; 
-} 
-.tournament_slide-content 
-{
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #fff;
-  text-align: center;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-}
-.tournament_slide-content h1 
-{
-  font-size: clamp(2rem,2vw,5rem);
-  font-weight: 600;
-}
-.tournament_slide-content p 
-{
-  font-size: clamp(1.6rem,2vw,2rem);
-  font-weight: 500;
-  margin: 1.6rem 0;
-  max-width: 800px;
-  text-align: center;
-  
-}
-
-#tournament .tournament_slide .tournament_slide-img img 
-{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-
-}
 
 .slick-dots {
   bottom: 35px;
@@ -1157,7 +1055,7 @@ main#questions {
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  background: #12ACF8;
+  background: #3C1E6E;
   z-index: 1000;
   transition: transform 500ms ease-in-out;
   border: 1px solid #fff;
@@ -1169,7 +1067,7 @@ main#questions {
   outline: 2px solid #fff;
   outline-offset: 2px;
   transform: scale(1.1);
-  box-shadow: 0 0 0 2px #12ACF8;
+  box-shadow: 0 0 0 2px #3f89fc;
   
 }
 
@@ -1561,7 +1459,7 @@ body {
   padding:0 0 5rem;
 }
 .section {
-  padding: 10rem 0;
+  padding: 8rem 0;
 }
 /* JUMP */
 button a {
@@ -2606,10 +2504,28 @@ font-size: 18px;
 }
 
 .slick-prev {
+  left: -60px !important;
+  z-index: 1;
+  transition: all .3s ease;
+}
+.tournament_slider 
+{
+  overflow: hidden;
+}
+.tournament_slider:hover .slick-prev
+{
   left: 29px !important;
   z-index: 1;
 }
-
+.slick-next {
+  right: -53px !important;
+  z-index: 1;
+  transition: all .3s ease;
+}
+.tournament_slider:hover .slick-next {
+  right: 53px !important;
+  z-index: 1;
+}
 .slick-prev::before,
 .slick-next::before {
   color: #3C1E6E !important;
@@ -2624,10 +2540,6 @@ font-size: 18px;
   padding: 6px 17px 3px 17px;
 }
 
-.slick-next {
-  right: 53px !important;
-  z-index: 1;
-}
 
 .bannar__body {
   position: relative;
@@ -4494,9 +4406,7 @@ box-shadow: 0px 6px 15px rgba(60, 30, 110, 0.12);
   .modal_width {
     max-width: 620px;
   }
-  #tournament_header {
-    height: 500px;
-}
+
   div.choose_plan {
     margin: 10px 10px;
   }
