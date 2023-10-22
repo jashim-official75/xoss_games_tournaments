@@ -42,7 +42,7 @@
     <!-- --------------------------TOURNAMENT HEADER  END ------------------------ -->
 
     <!-- --------------------------TOURNAMENT CARD START ------------------------ -->
-    <section id="tournament_card" class="section">
+    <section id="tournament_card" class="section-top">
         <div class="container">
             <div class="title pb-5">
                 <h1 class="mostPopular__title__text"> <img src="{{ asset('assets/frontend/img/tournament-icon.png') }}"
@@ -84,10 +84,15 @@
                                             @endphp
                                         </b></span>
                                 </div>
+                               <div class="card_footer">
+                                <div class="entry_fee">
+                                    <h3>Entry Fee : ৳9.99</h3>
+                                </div>
                                 <div class="play_now-btn">
                                     <a href="{{ route('tournament.game.details', $game->slug) }}" class="primary_btn">Join
                                         Now</a>
                                 </div>
+                               </div>
                             </div>
                         </div>
                     </div>
@@ -97,7 +102,7 @@
     </section>
     <!-- --------------------------TOURNAMENT CARD END ------------------------ -->
     <!-- --------------------------TOURNAMENT CARD START ------------------------ -->
-    <section id="tournament_card" class="section">
+    <section id="tournament_card" class="section-top">
         <div class="container">
             <div class="title pb-5">
                 <h1 class="mostPopular__title__text"> <img src="{{ asset('assets/frontend/img/tournament-icon.png') }}"
@@ -139,10 +144,15 @@
                                             @endphp
                                         </b></span>
                                 </div>
-                                <div class="play_now-btn">
-                                    <a href="{{ route('tournament.game.details', $game->slug) }}" class="primary_btn">Join
-                                        Now</a>
-                                </div>
+                                <div class="card_footer">
+                                    <div class="entry_fee">
+                                        <h3>Entry Fee : ৳19.00</h3>
+                                    </div>
+                                    <div class="play_now-btn">
+                                        <a href="{{ route('tournament.game.details', $game->slug) }}" class="primary_btn">Join
+                                            Now</a>
+                                    </div>
+                                   </div>
 
                             </div>
                         </div>
