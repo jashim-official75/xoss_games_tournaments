@@ -2195,6 +2195,7 @@ transition: all 0.2s ease-in-out;
   position: relative;
   filter: contrast(1);
   transition: filter 0.3s ease;
+  list-style: none;
 }
 
 #header .navbar li a {
