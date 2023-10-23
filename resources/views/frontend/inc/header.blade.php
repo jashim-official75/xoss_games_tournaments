@@ -8,15 +8,15 @@
  
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item">
-                                <a class="nav-link" href="#">
+                                <a class="nav-link" href="{{ route('tournament_rules') }}">
                                         Tournamnet Rules</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">
+                                <a class="nav-link" href="{{ route('tournament_faq') }}">
                                         FAQ</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">
+                                <a class="nav-link" href="{{ route('tournament_support') }}">
                                         Support</a>
                             </li>
                         </ul>

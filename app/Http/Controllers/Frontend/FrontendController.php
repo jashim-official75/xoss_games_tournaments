@@ -21,4 +21,19 @@ class FrontendController extends Controller
     {
         
     }
+    //--tournament_rules
+    public function tournament_rules()
+    {
+        return view('frontend.pages.rules');
+    }
+    //--tournament_faq
+    public function tournament_faq()
+    {
+        return view('frontend.pages.faq');
+    }
+    //--tournament_support
+    public function tournament_support()
+    {
+        return view('frontend.pages.support');
+    }
 }

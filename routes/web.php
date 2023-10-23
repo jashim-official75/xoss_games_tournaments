@@ -1,18 +1,5 @@
 <?php
 
-
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
 use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Backend\LoginController;
 use App\Http\Controllers\Backend\RegisterController;
@@ -30,7 +17,9 @@ use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [FrontendController::class, 'index'])->name('home');
-
+Route::get('/rules', [FrontendController::class, 'tournament_rules'])->name('tournament_rules');
+Route::get('/faq', [FrontendController::class, 'tournament_faq'])->name('tournament_faq');
+Route::get('/support', [FrontendController::class, 'tournament_support'])->name('tournament_support');
 //----user login and register---
 Route::group(['middleware'=> 'loginRegisterCheck'], function(){
     Route::get('/sign-up', [SignUpController::class, 'index'])->name('user.sign_up');
@@ -38,13 +27,11 @@ Route::group(['middleware'=> 'loginRegisterCheck'], function(){
     Route::get('/sign-in', [SignInController::class, 'index'])->name('user.sign_in');
     Route::post('/sign-in', [SignInController::class, 'store'])->name('user.signin.store');
 });
-
 Route::group(['middleware'=> 'subscriber'], function(){
     Route::get('/logout', [SignUpController::class, 'logout'])->name('user.logout');
     Route::get('/user/profile', [ProfileController::class, 'profile'])->name('user.profile');
     Route::post('/user/profile/{id}', [ProfileController::class, 'profile_update'])->name('user.profile.update');
 });
-
 //--forgot and reset password route ----
 Route::get('/verify-number', [ResetPasswordController::class, 'verify_number'])->name('verify_number');
 Route::post('/send-otp/store', [ResetPasswordController::class, 'send_otp_store'])->name('send.otp.store');
@@ -52,12 +39,10 @@ Route::get('/otp', [ResetPasswordController::class, 'otp'])->name('otp');
 Route::get('/otp-match', [ResetPasswordController::class, 'otp_match'])->name('otp.match');
 Route::get('/new-password/{otp}', [ResetPasswordController::class, 'new_password'])->name('new.password');
 Route::post('/new-password/store', [ResetPasswordController::class, 'new_password_store'])->name('new.password.store');
-
 //----tournament game ---
 Route::get('/tournament/GameDetails/{slug}', [TournamentController::class, 'game_details'])->name('tournament.game.details');
 Route::get('/game-score', [GameScoreController::class, 'updateScore']);
 Route::get('/tournament/gamePlay/{slug}', [TournamentController::class, 'gamePlay'])->name('tournament.game.play');
-
 //payment
 Route::get('/tournament/payment/{slug}', [TournamentPaymentController::class, 'tournamant_payment'])->name('tournament.payment');
 Route::get('/tournament/success/{id}', [TournamentPaymentController::class, 'tournamant_payment_success'])->name('tournament.payment.success');
@@ -69,11 +54,9 @@ Route::post('/admin/login', [LoginController::class, 'loginProcess'])->name('adm
 Route::group(['prefix' => '/admin', 'middleware' => 'auth'], function () {
     Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
     Route::get('/logout', [LoginController::class, 'logout'])->name('admin.logout');
-
     //--register--
     Route::get('/register', [RegisterController::class, 'register'])->name('admin.register');
     Route::post('/register', [RegisterController::class, 'register_store'])->name('admin.register.store');
-    
     //---front user and participation 
     Route::get('/front/user', [SubscriberController::class, 'user'])->name('admin.front.user');
     Route::get('/tournamant/perticipation', [SubscriberController::class, 'tournamant_perticipation'])->name('admin.tournamant.perticipation');
@@ -86,7 +69,6 @@ Route::group(['prefix' => '/admin', 'middleware' => 'auth'], function () {
     Route::post('/tournament/update/{id}', [TournamentGameController::class, 'update'])->name('tournament.game.update');
     Route::delete('/tournament/delete/{id}', [TournamentGameController::class, 'delete'])->name('tournament.game.destroy');
 });
-
 //Config cache clear
 Route::get('clear', function () {
     Artisan::call('cache:clear');
@@ -99,6 +81,5 @@ Route::get('clear', function () {
 //--storage link
 Route::get('/storage-link', function () {
     Artisan::call('storage:link');
-
     dd('Storage Link Success');
 });
