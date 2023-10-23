@@ -844,7 +844,7 @@ margin-left: 1rem;
 
 .card_body 
 {
-  padding: 3rem; 
+  padding: 1rem 3rem 2rem; 
 }
 .tournament_card .date {
   font-size: 1.6rem;
