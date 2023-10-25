@@ -1,13 +1,191 @@
 /* referral page */
-.Referr_header
+
 
 /* referral page */
 #referr_header
 {
-  background: #3c1e6e;
+  position: relative;
   width: 100%;
-  height: 500px;
+  height: 700px;
+  background: #F8F8F8;
+  display: flex;
+  /* align-items: center; */
+  padding-top: 4rem;
 }
+.color_shape 
+{
+  position: absolute;
+  bottom: 0;
+  left: -15rem;
+  width: 1000px;
+  opacity: 0.5;
+}
+.color_shape img 
+{
+  width: 100%;
+}
+#referr_header .referral_content  
+{
+  padding-left: 15%;
+  text-align: left;
+}
+#referr_header .referral_content h1
+{
+  font-size: clamp(3rem, 5vw , 8rem);
+  color: #3C1E6E;
+  line-height: 1;
+  text-transform: uppercase;
+}
+#referr_header .referral_content h3
+{
+  font-size: clamp(1.6rem, 5vw , 3rem);
+  color: #333;
+  line-height: 1;
+  max-width: 400px;
+  margin: 2rem 0;
+  line-height: 1.3;
+}
+#referr_header .referral_content h1 span 
+{
+  font-size: clamp(2rem, 5vw , 6rem);
+  display: block;
+}
+/* reffer section */
+.reffer_section 
+{
+  /* background: #3C1E6E; */
+  padding: 5rem 0 2rem;
+}
+.inputbx {
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  width: 100%;
+    flex-wrap:wrap;
+  flex-direction:column;
+}
+.inputbx label {
+  display: block;
+  font-size: 2rem;
+}
+.other_option 
+{
+  font-size: 3rem;
+  margin: 2rem 0 0;
+}
+.socail_share 
+{
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.socail_share a 
+{
+  width: 50px;
+  height: 50px;
+  border: 1px solid #3C1E6E;
+  border-radius: 50%;
+  background: #fff;
+}
+.socail_share a  img 
+{
+  width: 100%;
+  height: 100%;
+  transform: scale(0.6);
+  transition: all .3s ease;
+}
+.socail_share a:hover img 
+{
+  transform: scale(0.7);
+}
+.inputbx span 
+{
+  font-size: 1.4rem;
+  margin: 0 0 1rem;
+}
+.referral_input 
+{
+  display: flex;
+}
+.refferBox {
+  position: relative;
+  padding: 3rem;
+  border-radius: 15px;
+  max-width: 100%;
+  margin: -25rem auto 0;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid rgba(158, 105, 250, 0.425);
+  z-index: 10000;
+}
+.refferBox::after 
+{
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("Asset\ 4-8.png") ;
+  background-size: cover;
+  background-position: center top;
+  z-index: -1;
+  opacity: 0.3;
+}
+.refferBox h2 {
+  font-size: clamp(1.6rem, 5vw, 3rem);
+  font-weight: 500;
+  font-family: sans-serif;
+  margin: 3rem 0;
+  color: #222;
+  line-height: 1.2;
+}
+.refferBox h2 span 
+{
+  color: #3C1E6E;
+  font-weight: 600;
+}
+.refferBox #inputBox {
+  padding: 0.8rem 1rem;
+  border: 0;
+  outline: none;
+  width: 100%;
+  border: 1px solid #3C1E6E;
+  font-size: 1.6rem;
+  border-radius: 5px;
+
+}
+.refferBox #btn {
+  padding: 0.8rem 1rem;
+  border: 0;
+  position: relative;
+  left: -10px;
+  cursor: pointer;
+  outline: none;
+  width: 120px;
+  background: #3C1E6E;
+  border-radius: 0 5px 5px 0;
+  color: #fff;
+  font-size: 1.4rem;
+
+}
+.refferBox #btn.active 
+{
+  color: #0f0;
+} 
+.refferal_img 
+{
+  text-align: center;
+}
+.refferal_img img
+{
+  width: 80%;
+}
+/* reffer section */
 /* profile user */
 #profile_pic 
 {

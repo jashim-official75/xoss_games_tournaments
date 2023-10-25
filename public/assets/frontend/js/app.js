@@ -1,3 +1,8 @@
+
+
+
+// sidebar js
+
 function showSidebar() {
   document.querySelector('.sidebar').style.right = '0';
   document.querySelector('.overlay').style.display = 'block';

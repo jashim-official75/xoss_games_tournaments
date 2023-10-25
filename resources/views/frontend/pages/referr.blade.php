@@ -12,8 +12,77 @@
 @endsection
 @section('content')
     <section id="referr_header">
+        <div class="color_shape">
+            <img src="{{ asset('assets/frontend/img/colorfull-arrow.png') }}" alt="">
+        </div>
         <div class="container">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident similique, dolore eaque vitae sit aperiam facilis hic magni ut numquam mollitia suscipit fugiat veniam ad voluptas veritatis nisi quo iste ipsam vero! Soluta fugiat quas numquam laboriosam accusamus ratione. Laborum ut quos sed, minima repellendus et corrupti officiis magni quod dolorum maiores! Velit at deserunt in id doloremque laborum hic, tempore optio odio voluptatibus nisi, tenetur recusandae minima fuga doloribus perspiciatis? Nostrum nemo ab illum corrupti maxime, doloribus necessitatibus ratione voluptate esse provident sit fuga delectus odio ad nisi non repellat pariatur fugiat laboriosam molestiae porro distinctio! Eaque, ipsa, vero quia nobis, possimus placeat exercitationem modi error dolores aspernatur sapiente expedita nihil! Saepe deserunt nulla, officia consectetur voluptatum iure aperiam quae possimus ullam dolor magnam voluptate maiores quibusdam nostrum expedita, modi culpa quaerat dicta officiis in. Totam voluptatem debitis molestias deserunt pariatur esse magnam rerum dolore? Dolore et aspernatur beatae neque fugiat voluptatum ab quidem, commodi earum numquam minus repellat asperiores deserunt, rem nihil sunt molestiae esse, iste totam architecto! Incidunt fugit, accusantium nam nesciunt quasi autem dolorum magnam quisquam esse modi aliquid provident necessitatibus, beatae vel dolorem rerum aliquam sunt quos quam sit veniam odit. Adipisci minus eum mollitia velit a non, impedit nostrum maiores, aperiam accusamus praesentium, quam suscipit temporibus! Perspiciatis, laboriosam quibusdam. Facere iste sit obcaecati ipsum deleniti! Ut officiis sequi esse, quo incidunt delectus debitis consequuntur dolores? Possimus voluptate repellat fuga laboriosam ratione vero vitae nobis delectus odio corrupti, qui modi, cumque iure nihil tenetur repellendus suscipit obcaecati quidem maiores unde omnis est non quos illum. Quia dolorum laudantium sequi ratione adipisci iusto fugiat voluptatibus aperiam quo ducimus facere accusantium similique perspiciatis, praesentium blanditiis nesciunt alias eius repellat nostrum at, dignissimos dolor tempore. Nemo quisquam vitae, placeat odit repellendus aliquam nisi exercitationem! In doloribus magni reprehenderit possimus facere veniam commodi, ipsam ut consectetur quia deserunt repellendus architecto itaque a id non suscipit labore laboriosam culpa fugit soluta? Iste ducimus cumque odio iure aperiam deleniti eveniet aliquam porro doloremque. Dolorum natus quia facilis fuga magni nulla iste incidunt, non eum beatae itaque illo laboriosam laborum iure similique quam eaque nihil animi voluptatum facere quis rem doloribus harum. Tempore nesciunt dignissimos pariatur id esse voluptates. Dolorem, cum? Quidem ducimus laboriosam officia aut sed placeat aperiam, non nam neque rerum eaque laudantium beatae asperiores molestias quod soluta aliquid, harum, excepturi aliquam dicta ab quis! Vitae, numquam iste. Mollitia porro hic perspiciatis molestiae accusantium numquam nesciunt dignissimos perferendis delectus iure, officiis facere, repellat, impedit nisi libero sunt cum aliquam. Saepe quia temporibus animi, voluptatibus qui error corrupti, dolorem quo esse illum amet, dolores harum architecto obcaecati. Quis, nulla? Mollitia, vero molestias est dolorem natus quibusdam temporibus aliquam consequuntur cum nisi facere ducimus, ad, sunt doloremque velit consectetur corrupti. Necessitatibus eos dolor omnis nisi minima? Aperiam, unde similique iusto voluptates aliquid veniam aut deserunt fugit harum? Consectetur accusamus, quos tempore quo inventore repellat impedit dicta hic perferendis, saepe beatae optio mollitia delectus neque aperiam quae? Dolores praesentium explicabo nihil vero in!</p>
+            <div class="row align-items-center">
+                <div class="col-md-4">
+                   <div class="referral_content">
+                    <h1>Referr  <span> a Friend</span></h1>
+                    <h3>Referr to earn reawards and amazing prizes</h3>
+                   </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="refferal_img">
+                        <img src="{{ asset('assets/frontend/img/referr-friend.png') }}" alt=""  class="img-fluid"/>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
+    <div class="reffer_section">
+        <div class="container">
+            <div class="refferBox">
+                <div class="innerBox">
+                    <h2>Refer a friend and Earn <span>Rewards!</span></h2>
+              
+                <div class="inputbx">
+                  <label for="inputBox">Referral Link</label>
+                  <span>Use the link below to refer your friends</span>
+                  <div class="referral_input">
+                    <input type="text" name="" value="https://www.xoss.games/af6a23" id="inputBox" readonly>
+                    <!-- <input type="button" value="copy" id="btn"> -->
+                    <button type="button" id="btn">Copy Link</button>
+                  </div>
+                </div>
+                </div>
+                <span class="other_option">OR</span>
+                <hr>
+                <div class="socail_share">
+                    <a href="#"><img src="{{ asset('assets/frontend/img/socail-icons/facebook.png') }}" alt=""/></a>
+                    <a href="#"><img src="{{ asset('assets/frontend/img/socail-icons/facebook-messanger.png') }}" alt=""/></a>
+                    <a href="#"><img src="{{ asset('assets/frontend/img/socail-icons/whatsapp.png') }}" alt=""/></a>
+                    <a href="#"><img src="{{ asset('assets/frontend/img/socail-icons/telegram.png') }}" alt=""/></a>
+                    <a href="#"><img src="{{ asset('assets/frontend/img/socail-icons/twitter.png') }}" alt=""/></a>
+                    <a href="#"><img src="{{ asset('assets/frontend/img/socail-icons/instagram.png') }}" alt=""/></a>
+                    <a href="#"><img src="{{ asset('assets/frontend/img/socail-icons/linkedin.png') }}" alt=""/></a>
+                    <a href="#"><img src="{{ asset('assets/frontend/img/socail-icons/sms.png') }}" alt=""/></a>
+                    <a href="#"><img src="{{ asset('assets/frontend/img/socail-icons/reddit.png') }}" alt=""/></a>
+                    <a href="#"><img src="{{ asset('assets/frontend/img/socail-icons/pinterest.png') }}" alt=""/></a>
+                   
+                </div>
+              </div>
+        </div>
+    </div>
+    <script>
+        
+// refer code
+
+let Button = document.querySelector("#btn");
+let InputBx = document.querySelector("#inputBox");
+Button.addEventListener("click", function () {
+  InputBx.select();
+  InputBx.setSelectionRange(0, 99999); 
+  document.execCommand("copy");
+  Button.innerText = "Copied";
+  Button.classList.add("active");
+  setTimeout(function () {
+    Button.innerText = "Copy Link";
+    Button.classList.remove("active");
+  }, 1000); 
+});
+
+
+    </script>
 @endsection
