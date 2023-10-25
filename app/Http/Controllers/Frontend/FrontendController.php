@@ -36,4 +36,9 @@ class FrontendController extends Controller
     {
         return view('frontend.pages.support');
     }
+    //--referr
+    public function referr()
+    {
+        return view('frontend.pages.referr');
+    }
 }
