@@ -1,4 +1,12 @@
+function showSidebar() {
+  document.querySelector('.sidebar').style.right = '0';
+  document.querySelector('.overlay').style.display = 'block';
+}
 
+function closeSidebar() {
+  document.querySelector('.sidebar').style.right = '-400px';
+  document.querySelector('.overlay').style.display = 'none';
+}
 
 window.onload = function() {
     // Get preloader element

@@ -1,4 +1,251 @@
+/* profile user */
+#profile_pic 
+{
+  position: relative;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  margin-left: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+#profile_pic:hover 
+{
+  transform: scale(1.1);
+} 
+.active_status {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #0f0;
+  border-radius: 50%;
+  top: -3px;
+  right: 0px;
+  border: 1px solid #3c1e6e;
+}
+#profile_pic img 
+{
+  position: absrolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -400px; /* Initially hidden */
+  width: 400px;
+  height: 100%;
+  background-color: #3C1E6E;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  overflow-y: auto;
+  transition: right 0.3s;
+  z-index: 20000000;
+  color: #fff;
+  border-left: 2px solid #fff4;
+}
+.close_icon 
+{
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  font-size: 2rem;
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
 
+.close_icon img 
+{
+  width: 15px;
+  height: 15px;
+}
+.profile_edits 
+{
+  padding: 1rem;
+}
+.profile_edits ul 
+{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.profile_edits ul li 
+{
+  font-size: 1.6rem;
+  padding: 1rem 0;
+  display: block;
+  border-bottom: 1px solid #fff1;
+  cursor: pointer;
+}
+.profile_edits ul li span 
+{
+  color: #fff;
+}
+.profile_edits ul li:hover a 
+{
+  left: 5px;
+  color: #fff;
+}
+.profile_edits ul li a 
+{
+  position: relative;
+  left: 3px;
+  color: #fff8;
+  transition: all .3s ease;
+}
+#tournament_rules {
+  position: relative;
+}
+#tournament_rules p 
+{
+  font-size: 16px;
+}
+#tournament_rules ol 
+{
+  padding-left: 3rem;
+}
+#tournament_rules ol li {
+font-size: 1.6rem;
+}
+#tournament_rules ol li:last-child 
+{
+  margin-bottom: 2rem;
+}
+.tournamnet_title 
+{
+  font-size: clamp(2rem,5vw,3rem);
+  color: #3C1E6E;
+  text-align: center;
+  margin-bottom: 10rem;
+}
+.tournament_heding_secondary 
+{
+  font-size: clamp(1.6rem,5vw,2rem);
+  color: #3C1E6E;
+  margin: 1rem 0;
+}
+.short_links 
+{
+  display: flex;
+  justify-content: space-around;
+}
+.short_links a 
+{
+  font-size: 1.2rem;
+  display: block;
+  color: #fff8;
+  padding: 0.5rem 0;
+  transition: color .3s ease;
+}
+.short_links a:hover 
+{
+  color: #fff;
+}
+.socail_icons 
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  border-top: 1px solid #fff2;
+  padding-bottom: 2rem;
+}
+.socail_icons .icon  a
+{
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0.2rem solid #fff8;
+  border-radius: 50%;
+  margin-top: 2rem;
+  background: var(--i);
+}
+.socail_icons .icon  a:hover 
+{
+  background: transparent;
+  border-color: var(--i);
+  box-shadow: 0 0 8px 2px var(--i);
+}
+.socail_icons .icon a 
+{
+  color: #fff;
+  font-size: 1.6rem;
+  transition: all .3s ease;
+
+}
+.socail_icons .icon:hover a 
+{
+  color: #fff;
+} 
+/* Styling for the overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 200000;
+}
+.sidebar-content 
+{
+  margin-top: 5rem;
+}
+.sidebar-content .profile_pic 
+{
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border:2px solid #fff;
+  box-shadow: 0 0 0 5px rgba(255,255,255,0.2);
+  border-radius: 50%;
+}
+.sidebar-content .profile_pic img 
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+}
+.sidebar-content  h2 
+{
+  margin: 2rem 0 1rem;
+}
+.sidebar-content  p
+{
+  font-size: 14px;
+}
+/* Styling for the close icon */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+/* Styling for the content inside the sidebar */
+.sidebar-content {
+  padding: 20px;
+}
+/* profile user */
 /* custom btn */
 .custom_btn 
 {
@@ -16,6 +263,34 @@
   background: #2AB4F9;
   color: #000 !important;
   box-shadow: 0 0 10px 4px rgba(42, 180, 249, 0.514);
+}
+#support 
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 600px;
+}
+.language 
+{
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+}
+#language 
+{
+  
+  padding: 0.5rem 2rem;
+  font-size: 2rem;
+  border-radius: 5px;
+  background: transparent;
+  color: #fff;
+  border: 0.2rem solid #fff4;
+  outline: 0;
+}
+#language option 
+{
+  color: #000;
 }
 /* custom btn */
 
@@ -2175,7 +2450,7 @@ transition: all 0.2s ease-in-out;
 }
 
 #header {
-  height: 80px;
+  height: 70px;
   position: fixed;
   width: 100%;
   z-index: 1000;
@@ -4986,7 +5261,7 @@ margin-left: 0;
 }
 
   #header {
-    height: 60px;
+    height: 70px;
     position: relative;
 }
 .pb-80px {

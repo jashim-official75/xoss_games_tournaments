@@ -164,6 +164,9 @@
     </section>
     <!-- --------------------------TOURNAMENT CARD END ------------------------ -->
 
+
+ 
+
     <script>
         const parallaxContainer = document.querySelector(".parallax");
         const parallaxInstance = new Parallax(parallaxContainer);
