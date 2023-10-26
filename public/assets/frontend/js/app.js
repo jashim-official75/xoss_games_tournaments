@@ -119,5 +119,33 @@ $(".tournament_slider").slick({
   fade: true,
   cssEase: 'linear',
   pauseOnHover:false,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+      },
+    },
+    {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+      },
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        speed: 1000,
+        autoplaySpeed: 6000,
+        dots: false,
+      },
+    },
+  ],
 });
 

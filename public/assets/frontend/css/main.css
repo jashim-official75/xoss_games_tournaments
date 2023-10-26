@@ -31,14 +31,14 @@
 }
 #referr_header .referral_content h1
 {
-  font-size: clamp(3rem, 5vw , 8rem);
+  font-size: clamp(4rem, 5vw , 8rem);
   color: #3C1E6E;
   line-height: 1;
   text-transform: uppercase;
 }
 #referr_header .referral_content h3
 {
-  font-size: clamp(1.6rem, 5vw , 3rem);
+  font-size: clamp(2rem, 5vw , 3rem);
   color: #333;
   line-height: 1;
   max-width: 400px;
@@ -47,8 +47,9 @@
 }
 #referr_header .referral_content h1 span 
 {
-  font-size: clamp(2rem, 5vw , 6rem);
+  font-size: clamp(3rem, 5vw , 6rem);
   display: block;
+  margin-top: 1rem;
 }
 /* reffer section */
 .reffer_section 
@@ -183,7 +184,7 @@
 }
 .refferal_img img
 {
-  width: 80%;
+  width: 70%;
 }
 /* reffer section */
 /* profile user */
@@ -227,6 +228,7 @@
   top: 0;
   right: -400px; /* Initially hidden */
   width: 400px;
+  max-width: 100%;
   height: 100%;
   background-color: #3C1E6E;
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
@@ -1955,6 +1957,11 @@ body {
 button a {
     color: #000;
 }
+.custom_container 
+{
+  width: 90%;
+  margin: 0 auto;
+}
 #preloader_container {
 position: fixed;
 			top: 0;
@@ -2492,41 +2499,29 @@ input[type=number]::-webkit-outer-spin-button {
   color: #ffffff !important;
 }
 
-.footer {
+.footer_wrapper {
+  padding: 2rem 0 0;
   position: relative;
-  /* --mask: radial-gradient(59.17px at 50% 81px, #000 99%, #0000 101%)
-      calc(50% - 60px) 0/120px 100%,
-    radial-gradient(59.17px at 50% -51px, #0000 99%, #000 101%) 50% 30px/120px
-      100% repeat-x;
-  -webkit-mask: var(--mask);
-  mask: var(--mask); */
-  /* background: rgba(80, 41, 137, 0.1019607843);
-   */
     --mask:
       radial-gradient(7.54px at 50% 9.80px,#000 99%,#0000 101%) calc(50% - 14px) 0/28px 100%,
       radial-gradient(7.54px at 50% -2.8px,#0000 99%,#000 101%) 50% 7px/28px 100% repeat-x;
     -webkit-mask: var(--mask);
             mask: var(--mask);
    background: #582f9b;
+   width: 100%;
 }
-.footer::after {
+.footer_wrapper::after {
   position: absolute;
   content: '';
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  /* background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23a77de9' fill-opacity='0.1' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E"); */
 background-image: url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 16c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zm33.414-6l5.95-5.95L45.95.636 40 6.586 34.05.636 32.636 2.05 38.586 8l-5.95 5.95 1.414 1.414L40 9.414l5.95 5.95 1.414-1.414L41.414 8zM40 48c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zM9.414 40l5.95-5.95-1.414-1.414L8 38.586l-5.95-5.95L.636 34.05 6.586 40l-5.95 5.95 1.414 1.414L8 41.414l5.95 5.95 1.414-1.414L9.414 40z' fill='%23ffffff' fill-opacity='1' fill-rule='evenodd'/%3E%3C/svg%3E");
   opacity: 0.05;
   background-position:left;
-  /* animation: moveBg 60s linear infinite alternate; */
   z-index: -1;
 }
-.footer_wrapper {
-  padding: 2rem 0 0;
-}
-
 .footer .footer__information__title {
   position: relative;
   color: #fff;
@@ -2568,6 +2563,7 @@ background-image: url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox=
   color: rgba(255, 255, 255, 0.8) !important;
   text-decoration: none;
   transition: all 0s ease-in-out;
+  font-weight: 700;
 }
 .footer .footer__information .list-item a:hover{
   position: relative;
@@ -4849,13 +4845,14 @@ box-shadow: 0px 6px 15px rgba(60, 30, 110, 0.12);
   {
     height: 500px;
   }
-  #tournament_header {
-    height: 600px;
+.section-top {
+  padding: 2rem 0 0;
 }
 }
 @media (min-width: 1200px) {
-  .container {
+  .custom_container {
     max-width: 1440px;
+    width: 90%;
     padding: 0 2rem;
   }
   
@@ -4924,6 +4921,34 @@ box-shadow: 0px 6px 15px rgba(60, 30, 110, 0.12);
 }
 }
 
+@media screen and (max-width: 1024px) {
+  .refferal_img img {
+    width: 100%;
+}
+#referr_header .referral_content {
+  padding-left: 0;
+  text-align: center;
+}
+#referr_header .referral_content 
+{
+  text-align: center;
+}
+#referr_header .referral_content h3 {
+  max-width: 500px;
+  margin: 2rem auto;
+  text-align: center;
+  width: 100%;
+}
+#referr_header {
+  position: relative;
+  width: 100%;
+  height: 1000px;
+  background: #F8F8F8;
+  display: flex;
+  /* align-items: center; */
+  padding-top: 4rem;
+}
+}
 @media screen and (max-width: 575.98px) {
   .card__wrapper .card__body {
     margin: 1rem 1rem !important;
@@ -4935,6 +4960,45 @@ box-shadow: 0px 6px 15px rgba(60, 30, 110, 0.12);
     height: 3.5rem;
     border-radius: 8px;
     font-size: 2rem;
+}
+.refferBox {
+
+  padding: 2rem;
+  margin: -32rem auto 0;
+}
+.refferBox h2 {
+  font-size: clamp(2.5rem, 5vw, 3rem);
+  margin: 2rem 0;
+  text-align: center;
+}
+.refferBox #btn {
+
+  left: -3px;
+  width: 41%;
+  font-size: 1rem;
+}
+.socail_share a {
+  width: 35px;
+  height: 35px;
+}
+.refferBox #inputBox {
+  padding: 0.8rem 1rem;
+  font-size: 1.1rem;
+  border-radius: 5px;
+}
+.refferBox::after {
+  background-position: -56px 46px;
+
+}
+.color_shape {
+  display: none;
+}
+.refferal_img img {
+  width: 100%;
+}
+#referr_header .referral_content {
+  padding-left: 0;
+  text-align: center;
 }
 .top_card-user {
 
@@ -5110,10 +5174,6 @@ main#questions {
   padding: 2rem 0;
 }
 
-#tournament_header {
-  height: 330px;
-  min-height: 300px;
-}
   .card__wrapper .card__body .card__text {
     margin-left: 5px;
     line-height: 15px;
@@ -5143,11 +5203,11 @@ main#questions {
     content: url(../img/Group.svg);
   }
   .slick-next {
-    right: 10px !important;
+    right: 18px !important;
     z-index: 9999;
   }
   .slick-prev {
-  left: 5px !important;
+  left: 15px !important;
   z-index: 1;
 }
 
@@ -5269,12 +5329,15 @@ main#questions {
     font-size: 16px;
   }
  .card_body {
-    padding: 1rem 1rem 4rem;
+    padding: 1rem 2rem 2rem;
 }
-  .slider_content {
-    width: 70%;
-    margin: 0 auto;
-  }
+.slider_content {
+  width: 90%;
+  margin: 0 auto;
+}
+.single_slider-item {
+  height: 380px;
+}
   .bannar__body__text__title {
     font-size: 6rem;
     color: #ffffff;
@@ -5406,6 +5469,13 @@ margin-left: 0;
   .footer__end__body__form .lng__selection {
     padding-right: 4rem;
   }
+
+  .section {
+    padding: 1rem 0;
+}
+  #referr_header {
+    height: 800px;
+}
   .eyes::after, .eyes::before {
     width: 10px;
     height: 10px;
@@ -5423,6 +5493,21 @@ margin-left: 0;
     border-radius: 5px;
     padding: 10px 27px;
 }
+.sm-hide {
+  display: none !important;
+}
+.slider_content .primary_btn {
+  display: block !important;
+  position: absolute;
+  left: 2rem;
+  bottom: 2rem;
+  font-size: 12px;
+  width: 130px;
+}
+.single_slider-item {
+  height: 230px;
+  background-position: 85%  center;
+}
 }
 
 
@@ -5436,7 +5521,34 @@ margin-left: 0;
     margin: 0 auto;
     width: 90%;
 }
-
+.card_body .game_title a {
+  font-size: 1.6rem;
+}
+.tournament_card .date {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+.tournament_card .date img {
+  width: 18px;
+}
+.card_body {
+  padding: 1rem 1rem 2rem;
+}
+.tournament_card .card_img  .cover_img {
+  height: 150px;
+  filter: saturate(1.2);
+}
+.card_footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+.card_body .play_now-btn .primary_btn {
+  width: 130px;
+  font-size: 1.1rem;
+}
 .mostPopular__title__text img {
     width: 30px;
 }
@@ -5488,6 +5600,9 @@ margin-left: 0;
   .card__height {
     height: 108px;
   }
+  #referr_header {
+    height: 750px;
+}
   #faq .container 
 {
   padding-right: 10px !important;
@@ -5730,7 +5845,7 @@ margin-left: 0;
 }
 #header .navbar .logo__img {
     margin-right: 0 !important;
-    width: 150px;
+    width: 120px;
 }
 .bannar__body__btn button {
   font-size: 16px;
@@ -5739,8 +5854,23 @@ margin-left: 0;
   height: 50px;
   
 }
+#profile_pic {
+  width: 30px;
+  height: 30px;
+  margin-left: 1rem;
+}
+.custom_btn {
+  padding: 0.5rem 1.5rem;
+  font-size: 14px !important;
+}
 }
 
+@media screen and (max-width: 340px) {
+  .single_slider-item {
+    height: 200px;
+    background-position: 70%  center;
+}
+}
 @media screen and (max-width: 312.98px) {
   .playbtn__bannar {
     height: 30rem;

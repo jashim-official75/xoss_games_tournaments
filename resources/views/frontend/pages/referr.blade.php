@@ -15,15 +15,15 @@
         <div class="color_shape">
             <img src="{{ asset('assets/frontend/img/colorfull-arrow.png') }}" alt="">
         </div>
-        <div class="container">
+        <div class="custom_container">
             <div class="row align-items-center">
-                <div class="col-md-4">
+                <div class="col-xl-4 col-lg-6 col-md-12">
                    <div class="referral_content">
                     <h1>Referr  <span> a Friend</span></h1>
                     <h3>Referr to earn reawards and amazing prizes</h3>
                    </div>
                 </div>
-                <div class="col-md-8">
+                <div class="col-xl-8 col-lg-6 col-md-12">
                     <div class="refferal_img">
                         <img src="{{ asset('assets/frontend/img/referr-friend.png') }}" alt=""  class="img-fluid"/>
                     </div>
@@ -32,7 +32,7 @@
         </div>
     </section>
     <div class="reffer_section">
-        <div class="container">
+        <div class="custom_container">
             <div class="refferBox">
                 <div class="innerBox">
                     <h2>Refer a friend and Earn <span>Rewards!</span></h2>

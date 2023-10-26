@@ -1,7 +1,7 @@
 <!-- ------------------------- Header Start ---------------------- -->
 <div id="header-wrap" class="pb-80px">
     <section id="header">
-        <div class="container">
+        <div class="custom_container">
             <nav class="navbar navbar-expand-lg navber-fixed">
                 <a class="navbar-brand" href="{{ route('home') }}"><img
                         src="{{ asset('assets/frontend/img/logo.png') }}" class="logo__img" alt="" /></a>
