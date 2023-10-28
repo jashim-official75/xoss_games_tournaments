@@ -15,7 +15,7 @@
                 <label for="number">Phone Number</label>
                 
                 <input type="number" placeholder="Phone Number" name="phone_num" />
-                <span class="text-danger">*must be a Grammen Phone Number</span>
+                {{-- <span class="text-danger">*must be a Grammen Phone Number</span> --}}
                 @error('phone_num')
                     <span class="text-danger">{{ $message }}</span>
                 @enderror
