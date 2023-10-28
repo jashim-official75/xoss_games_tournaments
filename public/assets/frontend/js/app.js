@@ -1,4 +1,30 @@
 
+let prevScrollPos = window.pageYOffset;
+const header = document.getElementById("header");
+
+window.onscroll = () => {
+    const currentScrollPos = window.pageYOffset;
+
+    if (prevScrollPos > currentScrollPos) {
+        header.style.transform = "translateY(0)";
+    } else {
+        header.style.transform = "translateY(-100%)";
+    }
+
+    prevScrollPos = currentScrollPos;
+};
+
+// sidebar js
+
+function showSidebar() {
+  document.querySelector('.sidebar').style.right = '0';
+  document.querySelector('.overlay').style.display = 'block';
+}
+
+function closeSidebar() {
+  document.querySelector('.sidebar').style.right = '-400px';
+  document.querySelector('.overlay').style.display = 'none';
+}
 
 window.onload = function() {
     // Get preloader element
@@ -106,5 +132,33 @@ $(".tournament_slider").slick({
   fade: true,
   cssEase: 'linear',
   pauseOnHover:false,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+      },
+    },
+    {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+      },
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        speed: 1000,
+        autoplaySpeed: 6000,
+        dots: false,
+      },
+    },
+  ],
 });
 
