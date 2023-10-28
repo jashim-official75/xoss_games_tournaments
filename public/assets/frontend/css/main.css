@@ -10,7 +10,7 @@
   background: #F8F8F8;
   display: flex;
   /* align-items: center; */
-  padding-top: 4rem;
+  padding-top: 10rem;
 }
 .color_shape 
 {
@@ -4962,7 +4962,7 @@ box-shadow: 0px 6px 15px rgba(60, 30, 110, 0.12);
   background: #F8F8F8;
   display: flex;
   /* align-items: center; */
-  padding-top: 4rem;
+ 
 }
 }
 @media screen and (max-width: 575.98px) {
