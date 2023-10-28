@@ -5290,7 +5290,7 @@ main#questions {
 }
 
 
-@media only screen and (max-width:1400px)
+@media only screen and (max-width:1366px)
 {
   .tournament_card .card_img  .cover_img {
     height: 200px;
@@ -5301,6 +5301,9 @@ main#questions {
 }
 .single_slider-item {
   height: 400px;
+}
+.section {
+  padding: 10rem 0;
 }
 }
 @media only screen and (max-width:1280px)
