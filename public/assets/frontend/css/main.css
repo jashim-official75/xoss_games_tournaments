@@ -1652,8 +1652,10 @@ main#questions {
   /* height: 60vh;
   min-height: 500px; */
   /* background-image:linear-gradient(rgba(16, 6, 153, 0.6),rgba(44, 6, 114, 0.805)), url("../img/support-header-bg.webp"); */
-  background-size: cover;
-  background-position: 0% 40%;
+  /* background-size: cover;
+  background-position: 0% 40%; */
+  background: #f1f1f1;
+  border-bottom: 1px solid #fff;
 
 }
 .support_text 
@@ -1672,14 +1674,14 @@ main#questions {
   color: #3C1E6E;
 }
 .support-customer img {
-  width: 70%;
+  width: 80%;
   text-align: center;
   margin: 0 auto;
   display: block;
 }
 .support_text p {
   font-size: clamp(1.6rem,5vw,2rem);
-  margin: 2rem 0 3rem;
+  margin: 1rem 0;
   color: #3C1E6E;
 }
 .support_btn 
@@ -1784,10 +1786,7 @@ margin-top: 2rem;
   transform: scale(0.8);
 } 
 .support_contact {
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%,-70%);
+  padding: 1rem 0;
 }
 .support_contact ul li {
   list-style: none;

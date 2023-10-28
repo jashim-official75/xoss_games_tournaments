@@ -32,13 +32,11 @@
     <header id="support_header">
        <div class="custom_container">
         <div class="row align-items-center support-customer ">
-            <div class="col-md-6">
+            <div class="col-xl-6 col-lg-6 col-md-12">
                 <div class="support_text">
                     <h1>We are here for you</h1>
                     <p>We provides you technical support in 24/7</p>
-                    <a href="#support_contact" class="support_btn">Contact Us</a>
                     <div class="support_contact">
-
                         <ul>
                             <li><a href="tel:+8801715855974">
                                     <div class="icon"><i class="fa-solid fa-headphones"></i></div>+880 1715-855974
@@ -51,7 +49,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-xl-6 col-lg-6 col-md-12">
                 <img src="{{ asset('assets/frontend/img/customer_support.png') }}" class="img-fluid" alt="" />
             </div>
         </div>
