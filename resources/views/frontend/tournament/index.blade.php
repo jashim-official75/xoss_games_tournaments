@@ -13,7 +13,7 @@
 @section('content')
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
     <!-- --------------------------TOURNAMENT HEADER  START ------------------------ -->
-    <section id="tournament_header" class="section-top">
+    <section id="tournament_header">
         <div class="custom_container">
             <div class="tournament_slider">
                 @foreach ($games as $game)

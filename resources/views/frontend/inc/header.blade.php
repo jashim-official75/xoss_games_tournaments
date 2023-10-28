@@ -9,15 +9,15 @@
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('tournament_rules') }}">
-                                        Tournamnet Rules</a>
+                                    <img src="{{ asset('assets/frontend/img/rules.png') }}"  alt="" />Tournamnet Rules</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('tournament_faq') }}">
-                                        FAQ</a>
+                                    <img src="{{ asset('assets/frontend/img/faq.png') }}"  alt="" />FAQ</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('tournament_support') }}">
-                                        Support</a>
+                                    <img src="{{ asset('assets/frontend/img/call-center.png') }}"  alt="" />Support</a>
                             </li>
                         </ul>
                            

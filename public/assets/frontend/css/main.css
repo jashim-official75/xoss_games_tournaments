@@ -18,7 +18,7 @@
   bottom: 0;
   left: -15rem;
   width: 1000px;
-  opacity: 0.5;
+  opacity: 0.3;
 }
 .color_shape img 
 {
@@ -293,6 +293,10 @@
   left: 3px;
   color: #fff8;
   transition: all .3s ease;
+}
+#tournament_header 
+{
+  padding-top: 100px;
 }
 #tournament_rules {
   position: relative;
@@ -1645,9 +1649,9 @@ main#questions {
 #support_header {
   position: relative;
   width: 100%;
-  height: 60vh;
-  min-height: 500px;
-  background-image:linear-gradient(rgba(16, 6, 153, 0.6),rgba(44, 6, 114, 0.805)), url("../img/support-header-bg.webp");
+  /* height: 60vh;
+  min-height: 500px; */
+  /* background-image:linear-gradient(rgba(16, 6, 153, 0.6),rgba(44, 6, 114, 0.805)), url("../img/support-header-bg.webp"); */
   background-size: cover;
   background-position: 0% 40%;
 
@@ -1658,14 +1662,20 @@ main#questions {
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  text-align: center;
-  width: 80%;
+  text-align: left;
+  width: 100%;
   
 }
 .support_text h1 {
   font-size: clamp(2.5rem,5vw,4rem);
   font-weight: 500;
-  color: #fff;
+  color: #3C1E6E;
+}
+.support-customer img {
+  width: 70%;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
 }
 .support_text p {
   font-size: clamp(1.6rem,5vw,2rem);
@@ -1688,6 +1698,12 @@ main#questions {
 {
   background: #12ACF8;
   color: #000;
+}
+.support-customer 
+{
+  display: flex;
+  height: 800px;
+  align-items: center;
 }
 #support_contact {
   padding: 10rem 0;
@@ -1951,7 +1967,7 @@ body {
   padding:0 0 5rem;
 }
 .section {
-  padding: 8rem 0;
+  padding: 5rem 0;
 }
 /* JUMP */
 button a {
@@ -2636,6 +2652,7 @@ transition: all 0.2s ease-in-out;
 #header {
   height: 70px;
   position: fixed;
+  top: 0;
   width: 100%;
   z-index: 1000;
   display: flex;
@@ -5560,10 +5577,7 @@ margin-left: 0;
     justify-content: flex-start;
 }
 
-  #header {
-    height: 70px;
-    position: relative;
-}
+
 .pb-80px {
     padding-bottom: 0px !important;
 }

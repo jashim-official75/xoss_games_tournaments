@@ -1,5 +1,18 @@
 
+let prevScrollPos = window.pageYOffset;
+const header = document.getElementById("header");
 
+window.onscroll = () => {
+    const currentScrollPos = window.pageYOffset;
+
+    if (prevScrollPos > currentScrollPos) {
+        header.style.transform = "translateY(0)";
+    } else {
+        header.style.transform = "translateY(-100%)";
+    }
+
+    prevScrollPos = currentScrollPos;
+};
 
 // sidebar js
 
