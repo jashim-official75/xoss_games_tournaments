@@ -31,6 +31,7 @@ Route::group(['middleware'=> 'loginRegisterCheck'], function(){
 Route::group(['middleware'=> 'subscriber'], function(){
     Route::get('/logout', [SignUpController::class, 'logout'])->name('user.logout');
     Route::get('/user/profile', [ProfileController::class, 'profile'])->name('user.profile');
+    Route::get('/user/games', [ProfileController::class, 'my_games'])->name('user.my_games');
     Route::post('/user/profile/{id}', [ProfileController::class, 'profile_update'])->name('user.profile.update');
 });
 //--forgot and reset password route ----

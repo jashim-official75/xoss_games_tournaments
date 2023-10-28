@@ -1,7 +1,7 @@
 @extends('frontend.layouts.web')
 
 @section('content')
-<section id="login_page" id="login">
+<section id="login_page" class="section">
     <form action="{{ route('user.signin.store') }}" method="POST">
         @csrf
         <div class="login_body__logo">
