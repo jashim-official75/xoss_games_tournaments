@@ -78,7 +78,7 @@
 
                             <div class="inputBx">
                                 <label for="phonenumber">Phone Number</label>
-                                <input type="text" placeholder="Phone Number" name="phonenumber" id="phonenumber">
+                                <input type="number" placeholder="Phone Number" name="phonenumber" id="phonenumber">
                             </div>
 
                             <div class="inputBx">
