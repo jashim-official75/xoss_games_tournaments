@@ -19,9 +19,11 @@
                 @error('phone_num')
                     <span class="text-danger">{{ $message }}</span>
                 @enderror
-
-                <label for="password">Password</label>
-                <input type="password" placeholder="Password" name="password" />
+                <label for="passwordField">Password</label>
+                <div class="inputBox">
+                    <input type="password" placeholder="Password"  id="password" name="password">
+                      <i class="fas fa-eye-slash toggle-password" data-target="#password"></i>
+                </div>
 
                 @error('password')
                     <span class="text-danger">{{ $message }}</span>

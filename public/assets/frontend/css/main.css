@@ -1,6 +1,4 @@
 /* referral page */
-
-
 /* referral page */
 #referr_header
 {
@@ -72,6 +70,7 @@
 .inputbx label {
   display: block;
   font-size: 2rem;
+  margin: 1rem 0;
 }
 .other_option 
 {
@@ -514,7 +513,7 @@ font-size: 1.6rem;
   border-radius: 10px;
 }
 #login_page form  label {
-  margin-bottom: .5rem;
+  margin: .8rem 0;
   text-align: left;
   display: block;
   font-size: 1.6rem;
@@ -1584,8 +1583,7 @@ main#questions {
 
 .inputBox {
 	position: relative;
-	height: 42px;
-	margin-bottom: 2rem;
+	margin-bottom: 1rem;
 }
 .toggle-password {
   position: absolute;
