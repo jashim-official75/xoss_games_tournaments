@@ -37,6 +37,18 @@
                     <h1>We are here for you</h1>
                     <p>We provides you technical support in 24/7</p>
                     <a href="#support_contact" class="support_btn">Contact Us</a>
+                    <div class="support_contact">
+
+                        <ul>
+                            <li><a href="tel:+8801715855974">
+                                    <div class="icon"><i class="fa-solid fa-headphones"></i></div>+880 1715-855974
+                                </a></li>
+                            <li><a href="mailto:support@xoss.games">
+                                    <div class="icon"><i class="fa-regular fa-envelope-open"></i></div>
+                                    support@xoss.games
+                                </a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="col-md-6">
