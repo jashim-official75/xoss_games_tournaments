@@ -41,7 +41,7 @@
                   <label for="inputBox">Referral Link</label>
                   <span>Use the link below to refer your friends</span>
                   <div class="referral_input">
-                    <input type="text" name="" value="https://www.xoss.games/af6a23" id="inputBox" readonly>
+                    <input type="text" name="" value="" id="inputBox" readonly>
                     <!-- <input type="button" value="copy" id="btn"> -->
                     <button type="button" id="btn">Copy Link</button>
                   </div>
