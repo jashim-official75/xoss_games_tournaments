@@ -93,7 +93,7 @@
                     </div>
                     <ul>
                         <li>
-                            <span><i class="fas fa-phone-volume"></i></span> <a href="#">Contact Us</a>
+                            <span><i class="fas fa-phone-volume"></i></span> <a href="{{ route('tournament_support') }}">Contact Us</a>
                         </li>
                         <li>
                             <span><i class="fas fa-download"></i></span> <a href="#">Install App</a>
@@ -103,29 +103,29 @@
             </div>
             <div class="short_links">
                 <div class="single_row">
-                    <a href="#">About Us</a>
-                    <a href="#">FAQ</a>
+                    <a href="https://xoss.games/about-us">About Us</a>
+                    <a href="{{ route('tournament_faq') }}">FAQ</a>
                 </div>
                 <div class="single_row">
-                    <a href="#">Terms & Condition</a>
-                    <a href="#">Privacy Policy</a>
+                    <a href="https://xoss.games/terms-condition">Terms & Condition</a>
+                    <a href="https://xoss.games/privacy-policy">Privacy Policy</a>
                 </div>
             </div>
             <div class="socail_icons">
                 <div class="icon">
-                    <a href="#" style="--i:#4267B2;"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.facebook.com/xoss.games" style="--i:#4267B2;"><i class="fa-brands fa-facebook-f"></i></a>
                 </div>
                 <div class="icon">
-                    <a href="#" style="--i:#FF0000;"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://www.youtube.com/@xossgames" style="--i:#FF0000;"><i class="fa-brands fa-youtube"></i></a>
                 </div>
                 <div class="icon">
-                    <a href="#" style="--i:#0072b1;"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://www.linkedin.com/showcase/xoss-games" style="--i:#0072b1;"><i class="fa-brands fa-linkedin-in"></i></a>
                 </div>
                 <div class="icon">
-                    <a href="#" style="--i:#c72d8d;"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/xossgames" style="--i:#c72d8d;"><i class="fa-brands fa-instagram"></i></a>
                 </div>
                 <div class="icon">
-                    <a href="#" style="--i:#1DA1F2;"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://twitter.com/xossgames" style="--i:#1DA1F2;"><i class="fa-brands fa-twitter"></i></a>
                 </div>
             </div>
 

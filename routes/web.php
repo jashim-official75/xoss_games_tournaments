@@ -9,6 +9,7 @@ use App\Http\Controllers\Backend\TournamentPaymentController;
 use App\Http\Controllers\Frontend\ResetPasswordController;
 use App\Http\Controllers\Frontend\FrontendController;
 use App\Http\Controllers\Frontend\ProfileController;
+use App\Http\Controllers\Frontend\ReferrController;
 use App\Http\Controllers\Frontend\SignInController;
 use App\Http\Controllers\Frontend\SignUpController;
 use App\Http\Controllers\Frontend\TournamentController;
@@ -20,7 +21,7 @@ Route::get('/', [FrontendController::class, 'index'])->name('home');
 Route::get('/rules', [FrontendController::class, 'tournament_rules'])->name('tournament_rules');
 Route::get('/faq', [FrontendController::class, 'tournament_faq'])->name('tournament_faq');
 Route::get('/support', [FrontendController::class, 'tournament_support'])->name('tournament_support');
-Route::get('/referr', [FrontendController::class, 'referr'])->name('referr');
+Route::get('/referr', [ReferrController::class, 'referr'])->name('referr');
 //----user login and register---
 Route::group(['middleware'=> 'loginRegisterCheck'], function(){
     Route::get('/sign-up', [SignUpController::class, 'index'])->name('user.sign_up');
