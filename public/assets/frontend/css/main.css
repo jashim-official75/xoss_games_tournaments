@@ -1680,7 +1680,7 @@ main#questions {
 .support_text p {
   font-size: clamp(1.6rem,5vw,2rem);
   margin: 2rem 0 3rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: #3C1E6E;
 }
 .support_btn 
 {
@@ -1794,7 +1794,7 @@ margin-top: 2rem;
 }
 .support_contact ul li a {
   font-size: 2.5rem;
-  color: #fff;
+  color: #3C1E6E;
   text-decoration: none;
   display: flex;
   gap: 2rem;
@@ -5290,6 +5290,19 @@ main#questions {
 }
 
 
+@media only screen and (max-width:1480px)
+{
+  .tournament_card .card_img  .cover_img {
+    height: 200px;
+}
+.card_body .play_now-btn .primary_btn {
+  width: 130px;
+  font-size: 1.2rem;
+}
+.single_slider-item {
+  height: 400px;
+}
+}
 @media only screen and (max-width:1280px)
 {
   .playbtn__bannar {
