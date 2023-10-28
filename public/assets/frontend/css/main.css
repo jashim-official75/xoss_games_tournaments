@@ -5305,6 +5305,12 @@ main#questions {
 .section {
   padding: 10rem 0;
 }
+.entry_fee h3 {
+  font-size: clamp(1.4rem , 5vw ,1.6rem);
+}
+.tournament_card .date {
+  font-size: 1.4rem;
+}
 }
 @media only screen and (max-width:1280px)
 {
