@@ -11,7 +11,7 @@
     <title>Tournamnet | FAQ</title>
 @endsection
 @section('content')
-<section id="faq" class="section">
+<section id="faq" class="common_padding">
 
     <div class="container">
         <div class="title pb-5">

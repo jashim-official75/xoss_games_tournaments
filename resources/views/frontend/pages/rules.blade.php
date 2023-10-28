@@ -12,7 +12,7 @@
 @endsection
 @section('content')
 
-<section id="tournament_rules" class="section">
+<section id="tournament_rules" class="common_padding">
   <div class="container">
     <div class="title pb-5">
         <h1 class="mostPopular__title__text"> <img src="{{ asset('assets/frontend/img/tournament-icon.png') }}"
