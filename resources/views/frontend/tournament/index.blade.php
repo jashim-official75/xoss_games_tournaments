@@ -102,7 +102,7 @@
     </section> --}}
     <!-- --------------------------TOURNAMENT CARD END ------------------------ -->
     <!-- --------------------------TOURNAMENT CARD START ------------------------ -->
-    <section id="tournament_card" class="section">
+    <section id="tournament_card" class="section-top">
         <div class="custom_container">
             <div class="title pb-5">
                 <h1 class="mostPopular__title__text"> <img src="{{ asset('assets/frontend/img/tournament-icon.png') }}"
