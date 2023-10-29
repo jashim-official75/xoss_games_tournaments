@@ -1,3 +1,98 @@
+
+
+/* referral dasboard */
+.reffaral_dashboard
+{
+  background: #fff;
+  padding: 0 3rem 3rem 3rem;
+  margin-top: 3rem;
+  width: 500px;
+  max-width: 100%;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+}
+.refferal_text h2
+{
+   margin: 2rem 0!important;
+  font-size: clamp(1.6rem, 5vw, 2.5rem) !important;
+  font-weight: 500 !important;
+
+}
+
+.referral_info 
+{
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.referral_card
+{
+  border: 1px solid #3C1E6E;
+  width: 150px;
+  height: auto;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1rem;
+}
+.referral_card h3 
+{
+  font-size: clamp(1.4rem , 5vw , 1.6rem);
+  color: #3C1E6E;
+}
+.referral_card .number 
+{
+  font-size: clamp(1.6rem , 5vw , 2rem);
+  font-weight: 600;
+  color: rgba(61, 30, 110, 0.678);
+}
+/* referral dasboard */
+
+
+
+
+/* profile */
+.contant_body__logo 
+{
+  align-items: center;
+  text-align: center;
+}
+.imgUpload 
+{
+  position: relative;
+}
+.upload_icon 
+{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 80%;
+  padding: 1rem 0;
+  background: rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transform:  translateX(-50%) scale(0.6);
+  margin: 0 auto;
+  border-radius:50px ;
+}
+.contant_body__logo:hover  .upload_icon i 
+{
+  color: #fff;
+}
+.upload_icon i 
+{
+  font-size: 3rem;
+  color: #fff8;
+}
+/* profile */
+
+
+
+
+
+
+
 /* referral page */
 /* referral page */
 #referr_header
@@ -240,6 +335,10 @@
   z-index: 20000000;
   color: #fff;
   border-left: 2px solid #fff4;
+}
+.sidebar::-webkit-scrollbar
+{
+  width: 0 !important
 }
 .close_icon 
 {
@@ -1972,7 +2071,7 @@ body {
   padding:0 0 5rem;
 }
 .section {
-  padding: 5rem 0;
+  padding: 8rem 0;
 }
 /* JUMP */
 button a {
@@ -4464,24 +4563,24 @@ box-shadow: 0px 6px 15px rgba(60, 30, 110, 0.12);
 
 
 .containerBody {
-  min-height: 600px;
+  min-height: 100vh;
   width: 100%;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   background-color: #fff;
   border-radius: 15px;
+  padding-top: 8rem;
 }
 .containerBody #contant_body {
   margin-top: 50px;
   margin-bottom: 50px;
 }
 .containerBody .contant_body_profile {
-  height: 800px;
+  height: 100vh;
   width: 341px;
   background-color: transparent;
-  margin: auto;
-  margin-top: 25px;
+  margin: 8rem auto 0;
 }
 .containerBody .contant_body_profile .contant_body__logo {
   margin: auto;
@@ -4492,6 +4591,8 @@ box-shadow: 0px 6px 15px rgba(60, 30, 110, 0.12);
   margin: auto;
   display: block;
   object-fit: cover;
+  box-shadow: 0 0 0 8px rgba(61, 30, 110, 0.3);
+  border: 5px solid #fff;
 }
 .containerBody .contant_body_profile .contant_body__logo span {
   font-family: "Roboto", sans-serif;

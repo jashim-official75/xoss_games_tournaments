@@ -75,6 +75,32 @@
                             alt="" /></a>
 
                 </div>
+                <div class="reffaral_dashboard">
+                    <div class="referral_header">
+                        <div class="refferal_text">
+                            <h2>Referral Dashboard</h2>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="referral_info">
+                        <div class="total_registered referral_card">
+                            <h3>Registered</h3>
+                            <span class="number">0</span>
+                        </div>
+                        <div class="total_purchased referral_card">
+                            <h3>Purchased</h3>
+                            <span class="number">0</span>
+                        </div>
+                    </div>
+                    <div class="rewards">
+                        {{-- <h2>Rewards</h2> --}}
+                    </div>
+                    <div class="rewardcard">
+                        <div class="reaward_box">
+
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

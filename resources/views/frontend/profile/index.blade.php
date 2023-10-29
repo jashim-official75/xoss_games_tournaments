@@ -10,15 +10,19 @@
                 @csrf
                 <div class="contant_body__logo">
                     <input type="file" id="imageUpload" style="display: none" name="profile_pic" />
-                    <span>Profile</span>
-                    <label for="imageUpload" class="d-block">
+                    <label for="imageUpload" id="profile_img">
+                     <div class="imgUpload">
                         @if ($user->profile_pic)
-                            <img class="login_logo" src="{{ asset('uploads/User/Profile/' . $user->profile_pic) }}"
-                                alt="" style="border-radius: 50%;">
-                        @else
-                            <img class="login_logo" src="{{ asset('assets/frontend/img/profile_logo.png') }}"
-                                alt="">
-                        @endif
+                        <img class="login_logo" src="{{ asset('uploads/User/Profile/' . $user->profile_pic) }}"
+                            alt="" style="border-radius: 50%;">
+                    @else
+                        <img class="login_logo" src="{{ asset('assets/frontend/img/profile_logo.png') }}"
+                            alt="">
+                    @endif
+                    <div class="upload_icon">
+                        <i class="fa-solid fa-camera"></i>
+                    </div>
+                     </div>
                     </label>
                     @if ($user->name)
                         <p>{{ $user->name }} </p>
