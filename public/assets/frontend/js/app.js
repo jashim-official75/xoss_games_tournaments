@@ -89,11 +89,11 @@ function toggleAccordion() {
 items.forEach((item) => item.addEventListener("click", toggleAccordion));
 
 
-$(document).ready(function () {
-  $("#toggle_password").click(function () {
-    $("#password_change").slideToggle("fast");
-  });
-});
+// $(document).ready(function () {
+//   $("#toggle_password").click(function () {
+//     $("#password_change").slideToggle("fast");
+//   });
+// });
 
 const togglePassword = document.querySelectorAll(".toggle-password");
 

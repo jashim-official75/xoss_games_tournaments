@@ -15,13 +15,15 @@
                 <label for="number">Phone Number</label>
                 
                 <input type="number" placeholder="Phone Number" name="phone_num" />
-                <span class="text-danger">*must be a Grammen Phone Number</span>
+                {{-- <span class="text-danger">*must be a Grammen Phone Number</span> --}}
                 @error('phone_num')
                     <span class="text-danger">{{ $message }}</span>
                 @enderror
-
-                <label for="password">Password</label>
-                <input type="password" placeholder="Password" name="password" />
+                <label for="passwordField">Password</label>
+                <div class="inputBox">
+                    <input type="password" placeholder="Password"  id="password" name="password">
+                      <i class="fas fa-eye-slash toggle-password" data-target="#password"></i>
+                </div>
 
                 @error('password')
                     <span class="text-danger">{{ $message }}</span>

@@ -19,14 +19,20 @@
                 @enderror
 
                 <label for="password">Password</label>
-                <input type="password" placeholder="" name="password" />
+                <div class="inputBox">
+                    <input type="password" placeholder="Password"  id="password" name="password">
+                      <i class="fas fa-eye-slash toggle-password" data-target="#password"></i>
+                </div>
 
                 @error('password')
                     <span class="text-danger">{{ $message }}</span>
                 @enderror
 
                 <label for="password_confirmation">Confirm Password</label>
-                <input type="password" placeholder="" name="password_confirmation" />
+                <div class="inputBox">
+                    <input type="password" placeholder="Confirm Password"  id="c_password" name="password_confirmation">
+                      <i class="fas fa-eye-slash toggle-password" data-target="#c_password"></i>
+                </div>
 
                 <button type="submit">Sign Up</button>
                 <div class="account_policy">

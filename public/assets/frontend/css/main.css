@@ -1,6 +1,4 @@
 /* referral page */
-
-
 /* referral page */
 #referr_header
 {
@@ -10,6 +8,10 @@
   background: #F8F8F8;
   display: flex;
   /* align-items: center; */
+  padding-top: 10rem;
+}
+.common_padding 
+{
   padding-top: 10rem;
 }
 .color_shape 
@@ -68,6 +70,7 @@
 .inputbx label {
   display: block;
   font-size: 2rem;
+  margin: 1rem 0;
 }
 .other_option 
 {
@@ -491,28 +494,31 @@ font-size: 1.6rem;
 #login_page {
   position: relative;
   width: 100%;
-  height: 80vh;
+  height: 100vh;
   min-height: 400px;
   max-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 10rem;
   text-align: center;
+  /* padding: 11rem 0; */
 }
 #login_page form 
 {
-  width: 400px;
-  max-width: 400px;
+  width: 500px;
+  max-width: 500px;
   padding: 1rem;
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
 }
 #login_page form  label {
-  margin-bottom: .5rem;
+  margin: .8rem 0;
   text-align: left;
   display: block;
   font-size: 1.6rem;
   color: #000;
+  display: none;
 }
 .login_body__logo 
 {
@@ -529,6 +535,7 @@ font-size: 1.6rem;
   border-radius: 5px;
   font-size: 1.6rem;
   transition: opacity 1s ease;
+
 }
 #login_page input:focus::placeholder 
 {
@@ -537,10 +544,9 @@ font-size: 1.6rem;
 #login_page form button 
 {
   background: #3C1E6E;
-  font-size: 2rem;
+  font-size: 1.6rem;
   padding: 1rem;
-  width: 100%;
-  margin-top: 2rem;
+  width: 150px;
   font-weight: 500;
   color: #fff;
   border: 0;
@@ -550,6 +556,7 @@ font-size: 1.6rem;
   transition: all .3s ease;
   border-radius: 5px;
   letter-spacing: 0.1rem;
+  margin: 2rem 0 0;
 }
 #login_page form button:hover 
 {
@@ -1578,8 +1585,7 @@ main#questions {
 
 .inputBox {
 	position: relative;
-	height: 42px;
-	margin-bottom: 2rem;
+  margin-top: 1.2rem;
 }
 .toggle-password {
   position: absolute;
@@ -1704,7 +1710,7 @@ main#questions {
 .support-customer 
 {
   display: flex;
-  height: 800px;
+  height: 700px;
   align-items: center;
 }
 #support_contact {
@@ -1837,11 +1843,11 @@ margin-top: 2rem;
   text-align: center;
   margin-top: 1rem;
 }
-.verify_number
-{
+.verify_number {
   width: 100%;
-  height: 600px;
+  height: 100vh;
   display: flex;
+  min-height: 800px;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -4139,6 +4145,7 @@ box-shadow: 0px 6px 15px rgba(60, 30, 110, 0.12);
   display: flex !important;
   align-items: center;
   margin-top: 1rem;
+  justify-content: center;
 }
 .account_policy span {
   font-size: 1.6rem;
@@ -5294,6 +5301,13 @@ main#questions {
   .tournament_card .card_img  .cover_img {
     height: 200px;
 }
+#header 
+{
+  height: 60px;
+}
+.navbar {
+  transform: scale(0.9);
+}
 .card_body .play_now-btn .primary_btn {
   width: 130px;
   font-size: 1.2rem;
@@ -5309,6 +5323,11 @@ main#questions {
 }
 .tournament_card .date {
   font-size: 1.4rem;
+}
+.support-customer {
+  display: flex;
+  height: 500px;
+  align-items: center;
 }
 }
 @media only screen and (max-width:1280px)
@@ -5368,6 +5387,25 @@ main#questions {
   }
  .card_body {
     padding: 1rem 2rem 2rem;
+}
+.support-customer img {
+  display: none;
+}
+.support_text {
+  padding-top: 16rem;
+  text-align: center;
+}
+.support-customer {
+  height: 350px;
+}
+#support_contact {
+  padding: 3rem 0;
+  font-size: 1.6rem;
+}
+.support_contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .slider_content {
   width: 90%;
