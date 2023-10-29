@@ -36,15 +36,13 @@
             <div class="refferBox">
                 <div class="innerBox">
                     <h2>Refer a friend and Earn <span>Rewards!</span></h2>
+                    <h5>Your Refer Code : <span>{{ $user->referr_code }}</span></h5>
 
                     <div class="inputbx">
                         <label for="inputBox">Referral Link</label>
                         <span>Use the link below to refer your friends</span>
                         <div class="referral_input">
                             <input type="text" name="" value="{{ $refer_url }}" id="inputBox" readonly>
-                            {{-- <label for="refer_code">Refer Code</label>
-                            <input type="text" placeholder="Enter Referr Code" {{ $referr_code ? 'readonly' : '' }}
-                                name="refer_code" value="{{ $referr_code }}" /> --}}
                             <!-- <input type="button" value="copy" id="btn"> -->
                             <button type="button" id="btn">Copy Link</button>
                         </div>
@@ -85,7 +83,7 @@
                     <div class="referral_info">
                         <div class="total_registered referral_card">
                             <h3>Registered</h3>
-                            <span class="number">0</span>
+                            <span class="number">{{ $total_register }}</span>
                         </div>
                         <div class="total_purchased referral_card">
                             <h3>Purchased</h3>
