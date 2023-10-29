@@ -9,17 +9,17 @@
             <form action="{{ route('user.profile.update', $user->id) }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="contant_body__logo">
-                    <input type="file" id="imageUpload" style="display: none" name="profile_pic" />
+                    <input type="file" id="imageUpload" style="display: none" name="profile_pic"  onchange="document.getElementById('imageshow').src = window.URL.createObjectURL(this.files[0])" />
                     <label for="imageUpload" id="profile_img">
                      <div class="imgUpload">
                         @if ($user->profile_pic)
                         <img class="login_logo" src="{{ asset('uploads/User/Profile/' . $user->profile_pic) }}"
-                            alt="" style="border-radius: 50%;">
+                            alt="" style="border-radius: 50%;" id="imageshow">
                     @else
                         <img class="login_logo" src="{{ asset('assets/frontend/img/profile_logo.png') }}"
-                            alt="">
+                            alt="" />
                     @endif
-                    <div class="upload_icon">
+                    <div class="upload_icon" id="upload">
                         <i class="fa-solid fa-camera"></i>
                     </div>
                      </div>

@@ -90,69 +90,80 @@
                 <div class="top_scorer">
                     @if ($second_score)
                         <div class="rank-02 rank-card">
-                            <div class="rank_badge">
-                                <span class="rank_number">02</span>
-                            </div>
                             <div class="user_profile">
                                 <a href="#">
+                                 <div class="profile_part">
                                     @if ($second_score->SubUser->profile_pic)
-                                        <img src="{{ asset('uploads/User/Profile/' . $second_score->SubUser->profile_pic) }}"
-                                            alt="shohel" >
-                                    @else
-                                        <img src="{{ asset('dummy.png') }}" alt="xoss-games">
-                                    @endif
+                                    <img src="{{ asset('uploads/User/Profile/' . $second_score->SubUser->profile_pic) }}"
+                                        alt="shohel" class="user_pic" >
+                                @else
+                                    <img src="{{ asset('dummy.png') }}" alt="xoss-games">
+                                @endif
+                                <div class="rank_image">
+                                    <img src="{{ asset('assets/frontend/img/silver.png') }}" alt=""  class="badge_img"/>
+                                  </div>
+                                 </div>
                                 </a>
                                 <div class="user_info">
                                     <a href="#">{{ $second_score->SubUser->name ?? 'Jon Doe' }}</a>
-                                    <div class="points">{{ $second_score->score }} <span>PTs</span></div>
+                                    <div class="points"> <b>{{ $second_score->score }}</b> <sub>Points</sub></div>
                                 </div>
+
                             </div>
+                       
                         </div>
                     @endif
 
                     @if ($fist_score)
-                        <div class="rank-01 rank-card">
-
-                            <img src="https://i.ibb.co/pW8fFsT/icons8-crown-94.png" alt="icons8-crown-94" class="crown_badge">
-                            <div class="user_profile">
-
-                                <a href="#">
-                                    @if ($fist_score->SubUser->profile_pic)
-                                        <img src="{{ asset('uploads/User/Profile/' . $fist_score->SubUser->profile_pic) }}"
-                                            alt="shohel">
-                                    @else
-                                        <img src="{{ asset('dummy.png') }}" alt="xoss-games">
-                                    @endif
-                                </a>
-                                <div class="user_info">
-                                    <a href="#">{{ $fist_score->SubUser->name ?? 'Jon Doe' }}</a>
-                                    <div class="points">{{ $fist_score->score }} <span>PTs</span></div>
-                                </div>
+                    <div class="rank-01 rank-card">
+                        <div class="user_profile">
+                            <a href="#">
+                             <div class="profile_part">
+                                @if ($second_score->SubUser->profile_pic)
+                                <img src="{{ asset('uploads/User/Profile/' . $second_score->SubUser->profile_pic) }}"
+                                    alt="shohel" class="user_pic" >
+                            @else
+                                <img src="{{ asset('dummy.png') }}" alt="xoss-games">
+                            @endif
+                            <div class="rank_image">
+                                <img src="{{ asset('assets/frontend/img/gold.png') }}" alt=""  class="badge_img" />
+                              </div>
+                             </div>
+                            </a>
+                            <div class="user_info">
+                                <a href="#">{{ $second_score->SubUser->name ?? 'Jon Doe' }}</a>
+                                <div class="points"> <b>{{ $second_score->score }}</b> <sub>Points</sub></div>
                             </div>
 
                         </div>
+                   
+                    </div>
                     @endif
 
                     @if ($third_score)
-                        <div class="rank-03 rank-card">
-                            <div class="rank_badge">
-                                <span class="rank_number">03</span>
+                    <div class="rank-03 rank-card">
+                        <div class="user_profile">
+                            <a href="#">
+                             <div class="profile_part">
+                                @if ($second_score->SubUser->profile_pic)
+                                <img src="{{ asset('uploads/User/Profile/' . $second_score->SubUser->profile_pic) }}"
+                                    alt="shohel" class="user_pic" >
+                            @else
+                                <img src="{{ asset('dummy.png') }}" alt="xoss-games">
+                            @endif
+                            <div class="rank_image">
+                                <img src="{{ asset('assets/frontend/img/bronge.png') }}" alt=""  class="badge_img" />
+                              </div>
+                             </div>
+                            </a>
+                            <div class="user_info">
+                                <a href="#">{{ $second_score->SubUser->name ?? 'Jon Doe' }}</a>
+                                <div class="points"> <b>{{ $second_score->score }}</b> <sub>Points</sub></div>
                             </div>
-                            <div class="user_profile">
-                                <a href="#">
-                                    @if ($third_score->SubUser->profile_pic)
-                                        <img src="{{ asset('uploads/User/Profile/' . $third_score->SubUser->profile_pic) }}"
-                                            alt="xoss-games">
-                                    @else
-                                        <img src="{{ asset('dummy.png') }}" alt="xoss-games">
-                                    @endif
-                                </a>
-                                <div class="user_info">
-                                    <a href="#">{{ $third_score->SubUser->name ?? 'Jon Doe' }}</a>
-                                    <div class="points">{{ $third_score->score }} <span>PTs</span></div>
-                                </div>
-                            </div>
+
                         </div>
+                   
+                    </div>
                     @endif
 
                 </div>
@@ -160,11 +171,14 @@
                     <div id="top_10">
                         <h2 class="rank_title">Your Rank</h2>
                         <div class="top_card">
-                            <div class="rank_badge">
-                                <span class="rank_number">{{ $myIndex }}</span>
-                            </div>
+                            
                             <div class="column">
+                               
                                 <div class="top_card-user">
+                                 <div class="ranking">
+                                    <div class="rank_badge">
+                                        <span class="rank_number">{{ $myIndex }}</span>
+                                    </div>
                                     <div class="profile_img">
                                         @if ($my_score_details->SubUser->profile_pic)
                                             <img src="{{ asset('uploads/User/Profile/' . $my_score_details->SubUser->profile_pic) }}"
@@ -176,8 +190,9 @@
                                             <a href="#">{{ $my_score_details->SubUser->name ?? 'Jon Doe' }}</a>
                                         </div>
                                     </div>
+                                 </div>
                                     <div class="user_highscore">
-                                        <div class="points">{{ $myScore }} <span>PTs</span></div>
+                                        <div class="points">{{ $myScore }}<span>Points</span></div>
                                     </div>
                                 </div>
                             </div>
@@ -207,7 +222,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="user_highscore">
-                                                    <div class="points">{{ $gamescore->score }} <span>PTs</span></div>
+                                                    <div class="points">{{ $gamescore->score }} <sub>Points</sub></div>
                                                 </div>
                                             </div>
                                         </div>
