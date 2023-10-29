@@ -10281,7 +10281,7 @@ DST Off\">2023-10-13 00:00:00.0 Asia/Dhaka (+06:00)</span>
 #56 D:\\laragon\\www\\xoss_games_tournaments\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #57 {main}
 "} 
-<<<<<<< HEAD
+<<<<<<<<< Temporary merge branch 1
 [2023-10-29 11:55:31] local.ERROR: Attempt to read property "id" on null {"userId":1,"exception":"[object] (ErrorException(code: 0): Attempt to read property \"id\" on null at C:\\laragon\\www\\tournament_xoss_games\\app\\Http\\Controllers\\Frontend\\ReferrController.php:14)
 [stacktrace]
 #0 C:\\laragon\\www\\tournament_xoss_games\\app\\Http\\Controllers\\Frontend\\ReferrController.php(14): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'Attempt to read...', 'C:\\\\laragon\\\\www\\\\...', 14)
@@ -10593,7 +10593,7 @@ DST Off\">2023-10-13 00:00:00.0 Asia/Dhaka (+06:00)</span>
 #46 C:\\laragon\\www\\tournament_xoss_games\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #47 C:\\laragon\\www\\tournament_xoss_games\\server.php(21): require_once('C:\\\\laragon\\\\www\\\\...')
 #48 {main}
-=======
+=========
 [2023-10-29 13:57:24] local.ERROR: Command "ser\" is not defined. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"ser\\\" is not defined. at D:\\laragon\\www\\xoss_games_tournaments\\vendor\\symfony\\console\\Application.php:720)
 [stacktrace]
 #0 D:\\laragon\\www\\xoss_games_tournaments\\vendor\\symfony\\console\\Application.php(259): Symfony\\Component\\Console\\Application->find('ser\\\\')
@@ -10848,5 +10848,5 @@ DST Off\">2023-10-13 00:00:00.0 Asia/Dhaka (+06:00)</span>
 #65 D:\\laragon\\www\\xoss_games_tournaments\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #66 D:\\laragon\\www\\xoss_games_tournaments\\server.php(21): require_once('D:\\\\laragon\\\\www\\\\...')
 #67 {main}
->>>>>>> 172452036d6171072cbe1fca8bbcb88bac68f452
+>>>>>>>>> Temporary merge branch 2
 "} 
