@@ -4,9 +4,9 @@
 @endsection
 
 @section('content')
-    <div class="containerBody section">
+    <div class="containerBody ">
         <!-- --------------------------TOURNAMENT CARD START ------------------------ -->
-        <section id="tournament_card">
+        <section id="tournament_card" class="section">
             <div class="container">
                 <div class="title pb-5">
                     <h1 class="mostPopular__title__text"> <img src="{{ asset('assets/frontend/img/tournament-icon.png') }}"
@@ -20,7 +20,7 @@
                         <div class="bar"></div>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row justify-content-center">
                     @forelse ($games as $game)
                         <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-12 mb-3 ">
                             <div class="tournament_card">

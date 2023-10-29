@@ -1,4 +1,58 @@
 
+
+/* referral dasboard */
+.reffaral_dashboard
+{
+  background: #fff;
+  padding: 0 3rem 3rem 3rem;
+  margin-top: 3rem;
+  width: 500px;
+  max-width: 100%;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+}
+.refferal_text h2
+{
+   margin: 2rem 0!important;
+  font-size: clamp(1.6rem, 5vw, 2.5rem) !important;
+  font-weight: 500 !important;
+
+}
+
+.referral_info 
+{
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.referral_card
+{
+  border: 1px solid #3C1E6E;
+  width: 150px;
+  height: auto;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1rem;
+}
+.referral_card h3 
+{
+  font-size: clamp(1.4rem , 5vw , 1.6rem);
+  color: #3C1E6E;
+}
+.referral_card .number 
+{
+  font-size: clamp(1.6rem , 5vw , 2rem);
+  font-weight: 600;
+  color: rgba(61, 30, 110, 0.678);
+}
+/* referral dasboard */
+
+
+
+
 /* profile */
 .contant_body__logo 
 {
@@ -2017,7 +2071,7 @@ body {
   padding:0 0 5rem;
 }
 .section {
-  padding: 5rem 0;
+  padding: 8rem 0;
 }
 /* JUMP */
 button a {
