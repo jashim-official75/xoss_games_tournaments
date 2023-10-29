@@ -7,6 +7,7 @@ use App\Models\Subscriber;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 
 class SignUpController extends Controller
 {
@@ -18,9 +19,10 @@ class SignUpController extends Controller
     }
 
     //---index
-    public function index()
+    public function index(Request $request)
     {
-        return view('frontend.auth.signup');
+        $referr_code = $request->reffer_id;
+        return view('frontend.auth.signup', compact('referr_code'));
     }
 
     //---index
@@ -41,12 +43,14 @@ class SignUpController extends Controller
         }else{
             $phone_num = $request->phone_num;
         }
-
+        $referr_code = Str::random(4);
+        // return $referr_code;
         $subscriber = Subscriber::create([
             'phone_num'=>$phone_num,
             'password'=>Hash::make($request->password),
             'device_ip'=>$ip,
             'country'=>$country,
+            'referr_code'=>$referr_code,
         ]);
 
         if($subscriber){
