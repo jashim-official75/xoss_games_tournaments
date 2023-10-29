@@ -12,7 +12,7 @@ class ReferrController extends Controller
     public function referr()
     {
         $user = Subscriber::where('id', auth()->guard('subscriber')->user()->id)->first();
-        $refer_url = route('user.sign_up').'?reffer_id='.$user->referr_code;
+        $refer_url = route('user.sign_up').'?referr_id='.$user->referr_code;
         return view('frontend.pages.referr', compact('user', 'refer_url'));
     }
 }

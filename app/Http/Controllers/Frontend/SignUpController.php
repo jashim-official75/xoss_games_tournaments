@@ -21,13 +21,18 @@ class SignUpController extends Controller
     //---index
     public function index(Request $request)
     {
-        $referr_code = $request->reffer_id;
+        $referr_code = $request->referr_id;
         return view('frontend.auth.signup', compact('referr_code'));
     }
 
     //---index
     public function store(Request $request)
     {
+        $get_referr = Null;
+        $subscriber_check = Subscriber::where('referr_code', $request->refer_code)->first();
+        if($subscriber_check){
+            $get_referr =  $request->refer_code;
+        }
         $ip = $request->ip();
         $geoinfo = geoip()->getLocation($ip);
         $country = $geoinfo->country;
@@ -51,6 +56,7 @@ class SignUpController extends Controller
             'device_ip'=>$ip,
             'country'=>$country,
             'referr_code'=>$referr_code,
+            'get_referr'=>$get_referr,
         ]);
 
         if($subscriber){
