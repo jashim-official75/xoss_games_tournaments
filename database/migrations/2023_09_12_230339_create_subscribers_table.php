@@ -21,6 +21,7 @@ class CreateSubscribersTable extends Migration
             $table->char('password')->nullable();
             $table->string('device_ip')->nullable();
             $table->string('country')->nullable();
+            $table->string('referr_code')->nullable();
             $table->timestamps();
         });
     }
