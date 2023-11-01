@@ -81,6 +81,7 @@
 .prizes_slider .slick-dots
 {
    bottom: -10px;
+   left: 0;
 }
 .prize_item 
 {
