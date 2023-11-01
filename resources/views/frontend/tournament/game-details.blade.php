@@ -65,14 +65,11 @@
                         </div>
                     @endif
                     <div class="prizes mt-5">
-
                         <a href="#" class="primary_btn leaderborad_btn"><i class="fa-solid fa-trophy"></i>
                             <span>Price</span></a>
                         <a href="#" class="primary_btn howtoplayBtn"><span>How to Play</span> <i
                                 class="fa-solid fa-circle-info"></i></a>
-
                     </div>
-
                 </div>
                 <div class="gamePlaybtn">
                     @if ($subscriber == 1)
@@ -116,9 +113,7 @@
                                     <a href="#">{{ $second_score->SubUser->name ?? 'Jon Doe' }}</a>
                                     <div class="points"> <b>{{ $second_score->score }}</b> <sub>Points</sub></div>
                                 </div>
-
                             </div>
-                       
                         </div>
                     @endif
 
@@ -142,9 +137,7 @@
                                 <a href="#">{{ $second_score->SubUser->name ?? 'Jon Doe' }}</a>
                                 <div class="points"> <b>{{ $second_score->score }}</b> <sub>Points</sub></div>
                             </div>
-
                         </div>
-                   
                     </div>
                     @endif
 
@@ -168,9 +161,7 @@
                                 <a href="#">{{ $second_score->SubUser->name ?? 'Jon Doe' }}</a>
                                 <div class="points"> <b>{{ $second_score->score }}</b> <sub>Points</sub></div>
                             </div>
-
                         </div>
-                   
                     </div>
                     @endif
 
@@ -179,9 +170,7 @@
                     <div id="top_10">
                         <h2 class="rank_title">Your Rank</h2>
                         <div class="top_card">
-                            
                             <div class="column">
-                               
                                 <div class="top_card-user">
                                  <div class="ranking">
                                     <div class="rank_badge">
