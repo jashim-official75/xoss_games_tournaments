@@ -21,6 +21,14 @@ $(".prizes_slider").slick({
       },
     },
     {
+      breakpoint: 1367,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        infinite: true,
+      },
+    },
+    {
       breakpoint: 1024,
       settings: {
         slidesToShow: 3,

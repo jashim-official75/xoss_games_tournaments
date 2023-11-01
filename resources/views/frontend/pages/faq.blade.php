@@ -16,7 +16,7 @@
     <div class="container">
         <div class="title pb-5">
             <h1 class="mostPopular__title__text"> <img src="{{ asset('assets/frontend/img/tournament-icon.png') }}"
-                    alt=""> FAQ for Xoss Games Tournament</h1>
+                    alt=""> FAQ for Tournament</h1>
             <p class="subheading_common">Clash of Champions Battle for Supremacy in the Ultimate Tournament of Feature
                 Games!</p>
             <div class="title_bar">
