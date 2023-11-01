@@ -108,8 +108,8 @@
 }
 .prize_badge img 
 {
-  width: 70px !important;
-  height: 70px !important;
+  width: 80px !important;
+  height: 80px !important;
   margin: 0 !important;
 }
 .prize_item:last-child 
@@ -861,7 +861,7 @@ font-size: 1.6rem;
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease-in-out;
-  background-color: rgba(60, 5, 133, 0.848);
+  background-color: #fff;
   backdrop-filter: blur(1rem);
 }
 #howtoplayModal h1 
@@ -869,7 +869,7 @@ font-size: 1.6rem;
   font-size: clamp(2rem , 5vw ,5rem);
   padding: 3rem 0;
   border-bottom: 1px solid rgba(255,255,255,0.1);
-  color: #fff;
+  color: #000;
   
 }
 #howtoplayModal ol 
@@ -887,7 +887,7 @@ font-size: 1.6rem;
 #howtoplayModal ol li
 { 
   font-size: 1.6rem;
-  color: #fff;
+  color: #222;
   padding: 1rem;
   border-bottom: 1px solid rgba(255,255,255,0.1);
 }
