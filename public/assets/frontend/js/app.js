@@ -3,7 +3,7 @@
 $(".prizes_slider").slick({
   infinite: true,
   speed: 500,
-  slidesToShow: 7,
+  slidesToShow: 6,
   slidesToScroll: 2,
   autoplay: true,
   autoplaySpeed: 1500,
