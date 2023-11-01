@@ -1,13 +1,13 @@
 @extends('frontend.layouts.web')
 @section('frontend_header')
-<title>Xoss Games | Tournaments</title>
+    <title>Xoss Games | Tournaments</title>
 @endsection
 
 @section('content')
     <section id="tournament_deatils">
         <div class="tournament_singlebanner">
-            <a href="#"><img src="{{ asset('assets/frontend/img/cricket-game-details-tournament.webp') }}" alt="napzone-hero-bg-1"
-                    class="game_details-banner"></a>
+            <a href="#"><img src="{{ asset('assets/frontend/img/cricket-game-details-tournament.webp') }}"
+                    alt="napzone-hero-bg-1" class="game_details-banner"></a>
             <div class="game_content">
                 <div class="gameImg">
                     <img src="{{ asset('uploads/Tournamant/GameImage/' . $game->image) }}" alt="">
@@ -24,18 +24,18 @@
                             <div class="start-date date"> <span><i class="fa-regular fa-clock"></i> Start Date :
                                 </span><span>
                                     @php
-                                    $stringDate = $game->start_date; // Your string date
-                                           $date = \Carbon\Carbon::parse($stringDate);
-                                          echo $formattedDate = $date->format('j F, Y');
-                               @endphp
+                                        $stringDate = $game->start_date; // Your string date
+                                        $date = \Carbon\Carbon::parse($stringDate);
+                                        echo $formattedDate = $date->format('j F, Y');
+                                    @endphp
                                 </span> </div>
                             <div class="start-date date"> <span><i class="fa-regular fa-clock"></i> End Date :
                                 </span><span>
                                     @php
-                                    $stringDate = $game->end_date; // Your string date
-                                           $date = \Carbon\Carbon::parse($stringDate);
-                                          echo $formattedDate = $date->format('j F, Y');
-                               @endphp
+                                        $stringDate = $game->end_date; // Your string date
+                                        $date = \Carbon\Carbon::parse($stringDate);
+                                        echo $formattedDate = $date->format('j F, Y');
+                                    @endphp
                                 </span> </div>
                         </div>
                     @else
@@ -43,20 +43,20 @@
                             <div class="start-date date"> <span><i class="fa-regular fa-clock"></i> Start Date :
                                 </span><span>
                                     @php
-                                    $stringDate = $game->start_date; // Your string date
-                                           $date = \Carbon\Carbon::parse($stringDate);
-                                          echo $formattedDate = $date->format('j F, Y');
-                               @endphp
+                                        $stringDate = $game->start_date; // Your string date
+                                        $date = \Carbon\Carbon::parse($stringDate);
+                                        echo $formattedDate = $date->format('j F, Y');
+                                    @endphp
                                 </span> </div>
                         </div>
                         <div class="game_date">
                             <div class="start-date date"> <span><i class="fa-regular fa-clock"></i> End Date :
                                 </span><span>
                                     @php
-                                    $stringDate = $game->end_date; // Your string date
-                                           $date = \Carbon\Carbon::parse($stringDate);
-                                          echo $formattedDate = $date->format('j F, Y');
-                               @endphp    
+                                        $stringDate = $game->end_date; // Your string date
+                                        $date = \Carbon\Carbon::parse($stringDate);
+                                        echo $formattedDate = $date->format('j F, Y');
+                                    @endphp
                                 </span> </div>
                         </div>
                         <div class="entry_cost">
@@ -97,17 +97,18 @@
                         <div class="rank-02 rank-card">
                             <div class="user_profile">
                                 <a href="#">
-                                 <div class="profile_part">
-                                    @if ($second_score->SubUser->profile_pic)
-                                    <img src="{{ asset('uploads/User/Profile/' . $second_score->SubUser->profile_pic) }}"
-                                        alt="shohel" class="user_pic" >
-                                @else
-                                    <img src="{{ asset('dummy.png') }}" alt="xoss-games">
-                                @endif
-                                <div class="rank_image">
-                                    <img src="{{ asset('assets/frontend/img/silver.png') }}" alt=""  class="badge_img"/>
-                                  </div>
-                                 </div>
+                                    <div class="profile_part">
+                                        @if ($second_score->SubUser->profile_pic)
+                                            <img src="{{ asset('uploads/User/Profile/' . $second_score->SubUser->profile_pic) }}"
+                                                alt="shohel" class="user_pic">
+                                        @else
+                                            <img src="{{ asset('dummy.png') }}" alt="xoss-games">
+                                        @endif
+                                        <div class="rank_image">
+                                            <img src="{{ asset('assets/frontend/img/silver.png') }}" alt=""
+                                                class="badge_img" />
+                                        </div>
+                                    </div>
                                 </a>
                                 <div class="user_info">
                                     <a href="#">{{ $second_score->SubUser->name ?? 'Jon Doe' }}</a>
@@ -118,51 +119,55 @@
                     @endif
 
                     @if ($fist_score)
-                    <div class="rank-01 rank-card">
-                        <div class="user_profile">
-                            <a href="#">
-                             <div class="profile_part">
-                                @if ($second_score->SubUser->profile_pic)
-                                <img src="{{ asset('uploads/User/Profile/' . $second_score->SubUser->profile_pic) }}"
-                                    alt="shohel" class="user_pic" >
-                            @else
-                                <img src="{{ asset('dummy.png') }}" alt="xoss-games">
-                            @endif
-                            <div class="rank_image">
-                                <img src="{{ asset('assets/frontend/img/gold.png') }}" alt=""  class="badge_img" />
-                              </div>
-                             </div>
-                            </a>
-                            <div class="user_info">
-                                <a href="#">{{ $second_score->SubUser->name ?? 'Jon Doe' }}</a>
-                                <div class="points"> <b>{{ $second_score->score }}</b> <sub>Points</sub></div>
+                        <div class="rank-01 rank-card">
+                            <div class="user_profile">
+                                <a href="#">
+                                    <div class="profile_part">
+                                        @if ($fist_score->SubUser->profile_pic)
+                                            <img src="{{ asset('uploads/User/Profile/' . $fist_score->SubUser->profile_pic) }}"
+                                                alt="shohel" class="user_pic">
+                                        @else
+                                            <img src="{{ asset('dummy.png') }}" alt="xoss-games">
+                                        @endif
+                                        <div class="rank_image">
+                                            <img src="{{ asset('assets/frontend/img/gold.png') }}" alt=""
+                                                class="badge_img" />
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="user_info">
+                                    <a href="#">{{ $fist_score->SubUser->name ?? 'Jon Doe' }}</a>
+                                    <div class="points"> <b>{{ $fist_score->score }}</b> <sub>Points</sub></div>
+                                </div>
                             </div>
                         </div>
-                    </div>
                     @endif
 
                     @if ($third_score)
-                    <div class="rank-03 rank-card">
-                        <div class="user_profile">
-                            <a href="#">
-                             <div class="profile_part">
-                                @if ($second_score->SubUser->profile_pic)
-                                <img src="{{ asset('uploads/User/Profile/' . $second_score->SubUser->profile_pic) }}"
-                                    alt="shohel" class="user_pic" >
-                            @else
-                                <img src="{{ asset('dummy.png') }}" alt="xoss-games">
-                            @endif
-                            <div class="rank_image">
-                                <img src="{{ asset('assets/frontend/img/bronge.png') }}" alt=""  class="badge_img" />
-                              </div>
-                             </div>
-                            </a>
-                            <div class="user_info">
-                                <a href="#">{{ $second_score->SubUser->name ?? 'Jon Doe' }}</a>
-                                <div class="points"> <b>{{ $second_score->score }}</b> <sub>Points</sub></div>
+                        <div class="rank-03 rank-card">
+                            <div class="user_profile">
+                                <a href="#">
+                                    <div class="profile_part">
+                                        @if ($third_score->SubUser->profile_pic)
+                                            <img src="{{ asset('uploads/User/Profile/' . $third_score->SubUser->profile_pic) }}"
+                                                alt="shohel" class="user_pic">
+                                        @else
+                                            <img src="{{ asset('dummy.png') }}" alt="xoss-games">
+                                        @endif
+                                        <div class="rank_image">
+                                            <img src="{{ asset('assets/frontend/img/bronge.png') }}" alt=""
+                                                class="badge_img" />
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="user_info">
+                                    <a href="#">{{ $third_score->SubUser->name ?? 'Jon Doe' }}</a>
+                                    <div class="points"> <b>{{ $third_score->score }}</b> <sub>Points</sub></div>
+                                </div>
+
                             </div>
+
                         </div>
-                    </div>
                     @endif
 
                 </div>
@@ -170,24 +175,26 @@
                     <div id="top_10">
                         <h2 class="rank_title">Your Rank</h2>
                         <div class="top_card">
+
                             <div class="column">
+
                                 <div class="top_card-user">
-                                 <div class="ranking">
-                                    <div class="rank_badge">
-                                        <span class="rank_number">{{ $myIndex }}</span>
-                                    </div>
-                                    <div class="profile_img">
-                                        @if ($my_score_details->SubUser->profile_pic)
-                                            <img src="{{ asset('uploads/User/Profile/' . $my_score_details->SubUser->profile_pic) }}"
-                                                alt="shohel" border="0">
-                                        @else
-                                            <img src="{{ asset('dummy.png') }}" alt="shohel" border="0">
-                                        @endif
-                                        <div class="user_name">
-                                            <a href="#">{{ $my_score_details->SubUser->name ?? 'Jon Doe' }}</a>
+                                    <div class="ranking">
+                                        <div class="rank_badge">
+                                            <span class="rank_number">{{ $myIndex }}</span>
+                                        </div>
+                                        <div class="profile_img">
+                                            @if ($my_score_details->SubUser->profile_pic)
+                                                <img src="{{ asset('uploads/User/Profile/' . $my_score_details->SubUser->profile_pic) }}"
+                                                    alt="shohel" border="0">
+                                            @else
+                                                <img src="{{ asset('dummy.png') }}" alt="shohel" border="0">
+                                            @endif
+                                            <div class="user_name">
+                                                <a href="#">{{ $my_score_details->SubUser->name ?? 'Jon Doe' }}</a>
+                                            </div>
                                         </div>
                                     </div>
-                                 </div>
                                     <div class="user_highscore">
                                         <div class="points">{{ $myScore }}<span>Points</span></div>
                                     </div>
@@ -228,25 +235,15 @@
 
                             </div>
                         @endif
-
                         {{-- <a href="#" class="glass_btn">View More</a> --}}
                     </div>
                 @endif
-
-
             </div>
-
             </div>
-
         </section>
         <!-- --------------------------LEADERBOARD PART END ------------------------ -->
     @endif
-
-
-
-
     @include('frontend.tournament.modal.price')
-
     @include('frontend.tournament.modal.how-to-play')
 @endsection
 @section('pageJS')
