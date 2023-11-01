@@ -36,4 +36,9 @@ class FrontendController extends Controller
     {
         return view('frontend.pages.support');
     }
+    //--prizes
+    public function prizes()
+    {
+        return view('frontend.pages.prizes');
+    }
 }

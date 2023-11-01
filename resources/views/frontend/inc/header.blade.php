@@ -59,7 +59,8 @@
                 @endif
             </div>
             <h2 class="user_name">{{ auth()->guard('subscriber')->user()->name }}</h2>
-            <p>{{ auth()->guard('subscriber')->user()->phone_num }}</p>
+            <p>Referr Code : 25A5A425</p>
+            <p>Number : {{ auth()->guard('subscriber')->user()->phone_num }}</p>
             <div class="profile_edits">
                 <ul>
                     {{-- <li>

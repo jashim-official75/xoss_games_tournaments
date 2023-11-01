@@ -1,4 +1,60 @@
 
+
+$(".prizes_slider").slick({
+  infinite: true,
+  speed: 500,
+  slidesToShow: 7,
+  slidesToScroll: 2,
+  autoplay: true,
+  autoplaySpeed: 1500,
+  pauseOnHover:true,
+  arrows:false,
+  dots:true,
+  touchMove:true,
+  responsive: [
+    {
+      breakpoint: 1440,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: true,
+      },
+    },
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: true,
+      },
+    },
+    {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        infinite: true,
+      },
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 500,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+  ],
+
+});
+
+
 let prevScrollPos = window.pageYOffset;
 const header = document.getElementById("header");
 
@@ -161,4 +217,7 @@ $(".tournament_slider").slick({
     },
   ],
 });
+
+
+
 
