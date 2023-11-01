@@ -80,7 +80,7 @@
                             Friend</a>
                     </li>
                     <li>
-                        <span><i class="fa-solid fa-gift"></i></span> <a href="#">Prizes</a>
+                        <span><i class="fa-solid fa-gift"></i></span> <a href="{{ route('prizes') }}">Prizes</a>
                     </li>
                     <li>
                         <span><i class="fas fa-sign-out-alt"></i></span> <a

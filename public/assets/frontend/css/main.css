@@ -27,7 +27,7 @@
   flex-direction: column;
   flex-wrap: wrap;
 }
- .prize_card:nth-child(odd)
+ .prize_card:nth-child(even)
 {
   transform: scale(0.8);
 }
@@ -5615,6 +5615,12 @@ main#questions {
   .tournament_card .card_img  .cover_img {
     height: 200px;
 }
+.prizes_box {
+  width: 100px;
+}
+.prizes_slider {
+  padding-left: 10rem;
+}
 #header 
 {
   height: 60px;
@@ -5702,6 +5708,14 @@ main#questions {
  .card_body {
     padding: 1rem 2rem 2rem;
 }
+.prize_card .prizes_img img
+{
+  width: 150px;
+  height: 150px;
+}
+.single_game_prizes .prizes_inner {
+  padding: 4rem 0;
+}
 .support-customer img {
   display: none;
 }
@@ -5777,6 +5791,16 @@ main#questions {
 @media screen and (max-width: 768px) {
   #support_header {
     background-position: 50% 100%;
+}
+.single_game_prizes .prizes_inner {
+  flex-direction: column;
+}
+.prize_card:nth-child(even) {
+  transform: scale(1);
+}
+.prize_card {
+  margin-bottom: 2rem;
+  width: 80%;
 }
 .support_contact ul li a{
   font-size: 1.6rem !important;

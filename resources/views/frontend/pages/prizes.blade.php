@@ -32,6 +32,19 @@
         <div class="single_game_prizes">
             <div class="prizes_inner">
 
+                <div class="prize_card first_prize d-md-none d-flex">
+                    <div class="prizes_position">
+                        <h2>1st Prize</h2>
+                    </div>
+                    <div class="prizes_img">
+                        <img src="{{ asset('assets/frontend/img/prizes/smart-watch.png') }}" alt="">
+                    </div>
+                    <div class="prize_name">
+                        <h3>Smart Watch</h3>
+                    </div>
+
+            </div>
+
                 <div class="prize_card second_prize">
                   
                         <div class="prizes_position">
@@ -46,7 +59,7 @@
               
                 </div>
 
-                <div class="prize_card first_prize">
+                <div class="prize_card first_prize d-md-flex d-none">
                         <div class="prizes_position">
                             <h2>1st Prize</h2>
                         </div>
@@ -58,6 +71,7 @@
                         </div>
 
                 </div>
+
 
                 <div class="prize_card third_prize">
                         <div class="prizes_position">
