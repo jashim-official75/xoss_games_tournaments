@@ -102,7 +102,7 @@
                                             <img src="{{ asset('uploads/User/Profile/' . $second_score->SubUser->profile_pic) }}"
                                                 alt="shohel" class="user_pic">
                                         @else
-                                            <img src="{{ asset('dummy.png') }}" alt="xoss-games">
+                                            <img src="{{ asset('dummy.png') }}" class="user_pic" alt="xoss-games">
                                         @endif
                                         <div class="rank_image">
                                             <img src="{{ asset('assets/frontend/img/silver.png') }}" alt=""
@@ -127,7 +127,7 @@
                                             <img src="{{ asset('uploads/User/Profile/' . $fist_score->SubUser->profile_pic) }}"
                                                 alt="shohel" class="user_pic">
                                         @else
-                                            <img src="{{ asset('dummy.png') }}" alt="xoss-games">
+                                            <img src="{{ asset('dummy.png') }}" class="user_pic" alt="xoss-games">
                                         @endif
                                         <div class="rank_image">
                                             <img src="{{ asset('assets/frontend/img/gold.png') }}" alt=""
@@ -152,7 +152,7 @@
                                             <img src="{{ asset('uploads/User/Profile/' . $third_score->SubUser->profile_pic) }}"
                                                 alt="shohel" class="user_pic">
                                         @else
-                                            <img src="{{ asset('dummy.png') }}" alt="xoss-games">
+                                            <img src="{{ asset('dummy.png') }}" class="user_pic" alt="xoss-games">
                                         @endif
                                         <div class="rank_image">
                                             <img src="{{ asset('assets/frontend/img/bronge.png') }}" alt=""
@@ -188,7 +188,7 @@
                                                 <img src="{{ asset('uploads/User/Profile/' . $my_score_details->SubUser->profile_pic) }}"
                                                     alt="shohel" border="0">
                                             @else
-                                                <img src="{{ asset('dummy.png') }}" alt="shohel" border="0">
+                                                <img src="{{ asset('dummy.png') }}" class="user_pic" alt="shohel" border="0">
                                             @endif
                                             <div class="user_name">
                                                 <a href="#">{{ $my_score_details->SubUser->name ?? 'Jon Doe' }}</a>
@@ -218,7 +218,7 @@
                                                         <img src="{{ asset('uploads/User/Profile/' . $gamescore->SubUser->profile_pic) }}"
                                                             alt="shohel" border="0">
                                                     @else
-                                                        <img src="{{ asset('dummy.png') }}" alt="shohel"
+                                                        <img src="{{ asset('dummy.png') }}" class="user_pic" alt="shohel"
                                                             border="0">
                                                     @endif
                                                     <div class="user_name">

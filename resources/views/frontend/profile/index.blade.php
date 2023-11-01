@@ -17,7 +17,7 @@
                             alt="" style="border-radius: 50%;" id="imageshow">
                     @else
                         <img class="login_logo" src="{{ asset('assets/frontend/img/profile_logo.png') }}"
-                            alt="" />
+                            alt="" id="imageshow" style="border-radius: 50%;" />
                     @endif
                     <div class="upload_icon" id="upload">
                         <i class="fa-solid fa-camera"></i>
