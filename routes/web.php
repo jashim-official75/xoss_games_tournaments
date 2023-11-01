@@ -22,6 +22,7 @@ Route::get('/rules', [FrontendController::class, 'tournament_rules'])->name('tou
 Route::get('/faq', [FrontendController::class, 'tournament_faq'])->name('tournament_faq');
 Route::get('/support', [FrontendController::class, 'tournament_support'])->name('tournament_support');
 Route::get('/referr', [ReferrController::class, 'referr'])->name('referr');
+Route::get('/prizes', [FrontendController::class, 'prizes'])->name('prizes');
 //----user login and register---
 Route::group(['middleware'=> 'loginRegisterCheck'], function(){
     Route::get('/sign-up', [SignUpController::class, 'index'])->name('user.sign_up');

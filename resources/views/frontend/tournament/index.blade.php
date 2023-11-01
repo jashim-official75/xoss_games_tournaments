@@ -106,7 +106,7 @@
         <div class="custom_container">
             <div class="title pb-5">
                 <h1 class="mostPopular__title__text"> <img src="{{ asset('assets/frontend/img/tournament-icon.png') }}"
-                        alt="">Tournaments</h1>
+                        alt="">Tournament Games</h1>
                 <p class="subheading_common">Clash of Champions Battle for Supremacy in the Ultimate Tournament of Feature
                     Games!</p>
                 <div class="title_bar">
@@ -160,6 +160,203 @@
                 @endforeach
 
             </div>
+        </div>
+    </section>
+    <!-- --------------------------TOURNAMENT CARD END ------------------------ -->
+
+    <!-- --------------------------TOURNAMENT CARD START ------------------------ -->
+    <section id="tournament_card" class="section-top">
+        <div class="container-fluid">
+            <div class="title pb-5">
+                <h1 class="mostPopular__title__text"> <img src="{{ asset('assets/frontend/img/prizes-icon.png') }}"
+                        alt="">Tournament Prizes</h1>
+                <p class="subheading_common">Clash of Champions Battle for Supremacy in the Ultimate Tournament of Feature
+                    Games!</p>
+                <div class="title_bar">
+                    <div class="bar"></div>
+                    <img src="{{ asset('assets/frontend/img/battle.png') }}" alt="">
+                    <div class="bar"></div>
+                </div>
+            </div>
+
+         
+                 <div class="prizes_gift">
+                    <div class="prizes_slider">
+
+                        <div class="prize_item">
+                           <div class="prize_img">
+                               <img src="{{ asset('assets/frontend/img/prizes/smart-watch.png') }}" alt="">
+                           </div>
+                           <div class="prize_name">
+                               <h3>Smart Watch</h3>
+                           </div>
+                           <div class="prize_badge">
+                               <img src="{{ asset('assets/frontend/img/gift-box-wrap.png') }}" alt="">
+                           </div>
+                        </div>
+                        <div class="prize_item">
+                           <div class="prize_img">
+                               <img src="{{ asset('assets/frontend/img/prizes/headphone.png') }}" alt="">
+                           </div>
+                           <div class="prize_name">
+                               <h3>Head Phone</h3>
+                           </div>
+                           <div class="prize_badge">
+                               <img src="{{ asset('assets/frontend/img/gift-box-wrap.png') }}" alt="">
+                           </div>
+                        </div>
+                        <div class="prize_item">
+                           <div class="prize_img">
+                               <img src="{{ asset('assets/frontend/img/prizes/bluetooth-speaker.png') }}" alt="">
+                           </div>
+                           <div class="prize_name">
+                               <h3>Bluetooth Speaker</h3>
+                           </div>
+                           <div class="prize_badge">
+                               <img src="{{ asset('assets/frontend/img/gift-box-wrap.png') }}" alt="">
+                           </div>
+                        </div>
+                        <div class="prize_item">
+                           <div class="prize_img">
+                               <img src="{{ asset('assets/frontend/img/prizes/smart-watch.png') }}" alt="">
+                           </div>
+                           <div class="prize_name">
+                               <h3>Smart Watch</h3>
+                           </div>
+                           <div class="prize_badge">
+                               <img src="{{ asset('assets/frontend/img/gift-box-wrap.png') }}" alt="">
+                           </div>
+                        </div>
+                        <div class="prize_item">
+                           <div class="prize_img">
+                               <img src="{{ asset('assets/frontend/img/prizes/headphone.png') }}" alt="">
+                           </div>
+                           <div class="prize_name">
+                               <h3>Head Phone</h3>
+                           </div>
+                           <div class="prize_badge">
+                               <img src="{{ asset('assets/frontend/img/gift-box-wrap.png') }}" alt="">
+                           </div>
+                        </div>
+                        <div class="prize_item">
+                           <div class="prize_img">
+                               <img src="{{ asset('assets/frontend/img/prizes/bluetooth-speaker.png') }}" alt="">
+                           </div>
+                           <div class="prize_name">
+                               <h3>Bluetooth Speaker</h3>
+                           </div>
+                           <div class="prize_badge">
+                               <img src="{{ asset('assets/frontend/img/gift-box-wrap.png') }}" alt="">
+                           </div>
+                        </div>
+                        <div class="prize_item">
+                           <div class="prize_img">
+                               <img src="{{ asset('assets/frontend/img/prizes/smart-watch.png') }}" alt="">
+                           </div>
+                           <div class="prize_name">
+                               <h3>Smart Watch</h3>
+                           </div>
+                           <div class="prize_badge">
+                               <img src="{{ asset('assets/frontend/img/gift-box-wrap.png') }}" alt="">
+                           </div>
+                        </div>
+                        <div class="prize_item">
+                           <div class="prize_img">
+                               <img src="{{ asset('assets/frontend/img/prizes/headphone.png') }}" alt="">
+                           </div>
+                           <div class="prize_name">
+                               <h3>Head Phone</h3>
+                           </div>
+                           <div class="prize_badge">
+                               <img src="{{ asset('assets/frontend/img/gift-box-wrap.png') }}" alt="">
+                           </div>
+                        </div>
+                        <div class="prize_item">
+                           <div class="prize_img">
+                               <img src="{{ asset('assets/frontend/img/prizes/bluetooth-speaker.png') }}" alt="">
+                           </div>
+                           <div class="prize_name">
+                               <h3>Bluetooth Speaker</h3>
+                           </div>
+                           <div class="prize_badge">
+                               <img src="{{ asset('assets/frontend/img/gift-box-wrap.png') }}" alt="">
+                           </div>
+                        </div>
+                        <div class="prize_item">
+                           <div class="prize_img">
+                               <img src="{{ asset('assets/frontend/img/prizes/smart-watch.png') }}" alt="">
+                           </div>
+                           <div class="prize_name">
+                               <h3>Smart Watch</h3>
+                           </div>
+                           <div class="prize_badge">
+                               <img src="{{ asset('assets/frontend/img/gift-box-wrap.png') }}" alt="">
+                           </div>
+                        </div>
+                        <div class="prize_item">
+                           <div class="prize_img">
+                               <img src="{{ asset('assets/frontend/img/prizes/headphone.png') }}" alt="">
+                           </div>
+                           <div class="prize_name">
+                               <h3>Head Phone</h3>
+                           </div>
+                           <div class="prize_badge">
+                               <img src="{{ asset('assets/frontend/img/gift-box-wrap.png') }}" alt="">
+                           </div>
+                        </div>
+                        <div class="prize_item">
+                           <div class="prize_img">
+                               <img src="{{ asset('assets/frontend/img/prizes/bluetooth-speaker.png') }}" alt="">
+                           </div>
+                           <div class="prize_name">
+                               <h3>Bluetooth Speaker</h3>
+                           </div>
+                           <div class="prize_badge">
+                               <img src="{{ asset('assets/frontend/img/gift-box-wrap.png') }}" alt="">
+                           </div>
+                        </div>
+                        <div class="prize_item">
+                           <div class="prize_img">
+                               <img src="{{ asset('assets/frontend/img/prizes/smart-watch.png') }}" alt="">
+                           </div>
+                           <div class="prize_name">
+                               <h3>Smart Watch</h3>
+                           </div>
+                           <div class="prize_badge">
+                               <img src="{{ asset('assets/frontend/img/gift-box-wrap.png') }}" alt="">
+                           </div>
+                        </div>
+                        <div class="prize_item">
+                           <div class="prize_img">
+                               <img src="{{ asset('assets/frontend/img/prizes/headphone.png') }}" alt="">
+                           </div>
+                           <div class="prize_name">
+                               <h3>Head Phone</h3>
+                           </div>
+                           <div class="prize_badge">
+                               <img src="{{ asset('assets/frontend/img/gift-box-wrap.png') }}" alt="">
+                           </div>
+                        </div>
+                        <div class="prize_item">
+                           <div class="prize_img">
+                               <img src="{{ asset('assets/frontend/img/prizes/bluetooth-speaker.png') }}" alt="">
+                           </div>
+                           <div class="prize_name">
+                               <h3>Bluetooth Speaker</h3>
+                           </div>
+                           <div class="prize_badge">
+                               <img src="{{ asset('assets/frontend/img/gift-box-wrap.png') }}" alt="">
+                           </div>
+                        </div>
+                 </div>
+                    
+                 <div class="prizes_box">
+                    <img src="{{ asset('assets/frontend/img/gift-box.png') }}" alt="">
+                </div>
+
+                    </div>
+          
+                    
         </div>
     </section>
     <!-- --------------------------TOURNAMENT CARD END ------------------------ -->

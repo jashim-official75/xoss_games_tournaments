@@ -6,7 +6,7 @@
 @section('content')
     <section id="tournament_deatils">
         <div class="tournament_singlebanner">
-            <a href="#"><img src="https://i.ibb.co/fkyvRy9/napzone-hero-bg-1.webp" alt="napzone-hero-bg-1"
+            <a href="#"><img src="{{ asset('assets/frontend/img/cricket-game-details-tournament.webp') }}" alt="napzone-hero-bg-1"
                     class="game_details-banner"></a>
             <div class="game_content">
                 <div class="gameImg">
@@ -21,6 +21,14 @@
                 <div class="game_info">
                     @if ($subscriber == 1)
                         <div class="game_date">
+                            <div class="start-date date"> <span><i class="fa-regular fa-clock"></i> Start Date :
+                                </span><span>
+                                    @php
+                                    $stringDate = $game->end_date; // Your string date
+                                           $date = \Carbon\Carbon::parse($stringDate);
+                                          echo $formattedDate = $date->format('j F, Y');
+                               @endphp
+                                </span> </div>
                             <div class="start-date date"> <span><i class="fa-regular fa-clock"></i> End Date :
                                 </span><span>
                                     @php

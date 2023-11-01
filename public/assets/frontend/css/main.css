@@ -1,4 +1,150 @@
+/* prizes */
+.single_game_prizes 
+{
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.single_game_prizes .prizes_inner 
+{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+  padding: 13rem 0;
+}
+ .prize_card 
+{
+  width: 33%;
+  padding: 1rem;
+  border-radius: 15px;
+  border: 1px solid #3C1E6E;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+ .prize_card:nth-child(odd)
+{
+  transform: scale(0.8);
+}
 
+ .prize_card .prizes_position h2 
+{
+  position: relative;
+  font-size: clamp(1.6rem,5vw,3rem);
+  padding: 1rem 3rem;
+  margin: 2rem 0;
+  color: #fff;
+  font-weight: 700;
+  background: #3C1E6E;
+  transform: scale(0.8);
+  border-radius: 5px;
+}
+ .prize_card .prizes_position h2::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%) rotate(60deg);
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 25px solid #3c1e6e;
+}
+.prize_card .prizes_img img
+{
+   width: 200px;
+   height: 200px;
+   background: #ddd;
+   padding: 1rem;
+   border-radius: 15px;
+   display: block;
+   margin-bottom: 2rem;
+}
+ .prize_card .prize_name h3
+{
+  font-size: clamp(1.4rem,5vw,2rem);
+  color: #000;
+  padding-bottom: 1rem;
+}
+.prizes_slider 
+{
+  position: relative;
+  padding: 3rem;
+}
+.prizes_slider .slick-dots
+{
+   bottom: -10px;
+}
+.prize_item 
+{
+  position: relative;
+  background: #ddd;
+  border-radius: 15px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+  height: auto;
+  margin: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+  border: 1px solid rgba(61, 30, 110, 0.459);
+}
+.prize_badge 
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+.prize_badge img 
+{
+  width: 70px !important;
+  height: 70px !important;
+  margin: 0 !important;
+}
+.prize_item:last-child 
+{
+  margin-right: 0;
+} 
+.prize_item img 
+{
+  width: 150px;
+  height: 150px;
+  margin: 2rem auto;
+} 
+.prize_item h3 
+{
+  text-align: center;
+}
+.prizes_gift 
+{
+  position: relative;
+}
+.prizes_box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  box-shadow: 1px 0px 0px 0  rgba(0,0,0,0.1);
+  border-right: 1px solid #0001;
+}
+.prizes_box img 
+{
+  width: 100%;
+}
+/* prizes */
 
 /* referral dasboard */
 .reffaral_dashboard
@@ -806,7 +952,7 @@ z-index: 1;
  left: 0;
  width: 100%;
  height: 100%;
- background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 153, 255, 0.68));
+ background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.68));
  z-index: 10;
 
 }
@@ -835,36 +981,33 @@ z-index: 1;
 .gamePlaybtn {
   position: relative;
   z-index: 500;
-  margin-top: 3rem;
+  margin-top: 5rem;
 }
 .prizes 
 {
   display: flex;
-  gap: 1rem;
+  gap: 2.5rem;
 }
 .play_btn {
-  position: relative;
-  padding: 1rem 3rem;
-  display: block;
-  font-weight: 500;
-  z-index: 10;
-  width: 250px;
-  text-align: center;
-  font-size: 2rem;
-  color: #fff;
-  border: 3px solid #fff4;
-  border-radius: 5rem;
-  box-shadow: 0 0 50px #0099ff , 0 0 50px 10px rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(2rem);
-  transition: all 0.3s;
-  text-transform: uppercase;
-  letter-spacing: 0.2rem;
-  background: #7121f1;
+ 
+    margin: 0;
+    background: #5f36a1;
+    color: #fff;
+    width: 200px !important;
+    letter-spacing: 0.15rem;
+    font-weight: 500;
+    box-shadow: 0 7px 25px rgba(5,5,5,0.5);
+    border: 2px solid #fff2;
+    padding: 1.4rem 3rem;
+    font-size: 2rem;
+    border-radius: 50px;
+    text-transform: uppercase;
 }
 .play_btn:hover 
 {
-  background: rgba(255, 255, 255, 0.6);
+  background: #fff;
   color: #3C1E6E;
+  animation: dancing 0.8s ease-in-out forwards;
 } 
 .entry_label 
 {
@@ -891,9 +1034,12 @@ z-index: 1;
   position: relative;
   width: 200px;
   height: 200px;
-  border: 8px solid rgba(63, 135, 252, 0.686);
-  box-shadow: 0 0 25px #3f89fc;
+  border: 8px solid rgba(255, 255, 252, 0.486);
   border-radius: 50%;
+  box-shadow: 0 0 0 10px #fff4, 0 0 10px 25px rgb(60 30 110 / 28%);
+  border-radius: 50%;
+  transform: scale(0.9);
+
 }
 .game_content .gameImg img 
 {
@@ -903,7 +1049,7 @@ z-index: 1;
   width: 100%;
   height: 100%;
   background: #fff;
-  padding: 0.5rem;
+  padding: 0.2rem;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -911,7 +1057,7 @@ z-index: 1;
 .game_content .game_info .game_date
 {
  position: relative;
- font-size: 2rem;
+ font-size: 1.6rem;
  color: #fff;
  text-align: center;
  background: rgba(61, 30, 110, 0.2);
@@ -921,12 +1067,15 @@ z-index: 1;
  border: 2px solid rgba(255, 255, 255, 0.4);
  
 }
-.game_content .game_info .game_date .date 
-{
+.game_content .game_info .game_date .date {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
+  padding: 0.1rem 1rem 0.2rem;
+}
+.game_content .game_info .game_date .date:first-child 
+{
+  border-bottom: 1px solid #fff6;
 }
 #tournament_prizes {
   padding: 5rem 0;
@@ -964,7 +1113,7 @@ z-index: 1;
 #tournament_prizes .prize_inner .prize_header .prizes_title
 {
   font-size: clamp(3rem , 5vw , 25rem);
-  color: rgba(255,255,255,0.4);
+  color: rgba(255,255,255,0.6);
   font-weight: 900;
 }
 .trophy_board 
@@ -1626,9 +1775,24 @@ main#questions {
   font-size: 1.6rem;
   margin: 0 auto;
 }
-.primary_btn:hover {
-  background: #582f9b;
+.prizes .primary_btn {
+  background: rgb(43 29 66 / 27%);
   color: #fff;
+  border-radius: 8px;
+  padding: 0.8rem 2rem;
+  border: 1px solid #fff2;
+  font-weight: 400;
+  backdrop-filter: blur(1rem);
+  box-shadow: 0 0 5px #fff;
+
+}
+.prizes .primary_btn:hover 
+{
+  animation: dancing 1s ease-in-out forwards;
+}
+.primary_btn:hover {
+  background: #fff;
+  color: #3C1E6E;
   animation: dancing 0.8s ease-in-out forwards;
 }
 
@@ -3315,16 +3479,22 @@ a:hover {
   z-index: 10;
   padding: 50px 0px;
 }
+
 .mostPopular__title__text {
   color: #502989;
-  font-size: clamp(2rem , 5vw , 3rem);
+  font-size: clamp(1.8rem , 5vw , 2.5rem);
   font-style: normal;
   font-weight: 700;
   letter-spacing: 0em;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .mostPopular__title__text img {
-  width: 46px;
+  width: 40px;
+  margin-right: 1rem;
+  display: inline-block;
 }
 .title_bar
 {
@@ -5269,6 +5439,7 @@ box-shadow: 0px 6px 15px rgba(60, 30, 110, 0.12);
   height: 150px;
   border: 4px solid rgba(63, 135, 252, 0.686);
   box-shadow: 0 0 20px #3f89fc;
+  
 }
 .user_profile {
   width: 110px;
