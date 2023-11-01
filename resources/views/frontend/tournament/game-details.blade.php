@@ -24,7 +24,7 @@
                             <div class="start-date date"> <span><i class="fa-regular fa-clock"></i> Start Date :
                                 </span><span>
                                     @php
-                                    $stringDate = $game->end_date; // Your string date
+                                    $stringDate = $game->start_date; // Your string date
                                            $date = \Carbon\Carbon::parse($stringDate);
                                           echo $formattedDate = $date->format('j F, Y');
                                @endphp

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Oct 28, 2023 at 04:57 PM
+-- Generation Time: Oct 31, 2023 at 08:29 AM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -51,16 +51,6 @@ CREATE TABLE `game_scores` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `game_scores`
---
-
-INSERT INTO `game_scores` (`id`, `subscriber_id`, `tournament_game_id`, `score`, `created_at`, `updated_at`) VALUES
-(1, 1, 1, 1158, '2023-10-13 11:46:40', '2023-10-21 07:16:22'),
-(2, 2, 1, 364, '2023-10-13 11:54:46', '2023-10-15 16:58:37'),
-(3, 3, 1, 422, '2023-10-13 14:07:12', '2023-10-13 14:22:09'),
-(11, 1, 2, 3, '2023-10-20 16:09:13', '2023-10-20 16:10:29');
 
 -- --------------------------------------------------------
 
@@ -158,6 +148,8 @@ CREATE TABLE `subscribers` (
   `password` char(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `device_ip` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `country` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `referr_code` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `get_referr` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -166,13 +158,11 @@ CREATE TABLE `subscribers` (
 -- Dumping data for table `subscribers`
 --
 
-INSERT INTO `subscribers` (`id`, `phone_num`, `name`, `profile_pic`, `password`, `device_ip`, `country`, `created_at`, `updated_at`) VALUES
-(1, '01775484658', 'Sohel Rana', '6507613a94eb7_01775484658.webp', '$2y$10$7S.3SRsgg4yfGBGJZLuJCOzkH.6wkmrrybT5I6Oyjul48tkfTwLnK', '127.0.0.1', 'United States', '2023-09-16 19:42:34', '2023-10-20 10:41:09'),
-(2, '01715855974', 'Xoss Games', '650767722dabc_01715855974.jpg', '$2y$10$JlEq7gfK5lcFwM.440gaeOErx5CqqCssjY.MyoSllkMemP3E1kqCS', '157.119.186.134', 'Bangladesh', '2023-09-17 18:48:36', '2023-09-18 05:41:12'),
-(3, '01733592016', 'Virat Kohli', '65296ff513082_01733592016.jpg', '$2y$10$DTMrJ6cHfyaYQEtHrChq4.5RxdOGRXjlIScwO3OZrNS1J2RRxIRiS', '103.141.134.33', 'Bangladesh', '2023-09-17 19:31:35', '2023-10-13 14:27:33'),
-(4, '01775484655', NULL, NULL, '$2y$10$IywzWBeEA1DYTKmI5j74LeE0IhZmXPyeF3jXb0Hz.LkhBMXVmuTey', '157.119.186.134', 'Bangladesh', '2023-09-18 08:08:40', '2023-09-18 08:08:40'),
-(5, '01775154785', NULL, NULL, '$2y$10$2kzuHE.KpXkfI1wpnowsLuc3qMDzpNUdiVmExYZ6AWvWBKviz.spC', '103.141.134.33', 'Bangladesh', '2023-09-24 14:46:47', '2023-09-24 14:46:47'),
-(6, '01735162589', NULL, NULL, '$2y$10$SULPHdFgzqDZYgrsjGMPwOHsUcT3hPZ.aIB4LLJ6CFR/GOWNGDCNO', '103.141.134.33', 'Bangladesh', '2023-10-21 05:50:21', '2023-10-21 05:50:21');
+INSERT INTO `subscribers` (`id`, `phone_num`, `name`, `profile_pic`, `password`, `device_ip`, `country`, `referr_code`, `get_referr`, `created_at`, `updated_at`) VALUES
+(1, '01775484658', NULL, NULL, '$2y$10$YILXhAhcgfzJBAn6.zzy6OYNAdOjhXiT29ZfYTjXLPzE2CmPyfqUe', '127.0.0.1', 'United States', 'd8l2', NULL, '2023-10-29 09:35:32', '2023-10-29 09:35:32'),
+(2, '01700000000', NULL, NULL, '$2y$10$rm8BTj0j/JrGyBWxUPRk7u9Wfd6S3ib/him1s2ArI8O4GOsv65bu2', '127.0.0.1', 'United States', '7as6', 'd8l2', '2023-10-29 09:36:22', '2023-10-29 09:36:22'),
+(3, '01733333333', NULL, NULL, '$2y$10$HUmHIzVrghbOKBvvDQlbduTCzZamt6k1i5TAvZzN/zLB5XEDReGrm', '127.0.0.1', 'United States', 'e0Yb', 'd8l2', '2023-10-29 09:37:20', '2023-10-29 09:37:20'),
+(4, '01722222222', NULL, NULL, '$2y$10$ZohrEGHBCcj.FHhU8PloSO.12GQlbbsBkF.gMAfvZ5KPeZTiC.Gse', '127.0.0.1', 'United States', 'TbtG', '7as6', '2023-10-29 09:40:00', '2023-10-29 09:40:00');
 
 -- --------------------------------------------------------
 
@@ -238,11 +228,8 @@ CREATE TABLE `tournament_payment_details` (
 --
 
 INSERT INTO `tournament_payment_details` (`id`, `subscriber_id`, `tournament_game_id`, `amount`, `subscription_day`, `customer_reference`, `consent_id`, `token`, `start_time`, `end_time`, `created_at`, `updated_at`) VALUES
-(9, 1, 1, 35, 3, 'JE9oF4EzpXEnf6o1SxV8AlNKdCcKABNH', '9b32377d-5500-497c-8f6a-23a161990431', '2rd0DbNwIPLpLTBhvwHUEwRPybkGJGhv', NULL, NULL, '2023-10-13 11:41:16', '2023-10-13 11:41:16'),
-(10, 2, 1, 35, 3, '8oRMheRgFmOPfgW07dPC7Vhdb02itmpi', 'bbf60491-f979-47c6-89df-7cf7d8cbacfc', 'vV5CdLeyzBCpKLOlnRQe41O598VBWdN2', NULL, NULL, '2023-10-13 11:52:19', '2023-10-13 11:52:19'),
-(11, 3, 1, 35, 3, '7TdlAhg3DwwJvwH1N2cHJlxYg95Sjwi8', 'fd6836bb-4b48-4592-8b6c-f9e2d493e847', 'VJMlbneg5WS3tIUDjrqwScea5jqjN5w5', NULL, NULL, '2023-10-13 14:03:48', '2023-10-13 14:03:48'),
-(12, 1, 2, 55, 3, 'JE9oF4EzpXEnf6o11zbuE7Pztarf1nwe', 'f0078daf-ab97-4ad9-86f4-a2a5fd8fe3b2', 'VarBvIJE5pogWmIwY5KNvNF7yKnIPKkg', NULL, NULL, '2023-10-20 13:58:17', '2023-10-20 13:58:17'),
-(13, 6, 2, 55, 3, 'APDEJj33bnQe2jz0TYmpLKauXC8lBo4f', '2c94bb3c-4b8d-418f-bbd3-ab83d3d06671', 'MHvb3dtmXicatOivpKUc4sseOv1rhxef', NULL, NULL, '2023-10-21 06:00:08', '2023-10-21 06:00:08');
+(1, 2, 1, 35, 3, 'JE9oF4EzpXEnf6o0dI1LZMawzZjcFyoD', 'fc6bbf88-6e42-4fb3-bb06-d4951c161dc2', 'AbQur5lkEBQa6n6j1MOJ2fWKmHAZAeDv', NULL, NULL, '2023-10-29 11:08:34', '2023-10-29 11:08:34'),
+(2, 2, 2, 55, 3, 'JE9oF4EzpXEnf6o0QzMhWiH7CDhYw62p', 'aa920550-b05f-4877-b55b-9f01a9337084', '1BzDJndYjOIGNZpZwsJM9cYNZpc8iglV', NULL, NULL, '2023-10-29 11:29:38', '2023-10-29 11:29:38');
 
 -- --------------------------------------------------------
 
@@ -354,7 +341,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `game_scores`
 --
 ALTER TABLE `game_scores`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -378,7 +365,7 @@ ALTER TABLE `reset_password_otps`
 -- AUTO_INCREMENT for table `subscribers`
 --
 ALTER TABLE `subscribers`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `tournament_games`
@@ -390,7 +377,7 @@ ALTER TABLE `tournament_games`
 -- AUTO_INCREMENT for table `tournament_payment_details`
 --
 ALTER TABLE `tournament_payment_details`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `users`

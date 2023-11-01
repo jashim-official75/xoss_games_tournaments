@@ -10850,6 +10850,10 @@ DST Off\">2023-10-13 00:00:00.0 Asia/Dhaka (+06:00)</span>
 #67 {main}
 >>>>>>>>> Temporary merge branch 2
 "} 
+<<<<<<< HEAD
+[2023-10-29 17:08:34] local.INFO: {"amountTransaction":{"endUserId":"JE9oF4EzpXEnf6o0dI1LZMawzZjcFyoD","serverReferenceCode":"t5029054287","resourceURL":"/partner/payment/v1/JE9oF4EzpXEnf6o0dI1LZMawzZjcFyoD/transactions/amount/5029054287","transactionOperationStatus":"Charged","referenceCode":"AbQur5lkEBQa6n6","paymentAmount":{"totalAmountCharged":35,"chargingInformation":{"amount":35,"description":["XossGamesTournament"],"currency":"BDT"},"chargingMetaData":{"taxAmount":0}},"operatorId":"GRA-BD"}}  
+[2023-10-29 17:29:38] local.INFO: {"amountTransaction":{"endUserId":"JE9oF4EzpXEnf6o0QzMhWiH7CDhYw62p","serverReferenceCode":"t5029054288","resourceURL":"/partner/payment/v1/JE9oF4EzpXEnf6o0QzMhWiH7CDhYw62p/transactions/amount/5029054288","transactionOperationStatus":"Charged","referenceCode":"1BzDJndYjOIGNZp","paymentAmount":{"totalAmountCharged":55,"chargingInformation":{"amount":55,"description":["XossGamesTournament"],"currency":"BDT"},"chargingMetaData":{"taxAmount":0}},"operatorId":"GRA-BD"}}  
+=======
 [2023-10-29 20:18:01] local.ERROR: Attempt to read property "SubUser" on null (View: C:\laragon\www\tournament_xoss_games\resources\views\frontend\tournament\game-details.blade.php) {"view":{"view":"C:\\laragon\\www\\tournament_xoss_games\\resources\\views/frontend/tournament/game-details.blade.php","data":{"errors":"<pre class=sf-dump id=sf-dump-998366606 data-indent-pad=\"  \"><span class=sf-dump-note>Illuminate\\Support\\ViewErrorBag</span> {<a class=sf-dump-ref>#370</a><samp data-depth=1 class=sf-dump-expanded>
   #<span class=sf-dump-protected title=\"Protected property\">bags</span>: []
 </samp>}
@@ -17770,3 +17774,4 @@ DST Off\">2023-10-13 00:00:00.0 Asia/Dhaka (+06:00)</span>
 #57 C:\\laragon\\www\\tournament_xoss_games\\server.php(21): require_once('C:\\\\laragon\\\\www\\\\...')
 #58 {main}
 "} 
+>>>>>>> a45af041d1442c1a1a9f3e1598fd2b43b55e4cc1
