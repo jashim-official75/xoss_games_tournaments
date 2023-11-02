@@ -19,53 +19,31 @@
                 </div>
 
                 <div class="game_info">
-                    @if ($subscriber == 1)
-                        <div class="game_date">
-                            <div class="start-date date"> <span><i class="fa-regular fa-clock"></i> Start Date :
-                                </span><span>
-                                    @php
-                                        $stringDate = $game->start_date; // Your string date
-                                        $date = \Carbon\Carbon::parse($stringDate);
-                                        echo $formattedDate = $date->format('j F, Y');
-                                    @endphp
-                                </span> </div>
-                            <div class="start-date date"> <span><i class="fa-regular fa-clock"></i> End Date :
-                                </span><span>
-                                    @php
-                                        $stringDate = $game->end_date; // Your string date
-                                        $date = \Carbon\Carbon::parse($stringDate);
-                                        echo $formattedDate = $date->format('j F, Y');
-                                    @endphp
-                                </span> </div>
+                    <div class="game_date">
+                        <div class="start-date date"> <span><i class="fa-regular fa-clock"></i> Start Date :
+                            </span><span>
+                                @php
+                                    $stringDate = $game->start_date; // Your string date
+                                    $date = \Carbon\Carbon::parse($stringDate);
+                                    echo $formattedDate = $date->format('j F, Y');
+                                @endphp
+                            </span> </div>
+                        <div class="start-date date"> <span><i class="fa-regular fa-clock"></i> End Date :
+                            </span><span>
+                                @php
+                                    $stringDate = $game->end_date; // Your string date
+                                    $date = \Carbon\Carbon::parse($stringDate);
+                                    echo $formattedDate = $date->format('j F, Y');
+                                @endphp
+                            </span>
                         </div>
-                    @else
-                        <div class="game_date">
-                            <div class="start-date date"> <span><i class="fa-regular fa-clock"></i> Start Date :
-                                </span><span>
-                                    @php
-                                        $stringDate = $game->start_date; // Your string date
-                                        $date = \Carbon\Carbon::parse($stringDate);
-                                        echo $formattedDate = $date->format('j F, Y');
-                                    @endphp
-                                </span> </div>
-                        </div>
-                        <div class="game_date">
-                            <div class="start-date date"> <span><i class="fa-regular fa-clock"></i> End Date :
-                                </span><span>
-                                    @php
-                                        $stringDate = $game->end_date; // Your string date
-                                        $date = \Carbon\Carbon::parse($stringDate);
-                                        echo $formattedDate = $date->format('j F, Y');
-                                    @endphp
-                                </span> </div>
-                        </div>
-                        <div class="entry_cost">
-                            <a class="entry_label"><span>Entry Cost : {{ $game->game_fee }}</span> &#2547;
-                            </a>
-                        </div>
-                    @endif
+                    </div>
+                    <div class="entry_cost">
+                        <a class="entry_label"><span>Entry Cost : {{ $game->game_fee }}</span> &#2547;
+                        </a>
+                    </div>
                     <div class="prizes mt-5">
-                        <a href="#" class="primary_btn leaderborad_btn"><i class="fa-solid fa-trophy"></i>
+                        <a href="{{ route('prizes') }}" class="primary_btn leaderborad_btn"><i class="fa-solid fa-trophy"></i>
                             <span>Price</span></a>
                         <a href="#" class="primary_btn howtoplayBtn"><span>How to Play</span> <i
                                 class="fa-solid fa-circle-info"></i></a>
@@ -188,7 +166,8 @@
                                                 <img src="{{ asset('uploads/User/Profile/' . $my_score_details->SubUser->profile_pic) }}"
                                                     alt="shohel" border="0">
                                             @else
-                                                <img src="{{ asset('dummy.png') }}" class="user_pic" alt="shohel" border="0">
+                                                <img src="{{ asset('dummy.png') }}" class="user_pic" alt="shohel"
+                                                    border="0">
                                             @endif
                                             <div class="user_name">
                                                 <a href="#">{{ $my_score_details->SubUser->name ?? 'Jon Doe' }}</a>
@@ -218,8 +197,8 @@
                                                         <img src="{{ asset('uploads/User/Profile/' . $gamescore->SubUser->profile_pic) }}"
                                                             alt="shohel" border="0">
                                                     @else
-                                                        <img src="{{ asset('dummy.png') }}" class="user_pic" alt="shohel"
-                                                            border="0">
+                                                        <img src="{{ asset('dummy.png') }}" class="user_pic"
+                                                            alt="shohel" border="0">
                                                     @endif
                                                     <div class="user_name">
                                                         <a href="#">{{ $gamescore->SubUser->name ?? 'Jon Doe' }}</a>
@@ -243,24 +222,15 @@
         </section>
         <!-- --------------------------LEADERBOARD PART END ------------------------ -->
     @endif
-    @include('frontend.tournament.modal.price')
     @include('frontend.tournament.modal.how-to-play')
 @endsection
 @section('pageJS')
     <script>
         var closeBtn = document.querySelector(".modalclose_btn");
         var closeBtnplay = document.querySelector(".howtoplayClosebtn");
-        var leaderBoardModal = document.querySelector("#leaderBoardModel");
-        var leaderboardBtn = document.querySelector(".leaderborad_btn");
         var howtoPlayModal = document.querySelector("#howtoplayModal");
         var howtoplayBtn = document.querySelector(".howtoplayBtn");
-        // leaderboard
-        leaderboardBtn.addEventListener('click', () => {
-            leaderBoardModal.classList.add("active");
-        });
-        closeBtn.addEventListener('click', () => {
-            leaderBoardModal.classList.remove("active");
-        });
+        
         // howtoplay
         howtoplayBtn.addEventListener('click', () => {
             howtoPlayModal.classList.add("active");

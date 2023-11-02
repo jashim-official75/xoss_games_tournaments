@@ -59,7 +59,9 @@
                 @endif
             </div>
             <h2 class="user_name">{{ auth()->guard('subscriber')->user()->name }}</h2>
-            <p>Referr Code : 25A5A425</p>
+            @if (auth()->guard('subscriber')->user()->referr_code)
+            <p>Referr Code : {{ auth()->guard('subscriber')->user()->referr_code }}</p>
+            @endif
             <p>Number : {{ auth()->guard('subscriber')->user()->phone_num }}</p>
             <div class="profile_edits">
                 <ul>
@@ -79,9 +81,9 @@
                         <span><i class="far fa-share-square"></i></span> <a href="{{ route('referr') }}">Refer to
                             Friend</a>
                     </li>
-                    <li>
+                    {{-- <li>
                         <span><i class="fa-solid fa-gift"></i></span> <a href="{{ route('prizes') }}">Prizes</a>
-                    </li>
+                    </li> --}}
                     <li>
                         <span><i class="fas fa-sign-out-alt"></i></span> <a
                             href="{{ route('user.logout') }}">LogOut</a>

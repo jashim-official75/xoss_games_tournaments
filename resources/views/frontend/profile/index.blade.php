@@ -16,7 +16,7 @@
                         <img class="login_logo" src="{{ asset('uploads/User/Profile/' . $user->profile_pic) }}"
                             alt="" style="border-radius: 50%;" id="imageshow">
                     @else
-                        <img class="login_logo" src="{{ asset('assets/frontend/img/profile_logo.png') }}"
+                        <img class="login_logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxXxAkaZsZ1gZ3PrygUrnBQ6j4taiGtnFpwchadr3TG4whr6O2O5zjT_7w7rf9oQ31yX0&usqp=CAU"
                             alt="" id="imageshow" style="border-radius: 50%;" />
                     @endif
                     <div class="upload_icon" id="upload">

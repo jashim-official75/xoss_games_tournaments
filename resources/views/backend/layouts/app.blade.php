@@ -2,40 +2,6 @@
 <html lang="en">
 
 <head>
-
-    <!-- Google Tag Manager Head -->
-    <script>
-        (function(w, d, s, l, i) {
-            w[l] = w[l] || [];
-            w[l].push({
-                'gtm.start': new Date().getTime(),
-                event: 'gtm.js'
-            });
-            var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s),
-                dl = l != 'dataLayer' ? '&l=' + l : '';
-            j.async = true;
-            j.src =
-                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-            f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-TSDLM28');
-    </script>
-    <!-- End Google Tag Manager -->
-
-    <!-- Google Analatics tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9N2NB2TZ0Q"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'G-9N2NB2TZ0Q');
-    </script>
-    <!-- Google Analatics tag (gtag.js) -->
-
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- Tell the browser to be responsive to screen width -->
@@ -56,7 +22,6 @@
     <!-- colors from-->
     <link href="{{ asset('/assets/backend/css/colors/blue.css') }}" id="theme" rel="stylesheet">
     @yield('styles')
-    @livewireStyles
 </head>
 
 <body class="fix-header fix-sidebar card-no-border">
@@ -188,7 +153,6 @@
     @endif
 
     @yield('scripts')
-    @livewireScripts
 </body>
 
 </html>

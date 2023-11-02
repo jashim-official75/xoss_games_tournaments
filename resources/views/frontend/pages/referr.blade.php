@@ -9,6 +9,25 @@
     <meta name="keywords" content="xoss games, games, online game, action game" />
     <link rel="canonical" href="{{ url()->current() }}" />
     <title>Tournamnet | Referr</title>
+    <style>
+        div#social-links {
+            margin: 0 auto;
+            max-width: 500px;
+        }
+
+        div#social-links ul li {
+            display: inline-block;
+        }
+
+        div#social-links ul li a {
+            padding: 5px 12px;
+            border: 1px solid #ccc;
+            margin: 1px;
+            font-size: 30px;
+            color: #0c357e;
+            /* background-color: #0e0e0e; */
+        }
+    </style>
 @endsection
 @section('content')
     <section id="referr_header">
@@ -50,8 +69,11 @@
                 </div>
                 <span class="other_option">OR</span>
                 <hr>
-                <div class="socail_share">
-                    <a href="#"><img src="{{ asset('assets/frontend/img/socail-icons/facebook.png') }}"
+                <div class="socail_share mt-4">
+                    {!! $shareComponent !!}
+                </div>
+                {{-- <div class="socail_share">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://tournament.xoss.games/sign-up?referr_id=7as6"><img src="{{ asset('assets/frontend/img/socail-icons/facebook.png') }}"
                             alt="" /></a>
                     <a href="#"><img src="{{ asset('assets/frontend/img/socail-icons/facebook-messanger.png') }}"
                             alt="" /></a>
@@ -72,7 +94,7 @@
                     <a href="#"><img src="{{ asset('assets/frontend/img/socail-icons/pinterest.png') }}"
                             alt="" /></a>
 
-                </div>
+                </div> --}}
                 <div class="reffaral_dashboard">
                     <div class="referral_header">
                         <div class="refferal_text">
