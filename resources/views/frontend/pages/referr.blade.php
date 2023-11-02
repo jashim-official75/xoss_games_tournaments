@@ -14,11 +14,9 @@
             margin: 0 auto;
             max-width: 500px;
         }
-
         div#social-links ul li {
             display: inline-block;
         }
-
         div#social-links ul li a {
             padding: 5px 12px;
             border: 1px solid #ccc;
