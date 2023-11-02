@@ -9610,3 +9610,57 @@ Stack trace:
 #65 C:\\laragon\\www\\tournament_xoss_games\\server.php(21): require_once('C:\\\\laragon\\\\www\\\\...')
 #66 {main}
 "} 
+[2023-11-02 17:00:42] local.ERROR: Class "Jorenvh\Share\Providers\ShareServiceProvider" not found {"exception":"[object] (Error(code: 0): Class \"Jorenvh\\Share\\Providers\\ShareServiceProvider\" not found at D:\\laragon\\www\\xoss_games_tournaments\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php:208)
+[stacktrace]
+#0 D:\\laragon\\www\\xoss_games_tournaments\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php(144): Illuminate\\Foundation\\ProviderRepository->createProvider('Jorenvh\\\\Share\\\\P...')
+#1 D:\\laragon\\www\\xoss_games_tournaments\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php(61): Illuminate\\Foundation\\ProviderRepository->compileManifest(Array)
+#2 D:\\laragon\\www\\xoss_games_tournaments\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(659): Illuminate\\Foundation\\ProviderRepository->load(Array)
+#3 D:\\laragon\\www\\xoss_games_tournaments\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\RegisterProviders.php(17): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#4 D:\\laragon\\www\\xoss_games_tournaments\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(237): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#5 D:\\laragon\\www\\xoss_games_tournaments\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(310): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#6 D:\\laragon\\www\\xoss_games_tournaments\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(127): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#7 Command line code(1): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 {main}
+"} 
+[2023-11-02 17:00:42] local.ERROR: Uncaught Illuminate\Contracts\Container\BindingResolutionException: Target [Illuminate\Contracts\Auth\Access\Gate] is not instantiable. in D:\laragon\www\xoss_games_tournaments\vendor\laravel\framework\src\Illuminate\Container\Container.php:1089
+Stack trace:
+#0 D:\laragon\www\xoss_games_tournaments\vendor\laravel\framework\src\Illuminate\Container\Container.php(886): Illuminate\Container\Container->notInstantiable('Illuminate\\Cont...')
+#1 D:\laragon\www\xoss_games_tournaments\vendor\laravel\framework\src\Illuminate\Container\Container.php(758): Illuminate\Container\Container->build('Illuminate\\Cont...')
+#2 D:\laragon\www\xoss_games_tournaments\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(851): Illuminate\Container\Container->resolve('Illuminate\\Cont...', Array, true)
+#3 D:\laragon\www\xoss_games_tournaments\vendor\laravel\framework\src\Illuminate\Container\Container.php(694): Illuminate\Foundation\Application->resolve('Illuminate\\Cont...', Array)
+#4 D:\laragon\www\xoss_games_tournaments\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(836): Illuminate\Container\Container->make('Illuminate\\Cont...', Array)
+#5 D:\laragon\www\xoss_games_tournaments\vendor\laravel\framework\src\Illuminate\Container\Container.php(1419): Illuminate\Foundation\Application->make('Illuminate\\Cont...')
+#6 D:\laragon\www\xoss_games_tournaments\vendor\laravel\framework\src\Illuminate\Support\Facades\Facade.php(198): Illuminate\Container\Container->offsetGet('Illuminate\\Cont...')
+#7 D:\laragon\www\xoss_games_tournaments\vendor\laravel\framework\src\Illuminate\Support\Facades\Facade.php(166): Illuminate\Support\Facades\Facade::resolveFacadeInstance('Illuminate\\Cont...')
+#8 D:\laragon\www\xoss_games_tournaments\vendor\laravel\framework\src\Illuminate\Support\Facades\Facade.php(255): Illuminate\Support\Facades\Facade::getFacadeRoot()
+#9 Command line code(1): Illuminate\Support\Facades\Facade::__callStatic('abilities', Array)
+#10 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Illuminate\\Contracts\\Container\\BindingResolutionException: Target [Illuminate\\Contracts\\Auth\\Access\\Gate] is not instantiable. in D:\\laragon\\www\\xoss_games_tournaments\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php:1089
+Stack trace:
+#0 D:\\laragon\\www\\xoss_games_tournaments\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(886): Illuminate\\Container\\Container->notInstantiable('Illuminate\\\\Cont...')
+#1 D:\\laragon\\www\\xoss_games_tournaments\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(758): Illuminate\\Container\\Container->build('Illuminate\\\\Cont...')
+#2 D:\\laragon\\www\\xoss_games_tournaments\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(851): Illuminate\\Container\\Container->resolve('Illuminate\\\\Cont...', Array, true)
+#3 D:\\laragon\\www\\xoss_games_tournaments\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(694): Illuminate\\Foundation\\Application->resolve('Illuminate\\\\Cont...', Array)
+#4 D:\\laragon\\www\\xoss_games_tournaments\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(836): Illuminate\\Container\\Container->make('Illuminate\\\\Cont...', Array)
+#5 D:\\laragon\\www\\xoss_games_tournaments\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(1419): Illuminate\\Foundation\\Application->make('Illuminate\\\\Cont...')
+#6 D:\\laragon\\www\\xoss_games_tournaments\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(198): Illuminate\\Container\\Container->offsetGet('Illuminate\\\\Cont...')
+#7 D:\\laragon\\www\\xoss_games_tournaments\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(166): Illuminate\\Support\\Facades\\Facade::resolveFacadeInstance('Illuminate\\\\Cont...')
+#8 D:\\laragon\\www\\xoss_games_tournaments\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(255): Illuminate\\Support\\Facades\\Facade::getFacadeRoot()
+#9 Command line code(1): Illuminate\\Support\\Facades\\Facade::__callStatic('abilities', Array)
+#10 {main}
+  thrown at D:\\laragon\\www\\xoss_games_tournaments\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php:1089)
+[stacktrace]
+#0 {main}
+"} 
+[2023-11-02 17:00:42] local.ERROR: Class "Jorenvh\Share\Providers\ShareServiceProvider" not found {"exception":"[object] (Error(code: 0): Class \"Jorenvh\\Share\\Providers\\ShareServiceProvider\" not found at D:\\laragon\\www\\xoss_games_tournaments\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php:208)
+[stacktrace]
+#0 D:\\laragon\\www\\xoss_games_tournaments\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php(144): Illuminate\\Foundation\\ProviderRepository->createProvider('Jorenvh\\\\Share\\\\P...')
+#1 D:\\laragon\\www\\xoss_games_tournaments\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php(61): Illuminate\\Foundation\\ProviderRepository->compileManifest(Array)
+#2 D:\\laragon\\www\\xoss_games_tournaments\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(659): Illuminate\\Foundation\\ProviderRepository->load(Array)
+#3 D:\\laragon\\www\\xoss_games_tournaments\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\RegisterProviders.php(17): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#4 D:\\laragon\\www\\xoss_games_tournaments\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(237): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#5 D:\\laragon\\www\\xoss_games_tournaments\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(310): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#6 D:\\laragon\\www\\xoss_games_tournaments\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(127): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#7 Command line code(1): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 {main}
+"} 
