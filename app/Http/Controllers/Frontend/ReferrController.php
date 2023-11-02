@@ -26,7 +26,7 @@ class ReferrController extends Controller
         $total_purchase = DB::table('tournament_payment_details')
             ->join('subscribers', 'tournament_payment_details.subscriber_id', '=', 'subscribers.id')
             ->where('subscribers.get_referr', '=', auth()->guard('subscriber')->user()->referr_code)
-            ->get();
-        return view('frontend.pages.referr', compact('user', 'refer_url', 'total_register', 'shareComponent'));
+            ->count();
+        return view('frontend.pages.referr', compact('user', 'refer_url', 'total_register', 'shareComponent', 'total_purchase'));
     }
 }

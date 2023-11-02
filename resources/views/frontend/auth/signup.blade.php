@@ -1,4 +1,15 @@
 @extends('frontend.layouts.web')
+@section('frontend_header')
+    <meta property="og:title" content="Tournamnet | Signup">
+    <meta property="og:description" content="Tournamnet | Signup">
+    <meta property="og:image" content="https://xoss.games/xoss_games-og-image.jpg" />
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta name="title" content="Tournamnet | Signup" />
+    <meta name="description" content="Tournamnet | Signup" />
+    <meta name="keywords" content="xoss games, games, online game, action game" />
+    <link rel="canonical" href="{{ url()->current() }}" />
+    <title>Tournamnet | Signup</title>
+@endsection
 @section('content')
     <section id="login_page" id="login">
         <form action="{{ route('user.signup.store') }}" method="POST">

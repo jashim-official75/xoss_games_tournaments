@@ -25,7 +25,6 @@
             margin: 1px;
             font-size: 30px;
             color: #0c357e;
-            /* background-color: #0e0e0e; */
         }
     </style>
 @endsection
@@ -109,7 +108,7 @@
                         </div>
                         <div class="total_purchased referral_card">
                             <h3>Purchased</h3>
-                            <span class="number">0</span>
+                            <span class="number">{{ $total_purchase }}</span>
                         </div>
                     </div>
                     <div class="rewards">
