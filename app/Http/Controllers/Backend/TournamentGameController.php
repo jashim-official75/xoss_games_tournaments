@@ -19,7 +19,6 @@ class TournamentGameController extends Controller
             'games' => $games,
         ]);
     }
-
     //---create
     public function create()
     {

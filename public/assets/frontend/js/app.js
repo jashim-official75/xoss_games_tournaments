@@ -1,5 +1,95 @@
 
 
+$(".prizes_slider").slick({
+  infinite: true,
+  speed: 500,
+  slidesToShow: 6,
+  slidesToScroll: 2,
+  autoplay: true,
+  autoplaySpeed: 1500,
+  pauseOnHover:true,
+  arrows:false,
+  dots:true,
+  touchMove:true,
+  responsive: [
+    {
+      breakpoint: 1440,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: true,
+      },
+    },
+    {
+      breakpoint: 1367,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        infinite: true,
+      },
+    },
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: true,
+      },
+    },
+    {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        infinite: true,
+      },
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 500,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+  ],
+
+});
+
+
+let prevScrollPos = window.pageYOffset;
+const header = document.getElementById("header");
+
+window.onscroll = () => {
+    const currentScrollPos = window.pageYOffset;
+
+    if (prevScrollPos > currentScrollPos) {
+        header.style.transform = "translateY(0)";
+    } else {
+        header.style.transform = "translateY(-100%)";
+    }
+
+    prevScrollPos = currentScrollPos;
+};
+
+// sidebar js
+
+function showSidebar() {
+  document.querySelector('.sidebar').style.right = '0';
+  document.querySelector('.overlay').style.display = 'block';
+}
+
+function closeSidebar() {
+  document.querySelector('.sidebar').style.right = '-400px';
+  document.querySelector('.overlay').style.display = 'none';
+}
+
 window.onload = function() {
     // Get preloader element
     var preloader = document.getElementById("preloader_container");
@@ -63,11 +153,11 @@ function toggleAccordion() {
 items.forEach((item) => item.addEventListener("click", toggleAccordion));
 
 
-$(document).ready(function () {
-  $("#toggle_password").click(function () {
-    $("#password_change").slideToggle("fast");
-  });
-});
+// $(document).ready(function () {
+//   $("#toggle_password").click(function () {
+//     $("#password_change").slideToggle("fast");
+//   });
+// });
 
 const togglePassword = document.querySelectorAll(".toggle-password");
 
@@ -106,5 +196,36 @@ $(".tournament_slider").slick({
   fade: true,
   cssEase: 'linear',
   pauseOnHover:false,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+      },
+    },
+    {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+      },
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        speed: 1000,
+        autoplaySpeed: 6000,
+        dots: false,
+      },
+    },
+  ],
 });
+
+
+
 

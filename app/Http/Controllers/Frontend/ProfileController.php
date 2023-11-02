@@ -14,18 +14,22 @@ use Illuminate\Support\Facades\Hash;
 
 class ProfileController extends Controller
 {
-    //---profile
-    public function profile()
+    public function my_games()
     {
         $current_date = Carbon::now()->format('Y-m-d');
         $games = DB::table('tournament_payment_details')
             ->join('tournament_games', 'tournament_payment_details.tournament_game_id', '=', 'tournament_games.id')
             ->where('tournament_payment_details.subscriber_id', '=', auth()->guard('subscriber')->user()->id)
             ->where('tournament_games.end_date', '>', $current_date)
-            ->select('tournament_games.slug','tournament_games.image','tournament_games.game_name')
+            ->select('tournament_games.slug', 'tournament_games.image', 'tournament_games.game_name')
             ->get();
+            return view('frontend.profile.my_game', compact('games'));
+    }
+    //---profile
+    public function profile()
+    {
         $user = Subscriber::where('id', auth()->guard('subscriber')->user()->id)->first();
-        return view('frontend.profile.index', compact('user', 'games'));
+        return view('frontend.profile.index', compact('user'));
     }
     //--profile_update
     public function profile_update(Request $request, $id)

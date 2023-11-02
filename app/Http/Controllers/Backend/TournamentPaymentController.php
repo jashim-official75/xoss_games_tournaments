@@ -30,12 +30,12 @@ class TournamentPaymentController extends Controller
             // "subscriptionPeriod" => $game->subscription_period,
             "stopMessage" => "STOP SUBSCRIPTION",
             "urls" => [
-                "ok" => "https://tournament.xoss.games/tournament/success/$game->id",
-                "deny" => "https://tournament.xoss.games/tournament/deny/$game->slug",
-                "error" => "https://tournament.xoss.games/tournament/error/$game->slug"
-                // "ok" => "http://127.0.0.1:8000/tournament/success/$game->id",
-                // "deny" => "http://127.0.0.1:8000/tournament/deny/$game->slug",
-                // "error" => "http://127.0.0.1:8000/tournament/error/$game->slug"
+                // "ok" => "https://tournament.xoss.games/tournament/success/$game->id",
+                // "deny" => "https://tournament.xoss.games/tournament/deny/$game->slug",
+                // "error" => "https://tournament.xoss.games/tournament/error/$game->slug"
+                "ok" => "http://127.0.0.1:8000/tournament/success/$game->id",
+                "deny" => "http://127.0.0.1:8000/tournament/deny/$game->slug",
+                "error" => "http://127.0.0.1:8000/tournament/error/$game->slug"
             ],
             "operatorId" => "GRA-BD",
             "referenceId" => "pk-xyz-eng_eb4b7-8782-1b469ed27852"
