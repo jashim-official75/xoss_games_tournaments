@@ -20,6 +20,7 @@ class CreateTournamentGamesTable extends Migration
             $table->string('game_link');
             $table->string('game_zip_file');
             $table->string('image');
+            $table->string('game_background')->nullable();
             $table->longText('description');
             $table->longText('control')->nullable();
             $table->integer('participate')->nullable();

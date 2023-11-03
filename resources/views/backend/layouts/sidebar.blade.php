@@ -7,7 +7,6 @@
             <div class="profile-img">
                 <a href="{{ route('home') }}" target="_blank">
                     <img src="{{ asset('assets/backend/images/xoss_games_popup-logo.png') }}" alt="user" />
-
                 </a>
             </div>
             <!-- User profile text-->
@@ -18,7 +17,6 @@
                 <a href="#" class="" data-toggle="tooltip" title="Email"><i class="mdi mdi-gmail"></i></a> --}}
                 <a href="{{ route('admin.logout') }}" class="" data-toggle="tooltip" title="Logout"><i
                         class="mdi mdi-power"></i></a>
-
             </div>
         </div>
         <!-- End User profile text-->
@@ -55,9 +53,16 @@
                 <li> <a class="waves-effect waves-dark" href="{{ route('admin.front.user') }}" aria-expanded="false"><i
                             class="mdi mdi-gauge"></i><span class="hide-menu">User </span></a>
                 </li>
+
+                <!---prize---->
+                <li> <a class="waves-effect waves-dark" href="{{ route('prize.index') }}" aria-expanded="false"><i
+                            class="mdi mdi-gauge"></i><span class="hide-menu">Prize </span></a>
+                </li>
+
                 <!---subscriber---->
-                <li> <a class="waves-effect waves-dark" href="{{ route('admin.tournamant.perticipation') }}" aria-expanded="false"><i
-                            class="mdi mdi-gauge"></i><span class="hide-menu">Total Participation</span></a>
+                <li> <a class="waves-effect waves-dark" href="{{ route('admin.tournamant.perticipation') }}"
+                        aria-expanded="false"><i class="mdi mdi-gauge"></i><span class="hide-menu">Total
+                            Participation</span></a>
                 </li>
                 <!---administrator start----->
                 <li class=""><a href="#"><i

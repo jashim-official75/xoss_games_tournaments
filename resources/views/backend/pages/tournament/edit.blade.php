@@ -133,6 +133,18 @@
                                         @endif
                                     </div>
 
+                                    <div class="card-body">
+                                        <label for="game_background" class="mb-4">Game Background Image</label>
+                                        <input type="file" id="input-file-max-fs" class="dropify" name="game_background" />
+
+                                        <label for="prev" class="mb-3 mt-3 d-block">Old Game Background</label>
+                                        @if ($t_game->game_background)
+                                        <img class="img-fluid d-block p-b-30 m-auto"
+                                        src="{{ asset('uploads/Tournamant/GameBackground/' . $t_game->game_background) }}"
+                                        style="width: 150px;">
+                                        @endif
+                                    </div>
+
 
                                 </div>
                             </div>

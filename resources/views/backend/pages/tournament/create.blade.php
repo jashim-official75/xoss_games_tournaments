@@ -1,14 +1,11 @@
 @extends('backend.layouts.app')
-
 @section('pageName')
     Add Game
 @endsection
-
 @section('styles')
     {{-- File Upload --}}
     <link rel="stylesheet" href="{{ asset('/assets/backend/plugins/dropify/dist/css/dropify.min.css') }}">
 @endsection
-
 @section('content')
     <div class="row">
         <div class="col-md-12">
@@ -114,11 +111,13 @@
                                         <label for="game_banner" class="mb-4">Game Banner</label>
                                         <input type="file" id="input-file-max-fs" class="dropify" name="game_banner" />
                                     </div>
+
+                                    <div class="card-body">
+                                        <label for="game_background" class="mb-4">Game Background Image</label>
+                                        <input type="file" id="input-file-max-fs" class="dropify" name="game_background" />
+                                    </div>
                                 </div>
                             </div>
-
-                           
-                            
                             <button type="submit"
                                 class="btn btn-success waves-effect waves-light m-r-10 m-t-20">Submit</button>
                         </form>

@@ -36,14 +36,11 @@ class TournamentGameController extends Controller
             'subscription_period' => 'required',
             'f_price' => 'required',
             'game_thumbnail' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
+            'game_banner' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
+            'game_background' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
             'game_zip_file' => 'required|mimes:zip,rar'
         ]);
         $game_link = route('home') . '/' . 'tournament' . '/' . 'game' . '/' . Str::slug($request->game_name, '-');
-        if ($request->hasFile('game_banner')) {
-            $request->validate([
-                'game_banner' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
-            ]);
-        }
         // Check if a file was zip_file
         $file = $request->file('game_zip_file');
         $zip = new ZipArchive();
@@ -55,12 +52,18 @@ class TournamentGameController extends Controller
             $first_image_name = uniqid() . '_' . 'tournament' . '.' . $request->file('game_thumbnail')->extension();
             $request->file('game_thumbnail')->move(public_path('uploads/Tournamant/GameImage'), $first_image_name);
         }
+        //--game_background image upload
+        if ($request->hasFile('game_background')) {
+            $game_background = uniqid() . '_' . 'tournament' . '.' . $request->file('game_background')->extension();
+            $request->file('game_background')->move(public_path('uploads/Tournamant/GameBackground'), $game_background);
+        }
         $tournament_game = TournamentGame::create([
             'game_name' => $request->game_name,
             'slug' => Str::slug($request->game_name, '-'),
             'game_link' => $game_link,
             'game_zip_file' => $pathName,
             'image' => $first_image_name,
+            'game_background' => $game_background,
             'description' => $request->game_description,
             'control' => $request->game_control,
             'start_date' => $request->start_date,
@@ -82,6 +85,7 @@ class TournamentGameController extends Controller
                 ]);
             }
         }
+
         return redirect()->route('tournament.game.index')->with('success', 'Tournamant Game Uploaded Successfully!');
     }
     //---edit
@@ -103,12 +107,10 @@ class TournamentGameController extends Controller
             'start_date' => 'required',
             'end_date' => 'required',
             'f_price' => 'required',
+            'game_thumbnail' => 'image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
+            'game_banner' => 'image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
+            'game_background' => 'image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
         ]);
-        if ($request->hasFile('game_banner')) {
-            $request->validate([
-                'game_banner' => 'image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
-            ]);
-        }
         $t_game = TournamentGame::findOrFail($id);
         if ($request->hasFile('game_zip_file') == '') {
             $t_game->update([
@@ -127,9 +129,6 @@ class TournamentGameController extends Controller
         }
         //--delete old thumbnail image and new image update
         if ($request->hasFile('game_thumbnail')) {
-            $request->validate([
-                'game_thumbnail' => 'image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
-            ]);
             $oldFile = $t_game->image;
             $oldPath = 'uploads/Tournamant/GameImage/' . $oldFile;
             if ($oldPath) {
@@ -152,6 +151,20 @@ class TournamentGameController extends Controller
             $request->file('game_banner')->move(public_path('uploads/Tournamant/GameBanner'), $NewBannerName);
             $t_game->update([
                 'game_banner' => $NewBannerName,
+            ]);
+        }
+
+        //--delete old game_background and new game_background update
+        if ($request->hasFile('game_background')) {
+            $oldBack = $t_game->game_background;
+            $oldBackPath = 'uploads/Tournamant/GameBackground/' . $oldBack;
+            if ($oldBackPath) {
+                File::delete(public_path($oldBackPath));
+            }
+            $NewBackName = uniqid() . '_' . 'game_background_update' . '.' . $request->file('game_background')->extension();
+            $request->file('game_background')->move(public_path('uploads/Tournamant/GameBackground'), $NewBackName);
+            $t_game->update([
+                'game_background' => $NewBackName,
             ]);
         }
         //--delete old game asset and new game file update

@@ -6,7 +6,7 @@
 @section('content')
     <section id="tournament_deatils">
         <div class="tournament_singlebanner">
-            <a href="#"><img src="{{ asset('assets/frontend/img/cricket-game-details-tournament.webp') }}"
+            <a href="#"><img src="{{ asset('uploads/Tournamant/GameBackground/'. $game->game_background) }}"
                     alt="napzone-hero-bg-1" class="game_details-banner"></a>
             <div class="game_content">
                 <div class="gameImg">

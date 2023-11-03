@@ -22,6 +22,7 @@
                                 <tr>
                                     <th>No</th>
                                     <th>Participation</th>
+                                    <th>Add Prize</th>
                                     <th>Game</th>
                                     <th>Banner</th>
                                     <th>Fee</th>
@@ -35,6 +36,9 @@
                                         <td>{{ $loop->index + 1 }}</td>
                                         <td>
                                             <a href="{{ route('admin.current_game.participation', $game->id) }}">View Details</a>
+                                        </td>
+                                        <td>
+                                            <a href="{{ route('add_prize.show', $game->id) }}">Add</a>
                                         </td>
                                         <td>
                                             <img src="{{ asset('uploads/Tournamant/GameImage/' . $game->image) }}"
