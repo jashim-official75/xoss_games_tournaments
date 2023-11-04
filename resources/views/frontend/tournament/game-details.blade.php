@@ -43,7 +43,7 @@
                         </a>
                     </div>
                     <div class="prizes mt-5">
-                        <a href="{{ route('prizes') }}" class="primary_btn leaderborad_btn"><i class="fa-solid fa-trophy"></i>
+                        <a href="{{ route('tournament.game.prize', $game->slug) }}" class="primary_btn leaderborad_btn"><i class="fa-solid fa-trophy"></i>
                             <span>Price</span></a>
                         <a href="#" class="primary_btn howtoplayBtn"><span>How to Play</span> <i
                                 class="fa-solid fa-circle-info"></i></a>

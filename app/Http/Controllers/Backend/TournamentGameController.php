@@ -34,7 +34,6 @@ class TournamentGameController extends Controller
             'end_date' => 'required',
             'game_fee' => 'required',
             'subscription_period' => 'required',
-            'f_price' => 'required',
             'game_thumbnail' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
             'game_banner' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
             'game_background' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
@@ -70,10 +69,6 @@ class TournamentGameController extends Controller
             'end_date' => $request->end_date,
             'game_fee' => $request->game_fee,
             'subscription_period' => $request->subscription_period,
-            'first_price' => $request->f_price,
-            'second_price' => $request->s_price,
-            'third_price' => $request->third_price,
-            'fourth_price' => $request->fourth_price,
         ]);
         if ($tournament_game) {
             //--game banner upload
@@ -106,7 +101,6 @@ class TournamentGameController extends Controller
             'subscription_period' => 'required',
             'start_date' => 'required',
             'end_date' => 'required',
-            'f_price' => 'required',
             'game_thumbnail' => 'image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
             'game_banner' => 'image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
             'game_background' => 'image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
@@ -121,10 +115,6 @@ class TournamentGameController extends Controller
                 'end_date' => $request->end_date,
                 'game_fee' => $request->game_fee,
                 'subscription_period' => $request->subscription_period,
-                'first_price' => $request->f_price,
-                'second_price' => $request->s_price,
-                'third_price' => $request->third_price,
-                'fourth_price' => $request->fourth_price,
             ]);
         }
         //--delete old thumbnail image and new image update
@@ -232,5 +222,20 @@ class TournamentGameController extends Controller
         }
         $t_game->delete();
         return redirect()->route('tournament.game.index')->with('success', 'Tournamant Game Deleted Successfully!');
+    }
+
+    //---status_change
+    public function status_change($id)
+    {
+        $t_game = TournamentGame::findOrFail($id);
+        if($t_game->status == 1){
+            $t_game->status = 0;
+            $t_game->save();
+        }
+        else{
+            $t_game->status = 1;
+            $t_game->save();
+        }
+        return redirect()->route('tournament.game.index')->with('success', 'Tournamant Game Status Changed!');
     }
 }

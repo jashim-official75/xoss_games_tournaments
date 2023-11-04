@@ -63,48 +63,17 @@
                                         <label for="subscription_period">Subscription_period <span class="text-danger">(required)</span></label>
                                         <input type="text" class="form-control" id="subscription_period" name="subscription_period" value="">
                                     </div>
-
-                                    <div class="row">
-                                        <div class="col-sm-6 col-xl-6">
-                                            <div class="form-group">
-                                                <label for="f_price">1st Price <span class="text-danger">(required)</span></label>
-                                                <input type="text" class="form-control" id="f_price" name="f_price" value="">
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6 col-xl-6">
-                                            <div class="form-group">
-                                                <label for="s_price">2nd Price</label>
-                                                <input type="text" class="form-control" id="s_price" name="s_price" value="">
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6 col-xl-6">
-                                            <div class="form-group">
-                                                <label for="third_price">3rd Price</label>
-                                                <input type="text" class="form-control" id="third_price" name="third_price" value="">
-                                            </div>
-                                        </div>
-        
-                                        <div class="col-sm-6 col-xl-6">
-                                            <div class="form-group">
-                                                <label for="fourth_price">4th Price</label>
-                                                <input type="text" class="form-control" id="fourth_price" name="fourth_price" value="">
-                                            </div>
-                                        </div>
+                                    <div class="card-body">
+                                        <label for="zip" class="mb-4">Game Zip File <span class="text-danger">(required)</span></label>
+                                        <input type="file" id="input-file-max-fs" class="dropify" accept=".zip,.rar" name="game_zip_file" />
                                     </div>
-
                                 </div>
-                                
                                 <div class="offset-sm-1"></div>
                                 <div class="col-sm-5 col-xs-5">
                                     <div class="card-body">
                                         <label for="game_thumbnail" class="mb-4">Game Thumbnail (<span>340x210</span>) <span class="text-danger">(required)</span></label>
                                         <input type="file" id="input-file-max-fs" class="dropify"
                                             data-max-file-size="2M" name="game_thumbnail" />
-                                    </div>
-
-                                    <div class="card-body">
-                                        <label for="zip" class="mb-4">Game Zip File <span class="text-danger">(required)</span></label>
-                                        <input type="file" id="input-file-max-fs" class="dropify" accept=".zip,.rar" name="game_zip_file" />
                                     </div>
 
                                     <div class="card-body">

@@ -28,7 +28,10 @@ Route::get('/admin/login', [LoginController::class, 'login'])->name('admin.login
         Route::get('/tournament/edit/{id}', [TournamentGameController::class, 'edit'])->name('tournament.game.edit');
         Route::post('/tournament/update/{id}', [TournamentGameController::class, 'update'])->name('tournament.game.update');
         Route::delete('/tournament/delete/{id}', [TournamentGameController::class, 'delete'])->name('tournament.game.destroy');
+        Route::get('/tournament/status/{id}', [TournamentGameController::class, 'status_change'])->name('tgame.status');
         Route::resource('/add_prize', TournamentPrizeController::class);
+        Route::get('game_prize/status/{id}', [TournamentPrizeController::class, 'change_status'])->name('game_prize.status');
         //----prizes
         Route::resource('/prize', Prizecontroller::class);
+        
     });

@@ -33,7 +33,7 @@ class CreateTournamentGamesTable extends Migration
             $table->string('second_price')->nullable();
             $table->string('third_price')->nullable();
             $table->string('fourth_price')->nullable();
-            $table->tinyInteger('status')->nullable();
+            $table->tinyInteger('status')->default(0);
             $table->timestamps();
         });
     }

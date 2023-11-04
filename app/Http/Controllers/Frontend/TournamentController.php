@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Backend\GamePrize;
 use App\Models\Backend\TournamentGame;
 use App\Models\Frontend\TournamentPaymentDetails;
 use App\Models\GameScore;
@@ -21,7 +22,6 @@ class TournamentController extends Controller
         if (!auth()->guard('subscriber')->check()) {
             return redirect()->route('home');
         }
-
         $subscriber_id = Auth::guard('subscriber')->user()->id;
         $game = TournamentGame::where('slug', $slug)->first();
         $tournament_game_id = $game->id;
@@ -41,16 +41,13 @@ class TournamentController extends Controller
                 break;
             }
         }
-
         $gamescores = $gamescore->splice(3);
-
         $check_payment = TournamentPaymentDetails::where('subscriber_id', $subscriber_id)->where('tournament_game_id', $tournament_game_id)->where('customer_reference', '!=', null)->first();
-        if($check_payment){
+        if ($check_payment) {
             $subscriber = 1;
-        }else{
+        } else {
             $subscriber = 0;
         }
-
         return view('frontend.tournament.game-details', [
             'game' => $game,
             'fist_score' => $fist_score,
@@ -61,10 +58,8 @@ class TournamentController extends Controller
             'myIndex' => $myIndex,
             'myScore' => $myScore,
             'subscriber' => $subscriber,
-
         ]);
     }
-
     //--gamePlay
     public function gamePlay($slug)
     {
@@ -72,17 +67,30 @@ class TournamentController extends Controller
         if (!auth()->guard('subscriber')->check()) {
             return redirect()->route('home');
         }
-
         $game = TournamentGame::where('slug', $slug)->first();
-
         $check_payment = TournamentPaymentDetails::where('subscriber_id', auth()->guard('subscriber')->user()->id)->where('tournament_game_id', $game->id)->where('customer_reference', '!=', null)->first();
-        if(!$check_payment){
+        if (!$check_payment) {
             return redirect()->route('home');
         }
-
         return view('frontend.tournament.game-play', [
             'game' => $game,
-
+        ]);
+    }
+    //---game_prize
+    public function game_prize($slug)
+    {
+        //---check login---
+        if (!auth()->guard('subscriber')->check()) {
+            return redirect()->route('home');
+        }
+        $game = TournamentGame::where('slug', $slug)->first();
+        $first_prize = GamePrize::byRank(1, $game->id)->first();
+        $second_prize = GamePrize::byRank(2, $game->id)->first();
+        $third_prize = GamePrize::byRank(3, $game->id)->first();
+        return view('frontend.tournament.game_prize', [
+            'first_prize' => $first_prize,
+            'second_prize' => $second_prize,
+            'third_prize' => $third_prize,
         ]);
     }
 }

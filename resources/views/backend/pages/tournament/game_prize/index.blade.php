@@ -15,7 +15,8 @@
             <div class="card">
                 <div class="card-header d-flex justify-content-between">
                     <h4 class="card-title">Add Prize</h4>
-                    <a href="{{ route('tournament.game.index') }}" class="btn btn-sm btn-primary d-flex align-items-center">Back</a>
+                    <a href="{{ route('tournament.game.index') }}"
+                        class="btn btn-sm btn-primary d-flex align-items-center">Back</a>
                 </div>
                 <div class="card-body">
                     <form action="{{ route('add_prize.store') }}" method="POST" enctype="multipart/form-data">
@@ -25,26 +26,26 @@
                             <label for="prize_name">Price Name <span class="text-danger">*</span></label>
                             <input type="text" class="form-control" id="prize_name" placeholder="prize Name"
                                 name="prize_name" value="">
-                                @error('prize_name')
-                                    <p class="text-danger mt-2">{{ $message }}</p>
-                                @enderror
+                            @error('prize_name')
+                                <p class="text-danger mt-2">{{ $message }}</p>
+                            @enderror
                         </div>
 
                         <div class="form-group">
                             <label for="position">Position <span class="text-danger">*</span></label>
                             <input type="number" class="form-control" id="position" placeholder="Prize Position"
                                 name="position" value="">
-                                @error('position')
-                                    <p class="text-danger mt-2">{{ $message }}</p>
-                                @enderror
+                            @error('position')
+                                <p class="text-danger mt-2">{{ $message }}</p>
+                            @enderror
                         </div>
 
                         <div class="form-group">
                             <label for="name">Image <span class="text-danger">*</span></label>
                             <input type="file" class="form-control" id="image" name="image">
                             @error('image')
-                                    <p class="text-danger mt-2">{{ $message }}</p>
-                                @enderror
+                                <p class="text-danger mt-2">{{ $message }}</p>
+                            @enderror
                         </div>
 
                         <div class="form-group">
@@ -68,6 +69,7 @@
                                     <th>Prize Name</th>
                                     <th>Image</th>
                                     <th>Position</th>
+                                    <th>Status</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -80,12 +82,21 @@
                                             <img src="{{ asset($prize->image) }}" alt="">
                                         </td>
                                         <td>{{ $prize->position }}</td>
+                                        <td>
+                                            @if ($prize->status == 1)
+                                                <a href="{{ route('game_prize.status', $prize->id) }}" onclick="return confirm('are you sure change status ?')">on</a>
+                                            @else
+                                                <a href="{{ route('game_prize.status', $prize->id) }}" onclick="return confirm('are you sure change status ?')">off</a>
+                                            @endif
+                                        </td>
                                         <td class="d-flex align-items-center">
                                             <a href="{{ route('add_prize.edit', $prize->id) }}" class="fa fa-pencil"></a>
                                             <form action="{{ route('add_prize.destroy', $prize->id) }}" method="POST">
                                                 @csrf
                                                 @method('DELETE')
-                                                <button type="submit" onclick="return confirm('Are you sure you want to delete this item?')" class="btn fa fa-trash text-danger"></button>
+                                                <button type="submit"
+                                                    onclick="return confirm('Are you sure you want to delete this item?')"
+                                                    class="btn fa fa-trash text-danger"></button>
                                             </form>
                                         </td>
                                     </tr>

@@ -41,6 +41,7 @@ Route::middleware('preventBackHistory')->group(function () {
     Route::post('/new-password/store', [ResetPasswordController::class, 'new_password_store'])->name('new.password.store');
     //----tournament game ---
     Route::get('/tournament/GameDetails/{slug}', [TournamentController::class, 'game_details'])->name('tournament.game.details');
+    Route::get('/tournament/prize/{slug}', [TournamentController::class, 'game_prize'])->name('tournament.game.prize');
     Route::get('/game-score', [GameScoreController::class, 'updateScore']);
     Route::get('/tournament/gamePlay/{slug}', [TournamentController::class, 'gamePlay'])->name('tournament.game.play');
     //payment
