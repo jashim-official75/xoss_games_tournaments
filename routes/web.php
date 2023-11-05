@@ -22,6 +22,8 @@ Route::middleware('preventBackHistory')->group(function () {
     Route::group(['middleware' => 'loginRegisterCheck'], function () {
         Route::get('/sign-up', [SignUpController::class, 'index'])->name('user.sign_up');
         Route::post('/sign-up', [SignUpController::class, 'store'])->name('user.signup.store');
+        Route::get('/sign-up/verify', [SignUpController::class, 'verify_number'])->name('user.signup.verify');
+        Route::post('/sign-up/verify', [SignUpController::class, 'verify_number_check'])->name('user.signup.verify_check');
         Route::get('/sign-in', [SignInController::class, 'index'])->name('user.sign_in');
         Route::post('/sign-in', [SignInController::class, 'store'])->name('user.signin.store');
     });

@@ -643,6 +643,7 @@ class ComposerStaticInitc9b4a3c38f0b8fc12c78f5de48ea6e0c
         'App\\Models\\GameScore' => __DIR__ . '/../..' . '/app/Models/GameScore.php',
         'App\\Models\\ResetPasswordOtp' => __DIR__ . '/../..' . '/app/Models/ResetPasswordOtp.php',
         'App\\Models\\Subscriber' => __DIR__ . '/../..' . '/app/Models/Subscriber.php',
+        'App\\Models\\SubscriberNumberVerify' => __DIR__ . '/../..' . '/app/Models/SubscriberNumberVerify.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',

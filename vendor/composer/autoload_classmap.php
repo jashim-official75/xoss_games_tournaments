@@ -58,6 +58,7 @@ return array(
     'App\\Models\\GameScore' => $baseDir . '/app/Models/GameScore.php',
     'App\\Models\\ResetPasswordOtp' => $baseDir . '/app/Models/ResetPasswordOtp.php',
     'App\\Models\\Subscriber' => $baseDir . '/app/Models/Subscriber.php',
+    'App\\Models\\SubscriberNumberVerify' => $baseDir . '/app/Models/SubscriberNumberVerify.php',
     'App\\Models\\User' => $baseDir . '/app/Models/User.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
     'App\\Providers\\AuthServiceProvider' => $baseDir . '/app/Providers/AuthServiceProvider.php',

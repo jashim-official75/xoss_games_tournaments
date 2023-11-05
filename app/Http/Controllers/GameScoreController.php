@@ -14,19 +14,15 @@ class GameScoreController extends Controller
         if (!auth()->guard('subscriber')->check()) {
             return redirect()->route('home');
         }
-        
+
         $game_score = $request->game;
         $game_id = $request->game_id;
         $user_id = Auth::guard('subscriber')->user()->id;
         $same_user =  GameScore::where('subscriber_id', $user_id)->where('tournament_game_id', $game_id)->first();
         if ($same_user) {
-            if ($same_user->score < $game_score) {
-                $same_user->update([
-                    'score'=>$game_score
-                ]);
-            }else{
-                return 'no update';
-            }
+            $same_user->update([
+                'score' => $same_user->score + $game_score
+            ]);
         } else {
             GameScore::create([
                 'subscriber_id' => $user_id,
