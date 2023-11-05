@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Backend\Prize;
 use App\Models\Backend\TournamentGame;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class FrontendController extends Controller
@@ -12,14 +14,15 @@ class FrontendController extends Controller
     public function index()
     {
         $games = TournamentGame::latest()->get();
+        $prizes = Prize::latest()->get();
         return view('frontend.tournament.index', [
             'games' => $games,
+            'prizes' => $prizes,
         ]);
     }
 
     public function tournament()
     {
-        
     }
     //--tournament_rules
     public function tournament_rules()

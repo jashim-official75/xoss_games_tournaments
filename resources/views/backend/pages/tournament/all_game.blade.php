@@ -1,14 +1,11 @@
 @extends('backend.layouts.app')
-
 @section('pageName')
     Tournamant Games
 @endsection
-
 @section('styles')
     <!-- Footable CSS -->
     <link href="{{ asset('/assets/backend/plugins/footable/css/footable.core.css') }}" rel="stylesheet">
 @endsection
-
 @section('content')
     <div class="row">
         <div class="col-12">
@@ -22,10 +19,11 @@
                                 <tr>
                                     <th>No</th>
                                     <th>Participation</th>
+                                    <th>Add Prize</th>
                                     <th>Game</th>
                                     <th>Banner</th>
                                     <th>Fee</th>
-                                    <th>First Price</th>
+                                    <th>Status</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -34,13 +32,16 @@
                                     <tr>
                                         <td>{{ $loop->index + 1 }}</td>
                                         <td>
-                                            <a href="{{ route('admin.current_game.participation', $game->id) }}">View Details</a>
+                                            <a href="{{ route('admin.current_game.participation', $game->id) }}">View
+                                                Details</a>
+                                        </td>
+                                        <td>
+                                            <a href="{{ route('add_prize.show', $game->id) }}">Add</a>
                                         </td>
                                         <td>
                                             <img src="{{ asset('uploads/Tournamant/GameImage/' . $game->image) }}"
                                                 alt="user" width="40" class="img-circle" /> {{ $game->game_name }}
                                         </td>
-
                                         <td>
                                             @if ($game->game_banner)
                                                 <img src="{{ asset('uploads/Tournamant/GameBanner/' . $game->game_banner) }}"
@@ -48,14 +49,17 @@
                                             @endif
                                         </td>
                                         <td>{{ $game->game_fee }}</td>
-                                        <td>{{ $game->first_price }}</td>
-
                                         <td>
-
+                                            @if ($game->status == 1)
+                                                <a href="{{ route('tgame.status', $game->id) }}" onclick="return confirm('are you sure change status this game?')">on</a>
+                                            @else
+                                                <a href="{{ route('tgame.status', $game->id) }}" onclick="return confirm('are you sure change status this game?')">off</a>
+                                            @endif
+                                        </td>
+                                        <td>
                                             <a href="{{ route('tournament.game.edit', $game) }}" data-toggle="tooltip"
                                                 data-original-title="Edit" style="background: transparent; border: none;">
                                                 <i class="fa fa-pencil text-inverse m-r-10"></i> </a>
-
                                             <form action="{{ route('tournament.game.destroy', $game) }}" method="post"
                                                 style="display: inline">
                                                 @csrf
@@ -69,7 +73,6 @@
                                         </td>
                                     </tr>
                                 @endforeach
-
                             </tbody>
                             <tfoot>
                                 <tr>
@@ -87,10 +90,5 @@
         </div>
     </div>
 @endsection
-
 @section('scripts')
-    <!-- Footable -->
-    {{-- <script src="{{ asset('/assets/backend/plugins/footable/js/footable.all.min.js') }}"></script> --}}
-    <!--FooTable init-->
-    {{-- <script src="{{ asset('/assets/backend/js/footable-init.js') }}"></script> --}}
 @endsection

@@ -25,7 +25,8 @@
                 @endif
                 <div class="row">
                     <div class="col-sm-12 col-xs-12">
-                        <form action="{{ route('tournament.game.update', $t_game->id) }}" method="post" enctype="multipart/form-data">
+                        <form action="{{ route('tournament.game.update', $t_game->id) }}" method="post"
+                            enctype="multipart/form-data">
                             @csrf
                             <div class="row">
                                 <div class="col-sm-6 col-xs-6">
@@ -42,7 +43,8 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="game_description">Game Description <span class="text-danger">(required)</span></label>
+                                        <label for="game_description">Game Description <span
+                                                class="text-danger">(required)</span></label>
                                         <textarea class="form-control" id="game_description" placeholder="Enter Game Description" name="game_description">{{ $t_game->description }}</textarea>
                                     </div>
 
@@ -52,51 +54,36 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="start_date">Start Date <span class="text-danger">(required)</span></label>
-                                        <input type="date" class="form-control" id="start_date" name="start_date" value="{{ $t_game->start_date }}">
+                                        <label for="start_date">Start Date <span
+                                                class="text-danger">(required)</span></label>
+                                        <input type="date" class="form-control" id="start_date" name="start_date"
+                                            value="{{ $t_game->start_date }}">
                                     </div>
 
                                     <div class="form-group">
                                         <label for="end_date">End Date <span class="text-danger">(required)</span></label>
-                                        <input type="date" class="form-control" id="end_date" name="end_date" value="{{ $t_game->end_date }}">
+                                        <input type="date" class="form-control" id="end_date" name="end_date"
+                                            value="{{ $t_game->end_date }}">
                                     </div>
 
                                     <div class="form-group">
                                         <label for="game_fee">Game Fee <span class="text-danger">(required)</span></label>
-                                        <input type="number" class="form-control" id="game_fee" name="game_fee" value="{{ $t_game->game_fee }}">
+                                        <input type="number" class="form-control" id="game_fee" name="game_fee"
+                                            value="{{ $t_game->game_fee }}">
                                     </div>
 
-                                     <div class="form-group">
-                                        <label for="subscription_period">Subscription_period <span class="text-danger">(required)</span></label>
-                                        <input type="text" class="form-control" id="subscription_period" name="subscription_period" value="{{ $t_game->subscription_period }}">
+                                    <div class="form-group">
+                                        <label for="subscription_period">Subscription_period <span
+                                                class="text-danger">(required)</span></label>
+                                        <input type="text" class="form-control" id="subscription_period"
+                                            name="subscription_period" value="{{ $t_game->subscription_period }}">
                                     </div>
-
-                                    <div class="row">
-                                        <div class="col-sm-6 col-xl-6">
-                                            <div class="form-group">
-                                                <label for="f_price">1st Price <span class="text-danger">(required)</span></label>
-                                                <input type="text" class="form-control" id="f_price" name="f_price" value="{{ $t_game->first_price }}">
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6 col-xl-6">
-                                            <div class="form-group">
-                                                <label for="s_price">2nd Price</label>
-                                                <input type="text" class="form-control" id="s_price" name="s_price" value="{{ $t_game->second_price }}">
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6 col-xl-6">
-                                            <div class="form-group">
-                                                <label for="third_price">3rd Price</label>
-                                                <input type="text" class="form-control" id="third_price" name="third_price" value="{{ $t_game->third_price }}">
-                                            </div>
-                                        </div>
-        
-                                        <div class="col-sm-6 col-xl-6">
-                                            <div class="form-group">
-                                                <label for="fourth_price">4th Price</label>
-                                                <input type="text" class="form-control" id="fourth_price" name="fourth_price" value="{{ $t_game->fourth_price }}">
-                                            </div>
-                                        </div>
+                                    <div class="card-body">
+                                        <label for="zip" class="mb-4">Game Zip File</label>
+                                        <input type="file" id="input-file-max-fs" class="dropify" accept=".zip,.rar"
+                                            name="game_zip_file" />
+                                        <label for="prev" class="mb-3 mt-3 d-block">Old Game File</label>
+                                        <p>{{ $t_game->game_zip_file }}</p>
                                     </div>
 
                                 </div>
@@ -112,24 +99,29 @@
                                             src="{{ asset('uploads/Tournamant/GameImage/' . $t_game->image) }}"
                                             style="width: 150px;">
                                     </div>
-
-                                    <div class="card-body">
-                                        <label for="zip" class="mb-4">Game Zip File</label>
-                                        <input type="file" id="input-file-max-fs" class="dropify" accept=".zip,.rar"
-                                            name="game_zip_file" />
-                                            <label for="prev" class="mb-3 mt-3 d-block">Old Game File</label>
-                                            <p>{{ $t_game->game_zip_file }}</p>
-                                    </div>
-
                                     <div class="card-body">
                                         <label for="game_banner" class="mb-4">Game Banner</label>
-                                        <input type="file" id="input-file-max-fs" class="dropify" name="game_banner" />
+                                        <input type="file" id="input-file-max-fs" class="dropify"
+                                            name="game_banner" />
 
                                         <label for="prev" class="mb-3 mt-3 d-block">Old Game Banner</label>
                                         @if ($t_game->game_banner)
-                                        <img class="img-fluid d-block p-b-30 m-auto"
-                                        src="{{ asset('uploads/Tournamant/GameBanner/' . $t_game->game_banner) }}"
-                                        style="width: 150px;">
+                                            <img class="img-fluid d-block p-b-30 m-auto"
+                                                src="{{ asset('uploads/Tournamant/GameBanner/' . $t_game->game_banner) }}"
+                                                style="width: 150px;">
+                                        @endif
+                                    </div>
+
+                                    <div class="card-body">
+                                        <label for="game_background" class="mb-4">Game Background Image</label>
+                                        <input type="file" id="input-file-max-fs" class="dropify"
+                                            name="game_background" />
+
+                                        <label for="prev" class="mb-3 mt-3 d-block">Old Game Background</label>
+                                        @if ($t_game->game_background)
+                                            <img class="img-fluid d-block p-b-30 m-auto"
+                                                src="{{ asset('uploads/Tournamant/GameBackground/' . $t_game->game_background) }}"
+                                                style="width: 150px;">
                                         @endif
                                     </div>
 

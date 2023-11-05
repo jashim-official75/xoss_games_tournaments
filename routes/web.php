@@ -1,10 +1,5 @@
 <?php
 
-use App\Http\Controllers\Backend\DashboardController;
-use App\Http\Controllers\Backend\LoginController;
-use App\Http\Controllers\Backend\RegisterController;
-use App\Http\Controllers\Backend\SubscriberController;
-use App\Http\Controllers\Backend\TournamentGameController;
 use App\Http\Controllers\Backend\TournamentPaymentController;
 use App\Http\Controllers\Frontend\ResetPasswordController;
 use App\Http\Controllers\Frontend\FrontendController;
@@ -22,16 +17,18 @@ Route::middleware('preventBackHistory')->group(function () {
     Route::get('/rules', [FrontendController::class, 'tournament_rules'])->name('tournament_rules');
     Route::get('/faq', [FrontendController::class, 'tournament_faq'])->name('tournament_faq');
     Route::get('/support', [FrontendController::class, 'tournament_support'])->name('tournament_support');
-    Route::get('/referr', [ReferrController::class, 'referr'])->name('referr');
     Route::get('/prizes', [FrontendController::class, 'prizes'])->name('prizes');
     //----user login and register---
     Route::group(['middleware' => 'loginRegisterCheck'], function () {
         Route::get('/sign-up', [SignUpController::class, 'index'])->name('user.sign_up');
         Route::post('/sign-up', [SignUpController::class, 'store'])->name('user.signup.store');
+        Route::get('/sign-up/verify', [SignUpController::class, 'verify_number'])->name('user.signup.verify');
+        Route::post('/sign-up/verify', [SignUpController::class, 'verify_number_check'])->name('user.signup.verify_check');
         Route::get('/sign-in', [SignInController::class, 'index'])->name('user.sign_in');
         Route::post('/sign-in', [SignInController::class, 'store'])->name('user.signin.store');
     });
     Route::group(['middleware' => 'subscriber'], function () {
+        Route::get('/referr', [ReferrController::class, 'referr'])->name('referr');
         Route::get('/logout', [SignUpController::class, 'logout'])->name('user.logout');
         Route::get('/user/profile', [ProfileController::class, 'profile'])->name('user.profile');
         Route::get('/user/games', [ProfileController::class, 'my_games'])->name('user.my_games');
@@ -46,6 +43,7 @@ Route::middleware('preventBackHistory')->group(function () {
     Route::post('/new-password/store', [ResetPasswordController::class, 'new_password_store'])->name('new.password.store');
     //----tournament game ---
     Route::get('/tournament/GameDetails/{slug}', [TournamentController::class, 'game_details'])->name('tournament.game.details');
+    Route::get('/tournament/prize/{slug}', [TournamentController::class, 'game_prize'])->name('tournament.game.prize');
     Route::get('/game-score', [GameScoreController::class, 'updateScore']);
     Route::get('/tournament/gamePlay/{slug}', [TournamentController::class, 'gamePlay'])->name('tournament.game.play');
     //payment
@@ -54,26 +52,11 @@ Route::middleware('preventBackHistory')->group(function () {
     Route::get('/tournament/deny/{slug}', [TournamentPaymentController::class, 'tournamant_payment_deny'])->name('tournament.payment.deny');
     Route::get('/tournament/error/{slug}', [TournamentPaymentController::class, 'tournamant_payment_error'])->name('tournament.payment.error');
     //end payment
-    Route::get('/admin/login', [LoginController::class, 'login'])->name('admin.login');
-    Route::post('/admin/login', [LoginController::class, 'loginProcess'])->name('admin.login.process');
-    Route::group(['prefix' => '/admin', 'middleware' => 'auth'], function () {
-        Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
-        Route::get('/logout', [LoginController::class, 'logout'])->name('admin.logout');
-        //--register--
-        Route::get('/register', [RegisterController::class, 'register'])->name('admin.register');
-        Route::post('/register', [RegisterController::class, 'register_store'])->name('admin.register.store');
-        //---front user and participation 
-        Route::get('/front/user', [SubscriberController::class, 'user'])->name('admin.front.user');
-        Route::get('/tournamant/perticipation', [SubscriberController::class, 'tournamant_perticipation'])->name('admin.tournamant.perticipation');
-        Route::get('/game/current/perticipation/{id}', [SubscriberController::class, 'currentGame_perticipation'])->name('admin.current_game.participation');
-        //---tournament----
-        Route::get('/tournament/index', [TournamentGameController::class, 'index'])->name('tournament.game.index');
-        Route::get('/tournament/add', [TournamentGameController::class, 'create'])->name('tournament.game.add');
-        Route::post('/tournament/store', [TournamentGameController::class, 'store'])->name('tournament.game.store');
-        Route::get('/tournament/edit/{id}', [TournamentGameController::class, 'edit'])->name('tournament.game.edit');
-        Route::post('/tournament/update/{id}', [TournamentGameController::class, 'update'])->name('tournament.game.update');
-        Route::delete('/tournament/delete/{id}', [TournamentGameController::class, 'delete'])->name('tournament.game.destroy');
-    });
+
+    //----admin routes start--
+    require __DIR__ .'/admin.php';
+    //--- admin routes end ---    
+
     //Config cache clear
     Route::get('clear', function () {
         Artisan::call('cache:clear');
