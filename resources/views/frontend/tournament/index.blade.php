@@ -40,6 +40,13 @@
             </div>
         </div>
     </section>
+    {{-- PRELAUNCHING TEXT START --}}
+    <section class="prelanching_text custom_container">
+        <div class="js-container">
+            <h1 class="backindown-text">We're Launching <span>Soon!</span> </h1>
+        </div>
+    </section>
+    {{-- PRELAUNCHING TEXT END --}}
     <!-- --------------------------TOURNAMENT HEADER  END ------------------------ -->
 
     <!-- --------------------------TOURNAMENT CARD START ------------------------ -->
@@ -116,9 +123,9 @@
                     <div class="bar"></div>
                 </div>
             </div>
-            <div class="row justify-content-center">
+            {{-- <div class="row justify-content-center">
                 @foreach ($games as $game)
-                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-12 mb-3 ">
+                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12 mb-3 ">
                         <div class="tournament_card m-lg-3 ">
                             <div class="card_img">
                                 <div class="cover_img">
@@ -165,14 +172,134 @@
                             </div>
                         </div>
                     </div>
+                   
                 @endforeach
+            </div> --}}
+            <div class="card_full_width" style="background-image: url('{{ asset('assets/frontend/img/large-card-banner/cricekt-tournament-banner.png') }}')">
+                <div class="card_overlay"></div>
+                <div class="card_content">
+                    <div class="game_name">
+                        <div class="game_profile d-md-none d-block">
+                            <img src="{{ asset('assets/frontend/img/cricekt-world-cup-profile.webp') }}"
+                        alt="">
+                        </div>
+                        <h2>Cricket World Cup</h2>
+                        <span>Registration Starts </span> <span><b>
+                            @php
+                                $stringDate = $game->start_date; // Your string date
+                                $date = \Carbon\Carbon::parse($stringDate);
+                                echo $formattedDate = $date->format('j F, Y');
+                            @endphp
+                        </b></span>
+                        <div class="entry_fee">
+                            <h3>Entry Fee : ৳{{ $game->game_fee }}</h3>
+                        </div>
+                        <div class="play_now-btn m-0">
+                            <a href="{{ route('user.sign_in') }}" class="primary_btn">Join
+                                Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card_full_width" style="background-image: url('{{ asset('assets/frontend/img/large-card-banner/football-tournament-banner.png') }}')">
+                <div class="card_overlay"></div>
+                <div class="card_content">
+                    <div class="game_name">
+                        <div class="game_profile d-md-none d-block">
+                            <img src="{{ asset('assets/frontend/img/football-tournament.webp') }}" alt="">
+                        </div>
+                        <h2>Football Tournament</h2>
+                        <span>Registration Starts </span> <span><b>
+                            @php
+                                $stringDate = $game->start_date; // Your string date
+                                $date = \Carbon\Carbon::parse($stringDate);
+                                echo $formattedDate = $date->format('j F, Y');
+                            @endphp
+                        </b></span>
+                        <div class="entry_fee">
+                            <h3>Entry Fee : ৳{{ $game->game_fee }}</h3>
+                        </div>
+                        <div class="play_now-btn m-0">
+                            <a href="{{ route('user.sign_in') }}" class="primary_btn">Join
+                                Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+    </section>
+    <!-- --------------------------TOURNAMENT CARD END ------------------------ -->
+    
+    <!-- --------------------------TOP 3 OPTIONS START ------------------------ -->
+    <section id="tournament_steps" class="section">
+        <h1 class="title">Simple 3 Steps Need to Follow Up <br> <span>To Get Rewards!</span> </h1>
+        <div class="container">
+            <div class="row three_steps justify-content-center">
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="steps_card">
+                        <div class="card_header">
+                            <span class="number">01</span>
+                            <div class="icon">
+                                <img src="{{ asset('assets/frontend/img/join-now.png') }}" alt="">
+                            </div>
+                        </div>
+                        <div class="card_body">
+                            <div class="card_body_content">
+                                <h2>Join Now</h2>
+                            </div>
+                            <div class="info_content">
+                                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, aspernatur!</p>
+                             </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="steps_card">
+                        <div class="card_header">
+                            <span class="number">02</span>
+                            <div class="icon">
+                                <img src="{{ asset('assets/frontend/img/pay-money.png') }}" alt="">
+                            </div>
+                        </div>
+                        <div class="card_body">
+                            <div class="card_body_content">
+                                <h2>Pay Money</h2>
+                            </div>
+                            <div class="info_content">
+                               <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam, id.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="steps_card">
+                        <div class="card_header">
+                            <span class="number">03</span>
+                            <div class="icon">
+                                <img src="{{ asset('assets/frontend/img/win-prizes.png') }}" alt="">
+                            </div>
+                        </div>
+                        <div class="card_body">
+                            <div class="card_body_content">
+                                <h2>Win Prizes</h2>
+                            </div>
+                            <div class="info_content">
+                                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, aut.</p>
+                             </div>
+                        </div>
+
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-    <!-- --------------------------TOURNAMENT CARD END ------------------------ -->
+    <!-- --------------------------TOP 3 OPTIONS START ------------------------ -->
 
-    <!-- --------------------------TOURNAMENT CARD START ------------------------ -->
-    <section id="tournament_card" class="section-top">
+    <!-- --------------------------TOURNAMENT PRIZES START ------------------------ -->
+    <section id="tournament_card" class="section">
         <div class="container-fluid">
             <div class="title pb-5">
                 <h1 class="mostPopular__title__text"> <img src="{{ asset('assets/frontend/img/prizes-icon.png') }}"
@@ -207,5 +334,40 @@
             </div>
         </div>
     </section>
-    <!-- --------------------------TOURNAMENT CARD END ------------------------ -->
+    <!-- --------------------------TOURNAMENT PRIZES END ------------------------ -->
+
+    <!-- --------------------------TOURNAMENT PRIZES START ------------------------ -->
+    <section id="tournmanet_games_banner " class="custom_container section_margin ">
+        <div class="demo_bg">
+            <h1>Tournament Graphics 1920 * 400 </h1>
+        </div>
+    </section>
+    <!-- --------------------------TOURNAMENT PRIZES END ------------------------ -->
+    
+    <!-- --------------------------TOURNAMENT PRIZES START ------------------------ -->
+    <section id="tournmanet_games_banner " class="custom_container section_margin ">
+        <div class="demo_bg">
+            <h1>Tournament Graphics 1920 * 400 </h1>
+        </div>
+    </section>
+    <!-- --------------------------TOURNAMENT PRIZES END ------------------------ -->
+
+    <!-- -------------------------- REFERR PAGE START ------------------------ -->
+    <section id="reffer_your_friend" class="custom_container section_margin">
+       <div class="container-fluid">
+        <div class="refeer_frinds">
+            <div class="reffer_img">
+                <img src="{{ asset('assets/frontend/img/referr-friends.png') }}" alt="" class="img-fluid">
+            </div>
+            <div class="reffer_invitaion_text">
+                <h2>Invite Friends & Win Rewards!</h2>
+                <h3>Join Xoss Games Tournament Today</h3>
+            </div>
+            <div class="join_now">
+                <a href="#" class="primary_btn">LogIn Now</a>
+            </div>
+        </div>
+       </div>
+    </section>
+    <!-- -------------------------- REFERR PAGE END ------------------------ -->
 @endsection

@@ -1,3 +1,366 @@
+/* referr friends */
+#reffer_your_friend 
+{
+  position: relative;
+  background: #f1f1f1;
+  
+}
+#reffer_your_friend::after 
+{
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("tournament-seamless-pattern.png");
+  opacity: 0.1;
+}
+
+.refeer_frinds
+{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 0;
+  flex-wrap: wrap;
+  gap: 8rem;
+  z-index: 1000;
+  text-align: center;
+}
+.reffer_invitaion_text h2
+{
+  font-size: clamp(2rem,5vw,3.5rem);
+  font-weight: 600;
+  color: #3C1E6E;
+  margin-bottom: 1rem;
+}
+
+.reffer_invitaion_text h3
+{
+  font-size: clamp(2rem,5vw,3rem);
+  color: #3C1E6E;
+  margin-bottom: 1rem;
+}
+.game_profile {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  margin: 2rem auto;
+  display: block;
+  border: 2px solid #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 25px #0006 , 0 0 0 10px #fff4;
+}
+.game_profile img 
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+}
+/* referr friends */
+
+/* 3steps tournament */
+#tournament_steps 
+{
+  text-align: center;
+  background: #e2edf4;
+}
+.demo_bg 
+{
+  background: #3C1E6E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  border-radius: 15px;
+}
+.title 
+{
+  font-size: clamp(1.6rem,5vw,3rem);
+  padding: 0rem 0 5rem;
+  color: #3c1e6e;
+}
+.title span 
+{
+  font-size: clamp(2.5rem,5vw,4rem);
+  font-weight: 600;
+  color: #3C1E6E;
+  margin-top: 1rem;
+  display: block;
+}
+.three_steps 
+{
+  padding: 10rem 0 0;
+}
+.steps_card 
+{
+  position: relative;
+  background: #fff;
+  border-radius: 15px;
+  border: 1px solid #fff;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+}
+.card_header 
+{
+  position: relative;
+  width: 80%;
+  padding: 5rem 1rem;
+  background: #7d41dd;
+  margin: -5rem auto 0;
+  border-radius: 25px;
+  color: #fff2;
+}
+.card_header .number 
+{
+  position: relative;
+  font-size: clamp(5rem,5vw,8rem);
+  position: absolute;
+  bottom: -2rem;
+  left: 0;
+  font-weight: 700;
+  text-shadow: 0 5px 5px rgba(255, 255, 255, 0.1);
+}
+
+.card_header .icon img 
+{
+  width: 80px;
+}
+.card_body .card_body_content h2 
+{
+  font-size: 3rem;
+  margin: 2rem 0;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #3C1E6E;
+}
+.card_body .info_content p 
+{
+  font-size:clamp(1.2rem,5vw,1.4rem);
+  font-weight: 500;
+  text-align: justify;
+  text-align-last: center;
+  color: #232323;
+}
+/* 3steps tournament */
+
+
+/* full width tournament card */
+.card_full_width 
+{
+  position: relative;
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: top center;
+  padding: 20px 30px 20px 15px;
+  border-radius: 10px;
+  background-blend-mode: multiply;
+  margin-bottom: 20px;
+  z-index: 1;
+  box-shadow: 0 3px 10px 0 rgba(0,0,0,0.5);
+  transition: all 0.5s ease;
+  display: flex;
+  align-items: center;
+}
+.card_full_width .primary_btn
+{
+  margin: 2rem 0;
+  border: 2px solid transparent;
+  letter-spacing:2px;
+}
+.card_full_width .primary_btn:hover 
+{
+  background: transparent;
+  border: 2px solid #ddd;
+  color: #fff;
+  animation: none;
+}
+.card_overlay 
+{
+  background: linear-gradient(to right, transparent 0%, #3C1E6E 60%, #3c1e6e 100%);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 10px;
+}
+.card_content 
+{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  color: #fff;
+  /* padding-right: 2rem; */
+  width: 100%;
+  transform: scale(0.8);
+  /* position: absolute; */
+  /* right: 3rem; */
+}
+.card_content span 
+{
+ font-size: clamp(1.6rem , 5vw , 2rem);
+  font-weight: 500;
+  display: inline-block;
+  margin: 1rem 0;
+}
+.card_content .entry_fee {
+  background: #582aa2;
+  display: block;
+  padding: 0.5rem 1rem;
+  width: 200px;
+  border-radius: 10px;
+  border: 1px solid #fff4;
+  text-align: center;
+}
+.card_content .entry_fee h3
+{
+  color: #fff;
+  margin: 1rem 0;
+  font-size: 2rem;
+}
+.card_content h2 
+{
+ font-size: clamp(2.5rem , 5vw , 3.4rem);
+ margin-top: 1rem;
+}
+/* full width tournament card */
+
+
+/* tournament launching text */
+@keyframes confetti-slow {
+  0% {
+    transform: translate3d(0, 0, 0) rotateX(0) rotateY(0);
+ }
+  100% {
+    transform: translate3d(25px, 105vh, 0) rotateX(360deg) rotateY(180deg);
+ }
+}
+@keyframes confetti-medium {
+  0% {
+    transform: translate3d(0, 0, 0) rotateX(0) rotateY(0);
+ }
+  100% {
+    transform: translate3d(100px, 105vh, 0) rotateX(100deg) rotateY(360deg);
+ }
+}
+@keyframes confetti-fast {
+  0% {
+    transform: translate3d(0, 0, 0) rotateX(0) rotateY(0);
+ }
+  100% {
+    transform: translate3d(-50px, 105vh, 0) rotateX(10deg) rotateY(250deg);
+ }
+}
+.backindown-text 
+{
+  animation: backindown  3s ease-in-out infinite;
+ 
+}
+@keyframes backindown {
+  0% {
+    top: -20%;
+    transform:translate(-50%,-50%) scale(0.5);
+  }
+  10% 
+  {
+    top: 50%;
+  }
+  80% 
+  {
+    transform: translate(-50%,-50%) scale(0.8);
+    animation-delay: 10s;
+  }
+ 50%,60%,70% {
+    top: 50%;
+    transform: translate(-50%,-50%) scale(1.1);
+  }
+ 90%,100%{
+    transform: translate(-50%,-50%) scale(1.4);
+  }
+}
+
+.confetti-container {
+  perspective: 700px;
+  position: relative;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background: #3C1E6E;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.confetti-container::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("launch_text_graphics.png");
+  opacity: 0.2;
+}
+.prelanching_text 
+{
+  position: relative;
+  margin-top: 3rem !important;
+  overflow: hidden;
+}
+
+.prelanching_text h1 
+{
+  position: absolute;
+  font-size: clamp(1.6rem,5vw,5rem);
+  color: #fff;
+  top: 50%;
+  left: 50%;
+  z-index: 100;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+.prelanching_text h1 span 
+{
+  color: #eaec70;
+}
+.confetti {
+  position: absolute;
+  z-index: 1;
+  top: -10px;
+  border-radius: 0%;
+}
+.confetti--animation-slow {
+  animation: confetti-slow 2.25s linear 1 forwards;
+}
+.confetti--animation-medium {
+  animation: confetti-medium 1.75s linear 1 forwards;
+}
+.confetti--animation-fast {
+  animation: confetti-fast 1.25s linear 1 forwards;
+}
+
+/* tournament launching text */
+
+
+
 /* prizes */
 .single_game_prizes 
 {
@@ -751,9 +1114,9 @@ font-size: 1.6rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 10rem;
+  padding-top: 18rem;
   text-align: center;
-  /* padding: 11rem 0; */
+
 }
 #login_page form 
 {
@@ -857,7 +1220,7 @@ font-size: 1.6rem;
   min-height: 100vh;
   overflow-x: auto;
   overflow-y: auto;
-  z-index: 2560;
+  z-index: 20000;
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease-in-out;
@@ -1017,13 +1380,17 @@ z-index: 1;
   background: rgb(60 30 110 / 68%);
   width: 100%;
   padding: 1rem;
-  border: 0.1rem solid #fff2;
-  border-radius: 50px;
-  font-size: 3rem;
+  border: 0.1rem solid #fff8;
+  border-radius: 8px;
+  font-size: 2.5rem;
   color: #fff !important;
   backdrop-filter: blur(2rem);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   text-align: center;
+}
+.entry_cost 
+{
+  margin: 2rem 0;
 }
 .game_content .game_name a{
   font-size: clamp(3rem , 5vw ,5rem);
@@ -1063,7 +1430,6 @@ z-index: 1;
  color: #fff;
  text-align: center;
  background: rgba(61, 30, 110, 0.2);
- margin-bottom: 1rem;
  border-radius: 8px;
  backdrop-filter: blur(2rem);
  border: 2px solid rgba(255, 255, 255, 0.4);
@@ -1203,7 +1569,7 @@ z-index: 1;
   background-size: cover;
   background-position: center;
   z-index: 2;
-  height: 500px;
+  height: 600px;
   border-radius: 15px;
   overflow: hidden;
 }
@@ -1644,7 +2010,7 @@ margin-left: 1rem;
   background: #0099ff;
 }
 .entry_fee h3 {
-  font-size: clamp(1.6rem , 5vw ,2rem);
+  font-size: clamp(1.4rem , 5vw ,1.8rem);
   font-weight: 500;
   color: #3C1E6E;
 }
@@ -2273,13 +2639,17 @@ body {
   display: none; 
 } */
 .section-top {
-  padding: 5rem 0 0;
+  padding: 10rem 0 0;
 }
 .section-bottom {
   padding:0 0 5rem;
 }
 .section {
   padding: 8rem 0;
+}
+.section_margin 
+{
+  margin: 0 auto 3rem !important;
 }
 /* JUMP */
 button a {
@@ -5189,9 +5559,9 @@ box-shadow: 0px 6px 15px rgba(60, 30, 110, 0.12);
 }
 @media (min-width: 1200px) {
   .custom_container {
-    max-width: 1440px;
-    width: 90%;
-    padding: 0 2rem;
+    max-width: 100%;
+    width: 100%;
+    padding: 0 4rem;
   }
   
 }
@@ -5291,6 +5661,46 @@ box-shadow: 0px 6px 15px rgba(60, 30, 110, 0.12);
   .card__wrapper .card__body {
     margin: 1rem 1rem !important;
   }
+  .support_text p {
+    padding: 0 4rem;
+}
+.refeer_frinds {
+  gap: 3rem;
+}
+.support_contact ul li a .icon {
+  width: 4rem;
+  height: 4rem;
+}
+.support_contact ul li a {
+  font-size: 2rem;
+  gap: 1rem;
+  margin-top: 1rem;
+
+}
+.prizes_box  
+{
+  display: none;
+}
+.prizes_slider {
+  padding-left: 0 !important;
+  padding: 0rem 0 2rem;
+  
+}
+.prizes_slider .slick-dots {
+  bottom: -14px;
+}
+  .steps_card 
+  {
+    padding: 1rem;
+    min-width: 90%;
+    margin: 0 auto 2rem;
+  }
+  .title {
+    padding: 2rem 0 0rem;
+}
+.three_steps {
+  padding: 3rem 0 0;
+}
   .modalclose_btn {
     top: 10px;
     right: 10px;
@@ -5434,7 +5844,10 @@ box-shadow: 0px 6px 15px rgba(60, 30, 110, 0.12);
 
 }
 .tournament_singlebanner {
-  height: 550px;
+  height: 600px;
+}
+.game_content {
+  transform: scale(0.9);
 }
 .game_content .gameImg {
   width: 150px;
@@ -5657,6 +6070,14 @@ main#questions {
   .playbtn__bannar {
     width: 80%;
 }
+.card_full_width {
+  background-position: 0;
+}
+.game_content {
+  justify-content: flex-start;
+  transform: scale(0.85);
+  padding-top: 3rem;
+}
 }
 
 @media screen and (max-width: 1199.98px) {
@@ -5793,6 +6214,70 @@ main#questions {
 @media screen and (max-width: 768px) {
   #support_header {
     background-position: 50% 100%;
+}
+.card_full_width 
+{
+  background-position: -170px;
+  padding: 0;
+  height: 400px;
+}
+.card_content .entry_fee h3 {
+  font-size: 20px;
+}
+.card_content .entry_fee {
+  padding: 1rem 1rem;
+  border-radius: 10px;
+  font-size: 20px;
+}
+.card_full_width .primary_btn
+{
+  width:180px;
+  font-size: 1.6rem;
+}
+.card_overlay {
+  background: rgb(60 30 110 / 65%);
+  backdrop-filter: blur(3px);
+}
+.card_content h2 {
+  margin-top: 3rem;
+}
+.card_content .entry_fee {
+  margin: 0 auto;
+}
+.card_full_width .primary_btn {
+  margin: 2rem auto;
+}
+.card_content .entry_fee {
+  padding: 1rem 1rem;
+  width: 200px;
+  border-radius: 10px;
+  font-size: 20px;
+}
+.card_header {
+  width: 100%;
+  padding: 1rem 1rem;
+  margin: 0 auto 0;
+  border-radius: 12px;
+}
+.card_body .card_body_content h2 {
+  font-size: 2.2rem;
+  margin: 1rem 0;
+}
+  .card_header .number 
+{
+  bottom: 0;
+  left: 10px;
+  font-size: clamp(6rem,5vw,8rem);
+}
+.card_content {
+  position: absolute;
+  text-align: center;
+  top: 70%;
+  transform: translateY(-70%) scale(0.8);
+  left: 0;
+  padding-left: 0rem;
+  justify-content: flex-end;
+  align-items: center;
 }
 .single_game_prizes .prizes_inner {
   flex-direction: column;
@@ -5932,6 +6417,22 @@ margin-left: 0;
     max-width: 500px;
     margin: auto;
   }
+  #login_page {
+    height: auto;
+    min-height: auto;
+    max-height: 100vh;
+    padding-top: 10rem;
+}
+.card_full_width 
+{
+  height: 350px;
+}
+  #tournament_header {
+    padding-top: 80px;
+    }
+    .prelanching_text {
+    margin-top: 2.3rem !important;
+}
   .game_content .game_info .game_date .date {
 
     justify-content: space-around;
@@ -5969,10 +6470,13 @@ margin-left: 0;
     gap: 2rem;
     padding: 0rem 0;
 }
-    #login_page form {
-    padding: 0.3rem;
-    margin: 0 auto;
-    width: 90%;
+#login_page form {
+  padding: 0.3rem;
+  margin: 1rem auto 5rem;
+  width: 90%;
+}
+.login_body__logo img {
+  width: 150px;
 }
 .card_body .game_title a {
   font-size: 1.6rem;
@@ -6076,13 +6580,15 @@ margin-left: 0;
   display: block;
   margin: 10px auto 0;
 }
-  .containerBody {
-    min-height: 500px !important;
-    height: 100vh !important;
-    display: flex !important;
-    align-items: center !important;
-    padding:0;
-  }
+.containerBody {
+  min-height: auto !important;
+  height: 100vh !important;
+  display: flex !important;
+  align-items: center !important;
+  padding: 0;
+  padding: 3rem 0;
+  margin-top: 6rem;
+}
   .containerBody #contant_body {
   margin-top: 20px;
   margin-bottom: 20px;
