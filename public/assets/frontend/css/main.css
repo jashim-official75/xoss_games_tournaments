@@ -889,25 +889,36 @@
 }
 .profile_edits ul li 
 {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #fff2;
+}
+.profile_edits ul li a
+{
   font-size: 1.6rem;
   padding: 1rem 0;
   display: block;
-  border-bottom: 1px solid #fff1;
   cursor: pointer;
 }
 .profile_edits ul li span 
 {
   color: #fff;
 }
+.profile_edits ul li span i 
+{
+  font-size: 1.6rem;
+  width: 3.5rem;
+}
 .profile_edits ul li:hover a 
 {
-  left: 5px;
+  left: 8px;
   color: #fff;
 }
 .profile_edits ul li a 
 {
   position: relative;
-  left: 3px;
+  left: 5px;
+  width: 100%;
   color: #fff8;
   transition: all .3s ease;
 }
