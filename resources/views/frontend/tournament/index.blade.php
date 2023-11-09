@@ -17,8 +17,29 @@
         <div class="custom_container">
             <div class="tournament_slider">
                 @foreach ($games as $game)
+
+                <div class="single_slider-item"
+                style="background-image: url('{{ asset('assets/frontend/img/tournament-prizes.jpg') }}')">
+                <div class="slider_content">
+                    @if (auth()->guard('subscriber')->check())
+                        <h1 class="sm-hide"><a
+                                href="{{ route('tournament.game.details', $game->slug) }}">Tournament</a>
+                        </h1>
+                    @else
+                        <h1 class="sm-hide"><a href="{{ route('user.sign_in') }}">Tournament</a></h1>
+                    @endif
+                    <h2 class="sm-hide bangla_font">খেলে জিতে নাও <br> আকর্ষণীয় সব পুরস্কার</h2>
+                    @if (auth()->guard('subscriber')->check())
+                        <a href="{{ route('tournament.game.details', $game->slug) }}" class="primary_btn mt-5">Join
+                            Now</a>
+                    @else
+                        <a href="{{ route('user.sign_in') }}" class="primary_btn mt-5">Join Now</a>
+                    @endif
+                </div>
+            </div>
                     <div class="single_slider-item"
                         style="background-image: url('{{ asset('uploads/Tournamant/GameBanner/' . $game->game_banner) }}')">
+                        
                         <div class="slider_content">
                             @if (auth()->guard('subscriber')->check())
                                 <h1 class="sm-hide"><a
@@ -36,6 +57,7 @@
                             @endif
                         </div>
                     </div>
+                   
                 @endforeach
             </div>
         </div>

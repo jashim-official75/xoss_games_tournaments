@@ -1639,7 +1639,7 @@ z-index: 1;
 
 .slider_content  h1 a
 {
-  font-size: clamp(1.6rem, 5vw,3.5rem);
+  font-size: clamp(1.6rem, 5vw,4rem);
   color: #fff;
   margin-bottom: 2rem;
   font-weight: 700;
@@ -1651,7 +1651,11 @@ z-index: 1;
   max-width: 368px;
   line-height: 1.5;
 }
-
+.bangla_font 
+{
+  font-size: clamp(1.6rem, 5vw,3rem) !important;
+  line-height: 1.8 !important;
+}
 
 
 /* leaderboard */
