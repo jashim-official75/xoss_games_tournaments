@@ -17,9 +17,11 @@
         <div class="custom_container">
             <div class="tournament_slider">
                 <div class="single_slider-item"
-                    style="background-image: url('{{ asset('assets/frontend/img/tournament-prizes-slider.webp') }}')">
-                    <div class="slider_content">
-                        <h1 class="sm-hide"><a>Tournament</a>
+                style="background-image: url('{{ asset('assets/frontend/img/tournament-prizes.jpg') }}')">
+                <div class="slider_content">
+                    @if (auth()->guard('subscriber')->check())
+                        <h1 class="sm-hide"><a
+                                href="{{ route('tournament.game.details', $game->slug) }}">Tournament</a>
                         </h1>
                         <h2 class="sm-hide bangla_font">খেলে জিতে নাও <br> আকর্ষণীয় সব পুরস্কার</h2>
                         <a href="{{ route('prizes') }}" class="primary_btn mt-5">Prizes</a>
@@ -353,6 +355,22 @@
                     <img src="{{ asset('assets/frontend/img/gift-box.png') }}" alt="">
                 </div>
             </div>
+        </div>
+    </section>
+    <!-- --------------------------TOURNAMENT PRIZES END ------------------------ -->
+
+    <!-- --------------------------TOURNAMENT PRIZES START ------------------------ -->
+    <section id="tournmanet_games_banner " class="custom_container section_margin ">
+        <div class="demo_bg">
+            <h1>Tournament Graphics 1920 * 400 </h1>
+        </div>
+    </section>
+    <!-- --------------------------TOURNAMENT PRIZES END ------------------------ -->
+    
+    <!-- --------------------------TOURNAMENT PRIZES START ------------------------ -->
+    <section id="tournmanet_games_banner " class="custom_container section_margin ">
+        <div class="demo_bg">
+            <h1>Tournament Graphics 1920 * 400 </h1>
         </div>
     </section>
     <!-- --------------------------TOURNAMENT PRIZES END ------------------------ -->

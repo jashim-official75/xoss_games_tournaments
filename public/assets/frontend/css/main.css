@@ -362,6 +362,11 @@
 
 
 /* prizes */
+.prizes_header 
+{
+  position: relative;
+  margin-top: 7rem;
+}
 .single_game_prizes 
 {
   position: relative;
@@ -375,7 +380,7 @@
   justify-content: space-between;
   width: 100%;
   flex-wrap: wrap;
-  padding: 13rem 0;
+  padding: 4rem 0 8rem;
 }
  .prize_card 
 {
@@ -3215,26 +3220,10 @@ input[type=number]::-webkit-outer-spin-button {
 .footer_wrapper {
   padding: 2rem 0 0;
   position: relative;
-    --mask:
-      radial-gradient(7.54px at 50% 9.80px,#000 99%,#0000 101%) calc(50% - 14px) 0/28px 100%,
-      radial-gradient(7.54px at 50% -2.8px,#0000 99%,#000 101%) 50% 7px/28px 100% repeat-x;
-    -webkit-mask: var(--mask);
-            mask: var(--mask);
    background: #582f9b;
    width: 100%;
 }
-.footer_wrapper::after {
-  position: absolute;
-  content: '';
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-background-image: url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 16c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zm33.414-6l5.95-5.95L45.95.636 40 6.586 34.05.636 32.636 2.05 38.586 8l-5.95 5.95 1.414 1.414L40 9.414l5.95 5.95 1.414-1.414L41.414 8zM40 48c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zM9.414 40l5.95-5.95-1.414-1.414L8 38.586l-5.95-5.95L.636 34.05 6.586 40l-5.95 5.95 1.414 1.414L8 41.414l5.95 5.95 1.414-1.414L9.414 40z' fill='%23ffffff' fill-opacity='1' fill-rule='evenodd'/%3E%3C/svg%3E");
-  opacity: 0.05;
-  background-position:left;
-  z-index: -1;
-}
+
 .footer .footer__information__title {
   position: relative;
   color: #fff;
@@ -3285,9 +3274,8 @@ left: 2px;
 transition: all 0.2s ease-in-out;
 }
 .footer__border {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
   margin: 15px 12px 0px 28px;
-  padding-top: 27px;
+  padding-top: 0;
 }
 .footer .footer__end__body {
   color: rgba(255, 255, 255, 0.6);
