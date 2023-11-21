@@ -16,30 +16,19 @@
     <section id="tournament_header">
         <div class="custom_container">
             <div class="tournament_slider">
-                @foreach ($games as $game)
-
                 <div class="single_slider-item"
-                style="background-image: url('{{ asset('assets/frontend/img/tournament-prizes.jpg') }}')">
-                <div class="slider_content">
-                    @if (auth()->guard('subscriber')->check())
-                        <h1 class="sm-hide"><a
-                                href="{{ route('tournament.game.details', $game->slug) }}">Tournament</a>
+                    style="background-image: url('{{ asset('assets/frontend/img/tournament-prizes-slider.webp') }}')">
+                    <div class="slider_content">
+                        <h1 class="sm-hide"><a>Tournament</a>
                         </h1>
-                    @else
-                        <h1 class="sm-hide"><a href="{{ route('user.sign_in') }}">Tournament</a></h1>
-                    @endif
-                    <h2 class="sm-hide bangla_font">খেলে জিতে নাও <br> আকর্ষণীয় সব পুরস্কার</h2>
-                    @if (auth()->guard('subscriber')->check())
-                        <a href="{{ route('tournament.game.details', $game->slug) }}" class="primary_btn mt-5">Join
-                            Now</a>
-                    @else
-                        <a href="{{ route('user.sign_in') }}" class="primary_btn mt-5">Join Now</a>
-                    @endif
+                        <h2 class="sm-hide bangla_font">খেলে জিতে নাও <br> আকর্ষণীয় সব পুরস্কার</h2>
+                        <a href="{{ route('prizes') }}" class="primary_btn mt-5">Prizes</a>
+                    </div>
                 </div>
-            </div>
+                @foreach ($games as $game)
                     <div class="single_slider-item"
                         style="background-image: url('{{ asset('uploads/Tournamant/GameBanner/' . $game->game_banner) }}')">
-                        
+
                         <div class="slider_content">
                             @if (auth()->guard('subscriber')->check())
                                 <h1 class="sm-hide"><a
@@ -57,19 +46,19 @@
                             @endif
                         </div>
                     </div>
-                   
                 @endforeach
             </div>
         </div>
     </section>
-    {{-- PRELAUNCHING TEXT START --}}
+    <!-- --------------------------TOURNAMENT HEADER  END ------------------------ -->
+
+    <!-- -------------------------- PRELAUNCHING TEXT START ------------------------ -->
     <section class="prelanching_text custom_container">
         <div class="js-container">
             <h1 class="backindown-text">We're Launching <span>Soon!</span> </h1>
         </div>
     </section>
-    {{-- PRELAUNCHING TEXT END --}}
-    <!-- --------------------------TOURNAMENT HEADER  END ------------------------ -->
+    <!-- -------------------------- PRELAUNCHING TEXT START ------------------------ -->
 
     <!-- --------------------------TOURNAMENT CARD START ------------------------ -->
     {{-- <section id="tournament_card" class="section-top">
@@ -197,33 +186,43 @@
                    
                 @endforeach
             </div> --}}
-            <div class="card_full_width" style="background-image: url('{{ asset('assets/frontend/img/large-card-banner/cricekt-tournament-banner.png') }}')">
-                <div class="card_overlay"></div>
-                <div class="card_content">
-                    <div class="game_name">
-                        <div class="game_profile d-md-none d-block">
-                            <img src="{{ asset('assets/frontend/img/cricekt-world-cup-profile.webp') }}"
-                        alt="">
-                        </div>
-                        <h2>Cricket World Cup</h2>
-                        <span>Registration Starts </span> <span><b>
-                            @php
-                                $stringDate = $game->start_date; // Your string date
-                                $date = \Carbon\Carbon::parse($stringDate);
-                                echo $formattedDate = $date->format('j F, Y');
-                            @endphp
-                        </b></span>
-                        <div class="entry_fee">
-                            <h3>Entry Fee : ৳{{ $game->game_fee }}</h3>
-                        </div>
-                        <div class="play_now-btn m-0">
-                            <a href="{{ route('user.sign_in') }}" class="primary_btn">Join
-                                Now</a>
+            @foreach ($games as $game)
+                <div class="card_full_width"
+                    style="background-image: url('{{ asset('uploads/Tournamant/GameImage/' . $game->image) }}')">
+                    <div class="card_overlay"></div>
+                    <div class="card_content">
+                        <div class="game_name">
+                            <div class="game_profile d-md-none d-block">
+                                <img src="{{ asset('uploads/Tournamant/GameImage/' . $game->image) }}" alt="">
+                            </div>
+                            <h2>{{ $game->game_name }}</h2>
+                            <span>Registration Starts </span> <span><b>
+                                    @php
+                                        $stringDate = $game->start_date; // Your string date
+                                        $date = \Carbon\Carbon::parse($stringDate);
+                                        echo $formattedDate = $date->format('j F, Y');
+                                    @endphp
+                                </b></span>
+                            <div class="entry_fee">
+                                <h3>Entry Fee : ৳{{ $game->game_fee }}</h3>
+                            </div>
+                            <div class="play_now-btn m-0">
+                                @if (auth()->guard('subscriber')->check())
+                                    <a href="{{ route('tournament.game.details', $game->slug) }}" class="primary_btn">Join
+                                        Now</a>
+                                @else
+                                    <a href="{{ route('user.sign_in') }}" class="primary_btn">Join
+                                        Now</a>
+                                @endif
+
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="card_full_width" style="background-image: url('{{ asset('assets/frontend/img/large-card-banner/football-tournament-banner.png') }}')">
+            @endforeach
+
+            {{-- <div class="card_full_width"
+                style="background-image: url('{{ asset('assets/frontend/img/large-card-banner/football-tournament-banner.png') }}')">
                 <div class="card_overlay"></div>
                 <div class="card_content">
                     <div class="game_name">
@@ -232,12 +231,12 @@
                         </div>
                         <h2>Football Tournament</h2>
                         <span>Registration Starts </span> <span><b>
-                            @php
-                                $stringDate = $game->start_date; // Your string date
-                                $date = \Carbon\Carbon::parse($stringDate);
-                                echo $formattedDate = $date->format('j F, Y');
-                            @endphp
-                        </b></span>
+                                @php
+                                    $stringDate = $game->start_date; // Your string date
+                                    $date = \Carbon\Carbon::parse($stringDate);
+                                    echo $formattedDate = $date->format('j F, Y');
+                                @endphp
+                            </b></span>
                         <div class="entry_fee">
                             <h3>Entry Fee : ৳{{ $game->game_fee }}</h3>
                         </div>
@@ -247,12 +246,12 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
-       
+
     </section>
     <!-- --------------------------TOURNAMENT CARD END ------------------------ -->
-    
+
     <!-- --------------------------TOP 3 OPTIONS START ------------------------ -->
     <section id="tournament_steps" class="section">
         <h1 class="title">Simple 3 Steps Need to Follow Up <br> <span>To Get Rewards!</span> </h1>
@@ -272,7 +271,7 @@
                             </div>
                             <div class="info_content">
                                 <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, aspernatur!</p>
-                             </div>
+                            </div>
                         </div>
 
                     </div>
@@ -290,7 +289,7 @@
                                 <h2>Pay Money</h2>
                             </div>
                             <div class="info_content">
-                               <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam, id.</p>
+                                <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam, id.</p>
                             </div>
                         </div>
 
@@ -310,7 +309,7 @@
                             </div>
                             <div class="info_content">
                                 <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, aut.</p>
-                             </div>
+                            </div>
                         </div>
 
                     </div>
@@ -321,7 +320,7 @@
     <!-- --------------------------TOP 3 OPTIONS START ------------------------ -->
 
     <!-- --------------------------TOURNAMENT PRIZES START ------------------------ -->
-    <section id="tournament_card" class="section">
+    <section id="tournament_card" class="section-top">
         <div class="container-fluid">
             <div class="title pb-5">
                 <h1 class="mostPopular__title__text"> <img src="{{ asset('assets/frontend/img/prizes-icon.png') }}"
@@ -358,38 +357,22 @@
     </section>
     <!-- --------------------------TOURNAMENT PRIZES END ------------------------ -->
 
-    <!-- --------------------------TOURNAMENT PRIZES START ------------------------ -->
-    <section id="tournmanet_games_banner " class="custom_container section_margin ">
-        <div class="demo_bg">
-            <h1>Tournament Graphics 1920 * 400 </h1>
-        </div>
-    </section>
-    <!-- --------------------------TOURNAMENT PRIZES END ------------------------ -->
-    
-    <!-- --------------------------TOURNAMENT PRIZES START ------------------------ -->
-    <section id="tournmanet_games_banner " class="custom_container section_margin ">
-        <div class="demo_bg">
-            <h1>Tournament Graphics 1920 * 400 </h1>
-        </div>
-    </section>
-    <!-- --------------------------TOURNAMENT PRIZES END ------------------------ -->
-
     <!-- -------------------------- REFERR PAGE START ------------------------ -->
     <section id="reffer_your_friend" class="custom_container section_margin">
-       <div class="container-fluid">
-        <div class="refeer_frinds">
-            <div class="reffer_img">
-                <img src="{{ asset('assets/frontend/img/referr-friends.png') }}" alt="" class="img-fluid">
-            </div>
-            <div class="reffer_invitaion_text">
-                <h2>Invite Friends & Win Rewards!</h2>
-                <h3>Join Xoss Games Tournament Today</h3>
-            </div>
-            <div class="join_now">
-                <a href="#" class="primary_btn">LogIn Now</a>
+        <div class="container-fluid">
+            <div class="refeer_frinds">
+                <div class="reffer_img">
+                    <img src="{{ asset('assets/frontend/img/referr-friends.png') }}" alt="" class="img-fluid">
+                </div>
+                <div class="reffer_invitaion_text">
+                    <h2>Invite Friends & Win Rewards!</h2>
+                    <h3>Join Xoss Games Tournament Today</h3>
+                </div>
+                <div class="join_now">
+                    <a href="#" class="primary_btn">LogIn Now</a>
+                </div>
             </div>
         </div>
-       </div>
     </section>
     <!-- -------------------------- REFERR PAGE END ------------------------ -->
 @endsection
