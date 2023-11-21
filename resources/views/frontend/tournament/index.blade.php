@@ -17,14 +17,12 @@
         <div class="custom_container">
             <div class="tournament_slider">
                 <div class="single_slider-item"
-                style="background-image: url('{{ asset('assets/frontend/img/tournament-prizes.jpg') }}')">
-                <div class="slider_content">
-                    @if (auth()->guard('subscriber')->check())
-                        <h1 class="sm-hide"><a
-                                href="{{ route('tournament.game.details', $game->slug) }}">Tournament</a>
-                        </h1>
-                        <h2 class="sm-hide bangla_font">খেলে জিতে নাও <br> আকর্ষণীয় সব পুরস্কার</h2>
-                        <a href="{{ route('prizes') }}" class="primary_btn mt-5">Prizes</a>
+                    style="background-image: url('{{ asset('assets/frontend/img/tournament-prizes.jpg') }}')">
+                    <div class="slider_content">
+                            <h1 class="sm-hide"><a>Tournament</a>
+                            </h1>
+                            <h2 class="sm-hide bangla_font">খেলে জিতে নাও <br> আকর্ষণীয় সব পুরস্কার</h2>
+                            <a href="{{ route('prizes') }}" class="primary_btn mt-5">Prizes</a>
                     </div>
                 </div>
                 @foreach ($games as $game)
@@ -222,33 +220,6 @@
                     </div>
                 </div>
             @endforeach
-
-            {{-- <div class="card_full_width"
-                style="background-image: url('{{ asset('assets/frontend/img/large-card-banner/football-tournament-banner.png') }}')">
-                <div class="card_overlay"></div>
-                <div class="card_content">
-                    <div class="game_name">
-                        <div class="game_profile d-md-none d-block">
-                            <img src="{{ asset('assets/frontend/img/football-tournament.webp') }}" alt="">
-                        </div>
-                        <h2>Football Tournament</h2>
-                        <span>Registration Starts </span> <span><b>
-                                @php
-                                    $stringDate = $game->start_date; // Your string date
-                                    $date = \Carbon\Carbon::parse($stringDate);
-                                    echo $formattedDate = $date->format('j F, Y');
-                                @endphp
-                            </b></span>
-                        <div class="entry_fee">
-                            <h3>Entry Fee : ৳{{ $game->game_fee }}</h3>
-                        </div>
-                        <div class="play_now-btn m-0">
-                            <a href="{{ route('user.sign_in') }}" class="primary_btn">Join
-                                Now</a>
-                        </div>
-                    </div>
-                </div>
-            </div> --}}
         </div>
 
     </section>
@@ -366,7 +337,7 @@
         </div>
     </section>
     <!-- --------------------------TOURNAMENT PRIZES END ------------------------ -->
-    
+
     <!-- --------------------------TOURNAMENT PRIZES START ------------------------ -->
     <section id="tournmanet_games_banner " class="custom_container section_margin ">
         <div class="demo_bg">
