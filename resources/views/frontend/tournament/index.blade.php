@@ -19,7 +19,7 @@
                 @foreach ($games as $game)
 
                 <div class="single_slider-item"
-                style="background-image: url('{{ asset('assets/frontend/img/tournament-prizes.jpg') }}')">
+                style="background-image: url('{{ asset('assets/frontend/img/tournament-prizes-gather.webp') }}')">
                 <div class="slider_content">
                     @if (auth()->guard('subscriber')->check())
                         <h1 class="sm-hide"><a
@@ -359,17 +359,21 @@
     <!-- --------------------------TOURNAMENT PRIZES END ------------------------ -->
 
     <!-- --------------------------TOURNAMENT PRIZES START ------------------------ -->
-    <section id="tournmanet_games_banner " class="custom_container section_margin ">
-        <div class="demo_bg">
-            <h1>Tournament Graphics 1920 * 400 </h1>
+    <section id="tournmanet_games_banner " class="section_margin ">
+        <div class="tournament_banner mb-3">
+            <a href="#">
+                <img src="{{ asset('assets/frontend/img/cricket-games-tournament-banner.png') }}" alt="" class="img-fluid">
+            </a>
         </div>
     </section>
     <!-- --------------------------TOURNAMENT PRIZES END ------------------------ -->
     
     <!-- --------------------------TOURNAMENT PRIZES START ------------------------ -->
-    <section id="tournmanet_games_banner " class="custom_container section_margin ">
-        <div class="demo_bg">
-            <h1>Tournament Graphics 1920 * 400 </h1>
+    <section id="tournmanet_games_banner " class="section_margin ">
+        <div class="tournament_banner mb-3">
+            <a href="#">
+                <img src="{{ asset('assets/frontend/img/football-games-tournament-banner.png') }}" alt="" class="img-fluid">
+            </a>
         </div>
     </section>
     <!-- --------------------------TOURNAMENT PRIZES END ------------------------ -->
