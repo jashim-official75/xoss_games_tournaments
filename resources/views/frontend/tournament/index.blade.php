@@ -355,9 +355,16 @@
                 <div class="reffer_invitaion_text">
                     <h2>সর্বোচ্চ REFER করে বুঝে নাও <span>Smartphone</span> </h2>
                     <h3>Invite Friends & Win Rewards!</h3>
+                    @auth('subscriber')
                     <div class="join_now mt-5">
-                        <a href="#" class="primary_btn">LogIn Now</a>
+                        <a href="{{ route('referr') }}" class="primary_btn">Refer Now</a>
                     </div>
+                        @else
+                        <div class="join_now mt-5">
+                            <a href="{{ route('user.sign_in') }}" class="primary_btn">LogIn Now</a>
+                        </div>
+                    @endauth
+                    
                 </div>
                 
             </div>
