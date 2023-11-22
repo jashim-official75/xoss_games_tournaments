@@ -1,5 +1,5 @@
 <!-- ------------------------- Footer Section start ---------------------- -->
-<section class="footer d-none d-sm-block mt-5 ">
+<section class="footer d-none d-sm-block">
     <div class="footer_wrapper py-5">
         <div class="row footer__border">
             <div class="col-4 col-md-2"></div>
