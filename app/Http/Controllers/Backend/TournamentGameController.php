@@ -35,6 +35,7 @@ class TournamentGameController extends Controller
             'game_fee' => 'required',
             'subscription_period' => 'required',
             'game_thumbnail' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
+            'game_small_icon' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
             'game_banner' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
             'game_background' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
             'game_zip_file' => 'required|mimes:zip,rar'
@@ -51,6 +52,11 @@ class TournamentGameController extends Controller
             $first_image_name = uniqid() . '_' . 'tournament' . '.' . $request->file('game_thumbnail')->extension();
             $request->file('game_thumbnail')->move(public_path('uploads/Tournamant/GameImage'), $first_image_name);
         }
+        //-- game_small_icon image upload
+        if ($request->hasFile('game_small_icon')) {
+            $game_small_icon = uniqid() . '_' . 'tournamentIcon' . '.' . $request->file('game_small_icon')->extension();
+            $request->file('game_small_icon')->move(public_path('uploads/Tournamant/GameIcon'), $game_small_icon);
+        }
         //--game_background image upload
         if ($request->hasFile('game_background')) {
             $game_background = uniqid() . '_' . 'tournament' . '.' . $request->file('game_background')->extension();
@@ -62,6 +68,7 @@ class TournamentGameController extends Controller
             'game_link' => $game_link,
             'game_zip_file' => $pathName,
             'image' => $first_image_name,
+            'game_small_icon' => $game_small_icon,
             'game_background' => $game_background,
             'description' => $request->game_description,
             'control' => $request->game_control,
@@ -102,6 +109,7 @@ class TournamentGameController extends Controller
             'start_date' => 'required',
             'end_date' => 'required',
             'game_thumbnail' => 'image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
+            'game_small_icon' => 'image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
             'game_banner' => 'image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
             'game_background' => 'image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
         ]);
@@ -128,6 +136,19 @@ class TournamentGameController extends Controller
             $request->file('game_thumbnail')->move(public_path('uploads/Tournamant/GameImage'), $NewName);
             $t_game->update([
                 'image' => $NewName,
+            ]);
+        }
+        //--delete old game_small_icon image and new image update
+        if ($request->hasFile('game_small_icon')) {
+            $oldFile = $t_game->game_small_icon;
+            $oldPath = 'uploads/Tournamant/GameIcon/' . $oldFile;
+            if ($oldPath) {
+                File::delete(public_path($oldPath));
+            }
+            $game_small_icon = uniqid() . '_' . 'game_small_icon_update' . '.' . $request->file('game_small_icon')->extension();
+            $request->file('game_small_icon')->move(public_path('uploads/Tournamant/GameIcon'), $game_small_icon);
+            $t_game->update([
+                'game_small_icon' => $game_small_icon,
             ]);
         }
         //--delete old banner image and new banner image update
@@ -200,6 +221,14 @@ class TournamentGameController extends Controller
         if ($t_game->image) {
             $oldFile = $t_game->image;
             $oldPath = 'uploads/Tournamant/GameImage/' . $oldFile;
+            if ($oldPath) {
+                File::delete(public_path($oldPath));
+            }
+        }
+        //game_small_icon
+        if ($t_game->game_small_icon) {
+            $oldFile = $t_game->game_small_icon;
+            $oldPath = 'uploads/Tournamant/GameIcon/' . $oldFile;
             if ($oldPath) {
                 File::delete(public_path($oldPath));
             }

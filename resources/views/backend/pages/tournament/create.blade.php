@@ -77,6 +77,11 @@
                                     </div>
 
                                     <div class="card-body">
+                                        <label for="game_small_icon" class="mb-4">Game Small Icon</label>
+                                        <input type="file" id="game_small_icon" class="dropify" name="game_small_icon" />
+                                    </div>
+
+                                    <div class="card-body">
                                         <label for="game_banner" class="mb-4">Game Banner</label>
                                         <input type="file" id="input-file-max-fs" class="dropify" name="game_banner" />
                                     </div>

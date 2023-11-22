@@ -193,7 +193,7 @@
                     <div class="card_content">
                         <div class="game_name">
                             <div class="game_profile d-md-none d-block">
-                                <img src="{{ asset('uploads/Tournamant/GameImage/' . $game->image) }}" alt="">
+                                <img src="{{ asset('uploads/Tournamant/GameIcon/' . $game->game_small_icon) }}" alt="">
                             </div>
                             <h2>{{ $game->game_name }}</h2>
                             <span>Registration Starts </span> <span><b>
