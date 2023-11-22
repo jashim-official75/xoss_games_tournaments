@@ -58,6 +58,7 @@ class TournamentController extends Controller
             'myIndex' => $myIndex,
             'myScore' => $myScore,
             'subscriber' => $subscriber,
+            'allgamescore' => $allgamescore,
         ]);
     }
     //--gamePlay
