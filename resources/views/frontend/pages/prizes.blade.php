@@ -14,20 +14,24 @@
 
 
 @section('content')
-    <section id="prizes_page" class="common_padding">
 
-        <div class="custom_container">
-            <div class="title">
-                <h1 class="mostPopular__title__text"> <img src="{{ asset('assets/frontend/img/prizes-icon.png') }}"
-                        alt="">Tournament Prizes</h1>
-                <p class="subheading_common">Clash of Champions Battle for Supremacy in the Ultimate Tournament of Feature
-                    Games!</p>
-                <div class="title_bar">
-                    <div class="bar"></div>
-                    <img src="{{ asset('assets/frontend/img/battle.png') }}" alt="">
-                    <div class="bar"></div>
-                </div>
+<div class="prizes_header">
+    <img src="{{ asset('assets/frontend/img/tournament-prizes-banner.webp') }}" alt="" class="img-fluid">
+ </div>
+    <section id="prizes_page">
+        <div class="title mt-5">
+            <h1 class="mostPopular__title__text"> <img src="{{ asset('assets/frontend/img/prizes-icon.png') }}"
+                    alt="">Tournament Prizes</h1>
+            <p class="subheading_common">Clash of Champions Battle for Supremacy in the Ultimate Tournament of Feature
+                Games!</p>
+            <div class="title_bar">
+                <div class="bar"></div>
+                <img src="{{ asset('assets/frontend/img/battle.png') }}" alt="">
+                <div class="bar"></div>
             </div>
+        </div>
+        <div class="container">
+           
             <div class="single_game_prizes">
                 <div class="prizes_inner">
 
