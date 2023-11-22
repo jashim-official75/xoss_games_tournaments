@@ -36,7 +36,15 @@
   color: #3C1E6E;
   margin-bottom: 1rem;
 }
-
+.reffer_invitaion_text h2 span 
+{
+  color: #000;
+  text-transform: uppercase;
+  text-shadow: 1px 3px 2px #0002;
+  letter-spacing: 1px;
+  background: #eaec70;
+  padding: 0 1rem;
+}
 .reffer_invitaion_text h3
 {
   font-size: clamp(2rem,5vw,3rem);
@@ -635,7 +643,7 @@
   bottom: 0;
   left: -15rem;
   width: 1000px;
-  opacity: 0.3;
+  opacity: 0.1;
 }
 .color_shape img 
 {
@@ -643,7 +651,7 @@
 }
 #referr_header .referral_content  
 {
-  padding-left: 15%;
+  padding-left: 35%;
   text-align: left;
 }
 #referr_header .referral_content h1
@@ -802,7 +810,7 @@
 }
 .refferal_img img
 {
-  width: 70%;
+  width: 50%;
 }
 /* reffer section */
 /* profile user */
@@ -1998,7 +2006,7 @@ margin-left: 1rem;
 
 .card_body 
 {
-  padding: 1rem 3rem 2rem; 
+  padding: 1rem 2rem 2rem; 
 }
 .tournament_card .date {
   font-size: 1.6rem;
@@ -6028,10 +6036,21 @@ main#questions {
 }
 
 
+@media only screen and (max-width:1446px)
+{
+  .card_full_width {
+    background-position: 0;
+  }
+}
+
 @media only screen and (max-width:1366px)
 {
   .tournament_card .card_img  .cover_img {
     height: 200px;
+}
+.prizes_header {
+  position: relative;
+  margin-top: 6rem;
 }
 .prizes_box {
   width: 100px;
@@ -6072,9 +6091,6 @@ main#questions {
 {
   .playbtn__bannar {
     width: 80%;
-}
-.card_full_width {
-  background-position: 0;
 }
 .game_content {
   justify-content: flex-start;

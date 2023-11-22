@@ -15,7 +15,7 @@
 
 
      <div class="prizes_header">
-        <img src="{{ asset('assets/frontend/img/tournament-prizes-banner.jpg') }}" alt="" class="img-fluid">
+        <img src="{{ asset('assets/frontend/img/tournament-prizes-banner.webp') }}" alt="" class="img-fluid">
      </div>
 
     <section id="prizes_page">

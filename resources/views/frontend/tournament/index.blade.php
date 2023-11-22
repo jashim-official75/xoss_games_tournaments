@@ -17,7 +17,7 @@
         <div class="custom_container">
             <div class="tournament_slider">
                 <div class="single_slider-item"
-                    style="background-image: url('{{ asset('assets/frontend/img/tournament-prizes.jpg') }}')">
+                    style="background-image: url('{{ asset('assets/frontend/img/tournament-prizes-gather.webp') }}')">
                     <div class="slider_content">
                             <h1 class="sm-hide"><a>Tournament</a>
                             </h1>
@@ -243,10 +243,9 @@
                                 <h2>Join Now</h2>
                             </div>
                             <div class="info_content">
-                                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, aspernatur!</p>
+                                <p>Participate in the Xoss Game Tournament today , eagerly anticipates your presence.</p>
                             </div>
                         </div>
-
                     </div>
                 </div>
                 <div class="col-xl-4 col-lg-4 col-md-6">
@@ -254,15 +253,15 @@
                         <div class="card_header">
                             <span class="number">02</span>
                             <div class="icon">
-                                <img src="{{ asset('assets/frontend/img/pay-money.png') }}" alt="">
+                                <img src="{{ asset('assets/frontend/img/play_game.png') }}" alt="">
                             </div>
                         </div>
                         <div class="card_body">
                             <div class="card_body_content">
-                                <h2>Pay Money</h2>
+                                <h2>Play Games</h2>
                             </div>
                             <div class="info_content">
-                                <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam, id.</p>
+                                <p>Play games to beat your opponents. Track your position on the live leaderboard.</p>
                             </div>
                         </div>
 
@@ -281,7 +280,7 @@
                                 <h2>Win Prizes</h2>
                             </div>
                             <div class="info_content">
-                                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, aut.</p>
+                                <p>Rank 1st, 2nd or 3rd and win the amazing prizes. What are you waiting for!</p>
                             </div>
                         </div>
 
@@ -354,12 +353,13 @@
                     <img src="{{ asset('assets/frontend/img/referr-friends.png') }}" alt="" class="img-fluid">
                 </div>
                 <div class="reffer_invitaion_text">
-                    <h2>Invite Friends & Win Rewards!</h2>
-                    <h3>Join Xoss Games Tournament Today</h3>
+                    <h2>সর্বোচ্চ REFER করে বুঝে নাও <span>Smartphone</span> </h2>
+                    <h3>Invite Friends & Win Rewards!</h3>
+                    <div class="join_now mt-5">
+                        <a href="#" class="primary_btn">LogIn Now</a>
+                    </div>
                 </div>
-                <div class="join_now">
-                    <a href="#" class="primary_btn">LogIn Now</a>
-                </div>
+                
             </div>
         </div>
     </section>
