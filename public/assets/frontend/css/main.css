@@ -1,3 +1,78 @@
+/* download apps */
+#download_apps 
+{
+  background: linear-gradient(#582f9b,#432574);
+  padding: 8rem 0;
+}
+#download_apps h1 
+{
+  color: #fff;
+  font-size: clamp(2rem,5vw,6rem);
+  line-height: 1.5;
+}
+#download_apps h2 
+{
+  color: #fff;
+  font-size: clamp(1.6rem,5vw,5rem);
+  line-height: 1.5;
+  text-transform: capitalize;
+  margin: 3rem 0;
+}
+/* download apps */
+
+/* socail media banner */
+#socail_media
+{
+  position: relative;
+  background: #3C1E6E;
+  margin-top: 5rem;
+  z-index: 2;
+
+}
+#socail_media::after
+{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("socail-media-pattern.png");
+  background-size: 300px;
+  z-index: 1;
+  opacity: 0.3;
+}
+#socail_media h1 
+{
+  font-size: clamp(2rem,5vw,5rem);
+  color: #fff;
+  line-height: 1.5;
+  text-align: center;
+}
+.socail_media_character {
+  position: relative;
+  top: -50px;
+}
+.socail_media_character img 
+{
+  width: 600px;
+}
+#socail_media .socail_icons {
+  display: flex;
+  justify-content: flex-start;
+  border: none;
+}
+.socail_media_inner 
+{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  z-index: 3;
+}
+/* socail media banner*/
+
 /* referr friends */
 #reffer_your_friend 
 {
@@ -29,12 +104,19 @@
   z-index: 1000;
   text-align: center;
 }
+.reffer_invitaion_text .primary_btn {
+  padding: 1rem 2rem;
+  width: 220px;
+  font-size: 2.4rem;
+  font-weight: 600;
+}
 .reffer_invitaion_text h2
 {
   font-size: clamp(2rem,5vw,3.5rem);
   font-weight: 600;
   color: #3C1E6E;
   margin-bottom: 1rem;
+  line-height: 1.6;
 }
 .reffer_invitaion_text h2 span 
 {
@@ -81,18 +163,7 @@
   text-align: center;
   background: #e2edf4;
 }
-.demo_bg 
-{
-  background: #3C1E6E;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 400px;
-  width: 100%;
-  color: #fff;
-  text-align: center;
-  border-radius: 15px;
-}
+
 .title 
 {
   font-size: clamp(1.6rem,5vw,3rem);
@@ -326,6 +397,7 @@
   height: 100%;
   background-image: url("launch_text_graphics.png");
   opacity: 0.2;
+  background-size: 1000px;
 }
 .prelanching_text 
 {
@@ -2657,6 +2729,7 @@ body {
   -ms-overflow-style: none; /* for Internet Explorer, Edge */
   scrollbar-width: none; /* for Firefox */
   overflow-y: none; 
+ 
 }
 .nav-link {
     position: relative !important;
@@ -3116,14 +3189,18 @@ html,
       overflow-x: hidden;
       overflow-y: auto;
       scroll-behavior: smooth;
+    
   }
 
 input {
     padding: 0.6rem 1rem;
 }
-
+p 
+{
+  font-weight: 500 !important;
+}
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Hind Siliguri', sans-serif !important;
   font-weight: 400;
   line-height: 1.7;
   box-sizing: border-box;
@@ -6147,6 +6224,19 @@ main#questions {
   .card__wrapper .card__body .card__text {
     font-size: 16px;
   }
+  .socail_media_character img {
+    width: 100%;
+}
+.socail_media_character {
+  position: relative;
+  top: -20px;
+}
+#socail_media {
+  padding: 5rem 0;
+}
+.socail_media_inner {
+  justify-content: center;
+}
  .card_body {
     padding: 1rem 2rem 2rem;
 }
@@ -6389,7 +6479,9 @@ margin-left: 0;
   .footer__end__body__form .lng__selection {
     padding-right: 4rem;
   }
-
+  .mobile_gift {
+    display: none;
+}
   .section {
     padding: 1rem 0;
 }
@@ -6460,6 +6552,17 @@ margin-left: 0;
 .sidebar-content .profile_pic {
   text-align: center;
   margin: 0 auto;
+}
+.reffer_invitaion_text .primary_btn {
+  padding: 1rem 2rem;
+  width: 180px;
+  font-size: 1.8rem;
+  font-weight: 600;
+
+}
+.apps_mockup img {
+  width: 200px;
+  margin-top: 3rem;
 }
 .user_name {
   text-align: center;
@@ -6727,6 +6830,13 @@ margin-left: 0;
   animation: moveBg 80s linear infinite alternate;
   /* background: rgb(60 30 110 / 92%); */
 }
+.reffer_invitaion_text h2 {
+  font-size: clamp(2rem,5vw,3.5rem);
+  font-weight: 600;
+  color: #3C1E6E;
+  margin-bottom: 1rem;
+}
+
 .inputBox {
     margin-bottom: 0.5rem;
 }

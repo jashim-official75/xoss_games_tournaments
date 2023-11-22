@@ -48,7 +48,7 @@
                             </div>
                         </div>
                     @empty
-                        <h1 class="text-center">Game Not Found</h1>
+                        <h1 class="text-center text-danger">You're not participate any tournament games</h1>
                     @endforelse
                 </div>
             </div>

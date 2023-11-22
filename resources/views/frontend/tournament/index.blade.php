@@ -329,31 +329,67 @@
     </section>
     <!-- --------------------------TOURNAMENT PRIZES END ------------------------ -->
 
-    <!-- --------------------------TOURNAMENT PRIZES START ------------------------ -->
-    <section id="tournmanet_games_banner " class="custom_container section_margin ">
-        <div class="demo_bg">
-            <h1>Tournament Graphics 1920 * 400 </h1>
-        </div>
+    <!-- --------------------------TOURNAMENT GAMES ADS GRAPHICS START ------------------------ -->
+    <section id="tournmanet_games_banner " class="section_margin ">
+        <img src="{{ asset('assets/frontend/img/cricket-games-tournament-banner.png') }}" alt="" class="img-fluid">
     </section>
-    <!-- --------------------------TOURNAMENT PRIZES END ------------------------ -->
+    <!-- --------------------------TOURNAMENT GAMES ADS GRAPHICS END ------------------------ -->
 
-    <!-- --------------------------TOURNAMENT PRIZES START ------------------------ -->
-    <section id="tournmanet_games_banner " class="custom_container section_margin ">
-        <div class="demo_bg">
-            <h1>Tournament Graphics 1920 * 400 </h1>
+    <!-- --------------------------SOCAIL MEDIA BANNER START ------------------------ -->
+
+    <section id="socail_media">
+        <div class="custom_container">
+          <div class="socail_media_inner">
+            <div class="socail_media_character">
+                <img src="{{ asset('assets/frontend/img/socail_media_character.png') }}" alt="">
+            </div>
+            <div class="socail_medida_content">
+                <h1>আরও আপডেট পেতে ফলো করো <br> Xoss Games Social Media</h1>
+            </div>
+           
+            <div class="socail_icons">
+                <div class="icon">
+                    <a href="https://www.facebook.com/xoss.games" style="--i:#4267B2;" previewlistener="true"><i class="fa-brands fa-facebook-f"></i></a>
+                </div>
+                <div class="icon">
+                    <a href="https://www.youtube.com/@xossgames" style="--i:#FF0000;" previewlistener="true"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+                <div class="icon">
+                    <a href="https://www.linkedin.com/showcase/xoss-games" style="--i:#0072b1;" previewlistener="true"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <div class="icon">
+                    <a href="https://www.instagram.com/xossgames" style="--i:#c72d8d;" previewlistener="true"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <div class="icon">
+                    <a href="https://twitter.com/xossgames" style="--i:#1DA1F2;" previewlistener="true"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+             </div>
+             
+          </div>
         </div>
     </section>
-    <!-- --------------------------TOURNAMENT PRIZES END ------------------------ -->
+
+    <!-- --------------------------SOCAIL MEDIA BANNER END ------------------------ -->
+
+    <!-- --------------------------TOURNAMENT GAMES ADS GRAPHICS START ------------------------ -->
+    <section id="tournmanet_games_banner " class="section_margin ">
+        <img src="{{ asset('assets/frontend/img/football-games-tournament-banner.png') }}" alt="" class="img-fluid">
+    </section>
+    <!-- --------------------------TOURNAMENT GAMES ADS GRAPHICS END ------------------------ -->
+
+    <!-- --------------------------SOCAIL MEDIA BANNER START ------------------------ -->
+    <!-- --------------------------SOCAIL MEDIA BANNER START ------------------------ -->
+
 
     <!-- -------------------------- REFERR PAGE START ------------------------ -->
-    <section id="reffer_your_friend" class="custom_container section_margin">
+    <section id="reffer_your_friend" class="section_margin">
         <div class="container-fluid">
             <div class="refeer_frinds">
                 <div class="reffer_img">
                     <img src="{{ asset('assets/frontend/img/referr-friends.png') }}" alt="" class="img-fluid">
                 </div>
                 <div class="reffer_invitaion_text">
-                    <h2>সর্বোচ্চ REFER করে বুঝে নাও <span>Smartphone</span> </h2>
+                    <h2>সর্বোচ্চ REFER করে বুঝে নাও  <span>Smartphone</span> </h2>
                     <h3>Invite Friends & Win Rewards!</h3>
                     @auth('subscriber')
                     <div class="join_now mt-5">
@@ -366,9 +402,36 @@
                     @endauth
                     
                 </div>
+                <div class="mobile_gift">
+                    <img src="{{ asset('assets/frontend/img/reffer_invite_mobile.webp') }}" alt="" width="200px">
+                </div>
                 
             </div>
         </div>
     </section>
     <!-- -------------------------- REFERR PAGE END ------------------------ -->
+
+    <!-- -------------------------- DWONLOAD APPS START -------------------------->
+    <section id="download_apps">
+        <div class="custom_container">
+          <div class="apps_inner row align-items-center">
+            <div class="apps_content col-md-6 text-center">
+                <h1>App ডাউনলোড করে <br> Experience করো <br> টুর্নামেন্টের আসল মজা</h1>
+                <h2>Download our app today!</h2>
+                <div class="download_btn">
+                    <a href="https://play.google.com/store/apps/details?id=com.naptechlabs.xoss.games" target="_blank">
+                        <img src="{{ asset('assets/frontend/img/google-playstore.webp') }}" alt="" width="200">
+                    </a>
+                </div>
+            </div>
+            <div class="apps_mockup col-md-6 text-center">
+                
+                <a href="https://play.google.com/store/apps/details?id=com.naptechlabs.xoss.games" target="_blank">
+                    <img src="{{ asset('assets/frontend/img/xoss-games-app-download-mockup.png') }}" alt="" class="img-fluid">
+                </a>
+            </div>
+          </div>
+        </div>
+    </section>
+    <!-- -------------------------- DWONLOAD APPS END ---------------------------->
 @endsection
