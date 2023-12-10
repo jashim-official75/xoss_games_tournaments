@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Nov 05, 2023 at 12:32 PM
+-- Generation Time: Dec 10, 2023 at 09:13 AM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -46,9 +46,9 @@ CREATE TABLE `failed_jobs` (
 CREATE TABLE `game_prizes` (
   `id` bigint UNSIGNED NOT NULL,
   `tournament_game_id` bigint UNSIGNED NOT NULL,
-  `prize_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `prize_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `image` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `position` int DEFAULT NULL,
   `status` tinyint NOT NULL DEFAULT '0',
   `created_at` timestamp NULL DEFAULT NULL,
@@ -109,7 +109,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (8, '2023_07_13_201744_create_tournament_payment_details_table', 3),
 (9, '2023_11_02_182928_create_prizes_table', 4),
 (10, '2023_11_03_210309_create_game_prizes_table', 5),
-(11, '2023_11_05_003929_create_subscriber_number_verifies_table', 6);
+(11, '2023_11_05_003929_create_subscriber_number_verifies_table', 6),
+(12, '2023_11_22_175705_add_column_to_tournament_games_table', 7);
 
 -- --------------------------------------------------------
 
@@ -149,11 +150,11 @@ CREATE TABLE `personal_access_tokens` (
 
 CREATE TABLE `prizes` (
   `id` bigint UNSIGNED NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `sub_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `status` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '0',
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `sub_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `image` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `status` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '0',
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -209,8 +210,8 @@ CREATE TABLE `subscribers` (
   `password` char(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `device_ip` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `country` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `referr_code` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `get_referr` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `referr_code` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `get_referr` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `otp_verify` tinyint NOT NULL DEFAULT '0',
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -238,7 +239,7 @@ INSERT INTO `subscribers` (`id`, `phone_num`, `name`, `profile_pic`, `password`,
 
 CREATE TABLE `subscriber_number_verifies` (
   `id` bigint UNSIGNED NOT NULL,
-  `number` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `number` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `otp` int NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -257,7 +258,8 @@ CREATE TABLE `tournament_games` (
   `game_link` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `game_zip_file` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `image` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `game_background` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `game_small_icon` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `game_background` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `description` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `control` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   `participate` int DEFAULT NULL,
@@ -279,9 +281,9 @@ CREATE TABLE `tournament_games` (
 -- Dumping data for table `tournament_games`
 --
 
-INSERT INTO `tournament_games` (`id`, `game_name`, `slug`, `game_link`, `game_zip_file`, `image`, `game_background`, `description`, `control`, `participate`, `game_banner`, `start_date`, `end_date`, `game_fee`, `subscription_period`, `first_price`, `second_price`, `third_price`, `fourth_price`, `status`, `created_at`, `updated_at`) VALUES
-(1, 'Cricket World Cup', 'cricket-world-cup', 'https://tournament.xoss.games/tournament/game/cricket-world-cup', 'Tournament/cricket-world-cup', '652948d3c6398_tournament.webp', '6544ee6d8d55a_game_background_update.webp', 'Cricket World Cup', 'Cricket World Cup', NULL, '653ce8f3483b8_banner_image_update.webp', '2023-10-13', '2023-11-10', 35, 'P14D', '30 GB GP Internet', '20 GB GP Internet', '5 GB GP Internet', '2 GB GP Internet', 1, '2023-10-13 11:40:35', '2023-11-03 19:22:58'),
-(2, 'Football WorldCup', 'football-worldcup', 'http://xoss_games_tournaments.test/tournament/game/football-worldcup', 'Tournament/football-worldcup', '6533d9af32171_thumbnail_image_update.webp', '6544ee78383e4_game_background_update.webp', 'Football WorldCup', 'Football WorldCup', NULL, '653ce8e277de7_banner_image_update.webp', '2023-10-20', '2023-11-08', 55, '14', '5 gb gp Internet', '3 gb gp Internet', '2 gb gp Internet', '1 gb gp Internet', 1, '2023-10-20 13:37:17', '2023-11-03 19:22:31');
+INSERT INTO `tournament_games` (`id`, `game_name`, `slug`, `game_link`, `game_zip_file`, `image`, `game_small_icon`, `game_background`, `description`, `control`, `participate`, `game_banner`, `start_date`, `end_date`, `game_fee`, `subscription_period`, `first_price`, `second_price`, `third_price`, `fourth_price`, `status`, `created_at`, `updated_at`) VALUES
+(1, 'Cricket World Cup', 'cricket-world-cup', 'https://tournament.xoss.games/tournament/game/cricket-world-cup', 'Tournament/cricket-world-cup', '655e1c52ae56d_thumbnail_image_update.webp', '655dee0e5ed5c_game_small_icon_update.webp', '6544ee6d8d55a_game_background_update.webp', 'Cricket World Cup', 'Cricket World Cup', NULL, '653ce8f3483b8_banner_image_update.webp', '2023-10-13', '2023-11-10', 35, 'P14D', '30 GB GP Internet', '20 GB GP Internet', '5 GB GP Internet', '2 GB GP Internet', 1, '2023-10-13 11:40:35', '2023-11-22 15:20:50'),
+(2, 'Football WorldCup', 'football-worldcup', 'http://xoss_games_tournaments.test/tournament/game/football-worldcup', 'Tournament/football-worldcup', '655e1c5deb4e8_thumbnail_image_update.webp', '655dee2558651_game_small_icon_update.webp', '6544ee78383e4_game_background_update.webp', 'Football WorldCup', 'Football WorldCup', NULL, '653ce8e277de7_banner_image_update.webp', '2023-10-20', '2023-11-08', 55, '14', '5 gb gp Internet', '3 gb gp Internet', '2 gb gp Internet', '1 gb gp Internet', 1, '2023-10-20 13:37:17', '2023-11-22 15:21:01');
 
 -- --------------------------------------------------------
 
@@ -452,7 +454,7 @@ ALTER TABLE `game_scores`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
@@ -488,7 +490,7 @@ ALTER TABLE `subscriber_number_verifies`
 -- AUTO_INCREMENT for table `tournament_games`
 --
 ALTER TABLE `tournament_games`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `tournament_payment_details`

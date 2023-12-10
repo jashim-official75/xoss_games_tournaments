@@ -14,14 +14,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
 
 <!-- Popup content -->
-<div class="popup_container" onclick="closePopup()">
+{{-- <div class="popup_container" onclick="closePopup()">
     <div id="popup">
         <p>This is a popup!</p>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos voluptate placeat libero fugiat! Minima ea dolorum, quo hic reprehenderit obcaecati debitis officia molestiae veritatis, vel autem pariatur in accusamus explicabo, labore amet excepturi magni? Ipsa est repudiandae doloremque amet, quia ducimus? Officiis natus cum totam, laboriosam voluptatibus eos pariatur itaque.</p>
         <a href="https://naptechgames.com/" target="_blank" class="primary_btn">Click Here</a>
         <button class="close_popup" onclick="closePopup()"><i class="fa-solid fa-circle-xmark"></i></button>
     </div>
-</div>
+</div> --}}
 <!-- Popup content -->
     <!-- --------------------------TOURNAMENT HEADER  START ------------------------ -->
     <section id="tournament_header">

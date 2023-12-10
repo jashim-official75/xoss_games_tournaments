@@ -89,13 +89,13 @@ function closeSidebar() {
   document.querySelector('.overlay').style.display = 'none';
 }
 
-window.onload = function() {
-    // Get preloader element
-    var preloader = document.getElementById("preloader_container");
-    // Hide preloader
-    preloader.style.opacity = "0";
-    preloader.style.visibility = "hidden";
-}
+// window.onload = function() {
+//     // Get preloader element
+//     var preloader = document.getElementById("preloader_container");
+//     // Hide preloader
+//     preloader.style.opacity = "0";
+//     preloader.style.visibility = "hidden";
+// }
 
 
 
