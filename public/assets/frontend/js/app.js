@@ -287,3 +287,21 @@ Confettiful.prototype._renderConfetti = function () {
 
 window.confettiful = new Confettiful(document.querySelector(".js-container"));
 
+  // Function to show the popup
+  function showPopup() {
+    document.getElementById('popup').style.display = 'block';
+    document.querySelector('.popup_container').style.display = 'block';
+}
+
+
+// Function to close the popup
+function closePopup() {
+    document.getElementById('popup').style.display = 'none';
+    document.querySelector('.popup_container').style.display = 'none';
+}
+
+// Event listener for window onload
+window.onload = function () {
+    showPopup();
+};
+

@@ -12,6 +12,11 @@
                             Rules</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="{{ route('prizes') }}">
+                            <img src="{{ asset('assets/frontend/img/gift.png') }}" alt="" />
+                            <span style="position: relative;top:2px">Prizes</span></a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="{{ route('tournament_faq') }}">
                             <img src="{{ asset('assets/frontend/img/faq.png') }}" alt="" />FAQ</a>
                     </li>

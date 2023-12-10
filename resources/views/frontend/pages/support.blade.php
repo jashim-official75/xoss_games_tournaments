@@ -30,7 +30,7 @@
 @section('content')
     <!-- SUPPORT HEADER PART START -->
     <header id="support_header" class="common_padding">
-       <div class="custom_container">
+       <div class="container">
         <div class="row align-items-center support-customer ">
             <div class="col-xl-6 col-lg-6 col-md-12">
                 <div class="support_text">

@@ -63,35 +63,36 @@
                             <button type="button" id="btn">Copy Link</button>
                         </div>
                     </div>
+                    <span class="other_option">OR</span>
+                    <hr>
+                    <div class="socail_share mt-4">
+                        {!! $shareComponent !!}
+                    </div>
+                    {{-- <div class="socail_share">
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://tournament.xoss.games/sign-up?referr_id=7as6"><img src="{{ asset('assets/frontend/img/socail-icons/facebook.png') }}"
+                                alt="" /></a>
+                        <a href="#"><img src="{{ asset('assets/frontend/img/socail-icons/facebook-messanger.png') }}"
+                                alt="" /></a>
+                        <a href="#"><img src="{{ asset('assets/frontend/img/socail-icons/whatsapp.png') }}"
+                                alt="" /></a>
+                        <a href="#"><img src="{{ asset('assets/frontend/img/socail-icons/telegram.png') }}"
+                                alt="" /></a>
+                        <a href="#"><img src="{{ asset('assets/frontend/img/socail-icons/twitter.png') }}"
+                                alt="" /></a>
+                        <a href="#"><img src="{{ asset('assets/frontend/img/socail-icons/instagram.png') }}"
+                                alt="" /></a>
+                        <a href="#"><img src="{{ asset('assets/frontend/img/socail-icons/linkedin.png') }}"
+                                alt="" /></a>
+                        <a href="#"><img src="{{ asset('assets/frontend/img/socail-icons/sms.png') }}"
+                                alt="" /></a>
+                        <a href="#"><img src="{{ asset('assets/frontend/img/socail-icons/reddit.png') }}"
+                                alt="" /></a>
+                        <a href="#"><img src="{{ asset('assets/frontend/img/socail-icons/pinterest.png') }}"
+                                alt="" /></a>
+    
+                    </div> --}}
                 </div>
-                <span class="other_option">OR</span>
-                <hr>
-                <div class="socail_share mt-4">
-                    {!! $shareComponent !!}
-                </div>
-                {{-- <div class="socail_share">
-                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://tournament.xoss.games/sign-up?referr_id=7as6"><img src="{{ asset('assets/frontend/img/socail-icons/facebook.png') }}"
-                            alt="" /></a>
-                    <a href="#"><img src="{{ asset('assets/frontend/img/socail-icons/facebook-messanger.png') }}"
-                            alt="" /></a>
-                    <a href="#"><img src="{{ asset('assets/frontend/img/socail-icons/whatsapp.png') }}"
-                            alt="" /></a>
-                    <a href="#"><img src="{{ asset('assets/frontend/img/socail-icons/telegram.png') }}"
-                            alt="" /></a>
-                    <a href="#"><img src="{{ asset('assets/frontend/img/socail-icons/twitter.png') }}"
-                            alt="" /></a>
-                    <a href="#"><img src="{{ asset('assets/frontend/img/socail-icons/instagram.png') }}"
-                            alt="" /></a>
-                    <a href="#"><img src="{{ asset('assets/frontend/img/socail-icons/linkedin.png') }}"
-                            alt="" /></a>
-                    <a href="#"><img src="{{ asset('assets/frontend/img/socail-icons/sms.png') }}"
-                            alt="" /></a>
-                    <a href="#"><img src="{{ asset('assets/frontend/img/socail-icons/reddit.png') }}"
-                            alt="" /></a>
-                    <a href="#"><img src="{{ asset('assets/frontend/img/socail-icons/pinterest.png') }}"
-                            alt="" /></a>
-
-                </div> --}}
+              
                 <div class="reffaral_dashboard">
                     <div class="referral_header">
                         <div class="refferal_text">
@@ -109,10 +110,34 @@
                             <span class="number">{{ $total_purchase }}</span>
                         </div>
                     </div>
-                    <div class="rewards">
-                        {{-- <h2>Rewards</h2> --}}
+                    <div class="referral_header">
+                        <div class="level_progress">
+                            <span class="level-one level"></span>
+                            <span class="level-two level"></span>
+                            <span class="level-three level"></span>
+                            <span class="level-four level"></span>
+                            <span class="level-five level"></span>
+                            <span class="level-six level"></span>
+                            <span class="level-seven level"></span>
+                            <span class="level-eight level"></span>
+                            <span class="level-nine level"></span>
+                            <span class="level-ten level"></span>
+                        </div>
+                        <div class="refferal_text">
+                            <h2>Rewards</h2>
+                        </div>
+                        <hr>
                     </div>
                     <div class="rewardcard">
+                        <div class="reaward_box">
+
+                        </div>
+                        <div class="reaward_box">
+
+                        </div>
+                        <div class="reaward_box">
+
+                        </div>
                         <div class="reaward_box">
 
                         </div>

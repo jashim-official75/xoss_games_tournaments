@@ -12,6 +12,17 @@
 @endsection
 @section('content')
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+
+<!-- Popup content -->
+<div class="popup_container" onclick="closePopup()">
+    <div id="popup">
+        <p>This is a popup!</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos voluptate placeat libero fugiat! Minima ea dolorum, quo hic reprehenderit obcaecati debitis officia molestiae veritatis, vel autem pariatur in accusamus explicabo, labore amet excepturi magni? Ipsa est repudiandae doloremque amet, quia ducimus? Officiis natus cum totam, laboriosam voluptatibus eos pariatur itaque.</p>
+        <a href="https://naptechgames.com/" target="_blank" class="primary_btn">Click Here</a>
+        <button class="close_popup" onclick="closePopup()"><i class="fa-solid fa-circle-xmark"></i></button>
+    </div>
+</div>
+<!-- Popup content -->
     <!-- --------------------------TOURNAMENT HEADER  START ------------------------ -->
     <section id="tournament_header">
         <div class="custom_container">
@@ -125,7 +136,7 @@
         <div class="custom_container">
             <div class="title pb-5">
                 <h1 class="mostPopular__title__text"> <img src="{{ asset('assets/frontend/img/tournament-icon.png') }}"
-                        alt="">Tournament Games</h1>
+                        alt="">Launching Tournament Games</h1>
                 <p class="subheading_common">Clash of Champions Battle for Supremacy in the Ultimate Tournament of Feature
                     Games!</p>
                 <div class="title_bar">
@@ -220,6 +231,113 @@
                     </div>
                 </div>
             @endforeach
+        </div>
+
+    </section>
+    <!-- --------------------------TOURNAMENT CARD END ------------------------ -->
+    <!-- --------------------------TOURNAMENT CARD START ------------------------ -->
+    
+    <section id="tournament_card" class="section-top">
+     
+                  <div class="custom_container">
+            <div class="title pb-5">
+                <h1 class="mostPopular__title__text"> <img src="{{ asset('assets/frontend/img/tournament-icon.png') }}"
+                        alt="">Upcomming Tournament Games</h1>
+                <p class="subheading_common">Clash of Champions Battle for Supremacy in the Ultimate Tournament of Feature
+                    Games!</p>
+                <div class="title_bar">
+                    <div class="bar"></div>
+                    <img src="{{ asset('assets/frontend/img/battle.png') }}" alt="">
+                    <div class="bar"></div>
+                </div>
+            </div>
+            {{-- <div class="row justify-content-center">
+                @foreach ($games as $game)
+                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12 mb-3 ">
+                        <div class="tournament_card m-lg-3 ">
+                            <div class="card_img">
+                                <div class="cover_img">
+                                    <img src="{{ asset('uploads/Tournamant/GameImage/' . $game->image) }}" alt="">
+                                    <svg class="waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                                        <path fill="#0099ff" fill-opacity="1"
+                                            d="M0,320L48,282.7C96,245,192,171,288,160C384,149,480,203,576,186.7C672,171,768,85,864,80C960,75,1056,149,1152,160C1248,171,1344,117,1392,90.7L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="card_body">
+                                <div class="game_title">
+                                    <a
+                                        href="{{ route('tournament.game.details', $game->slug) }}">{{ $game->game_name }}</a>
+                                </div>
+                                <div class="date">
+                                    <img src="{{ asset('assets/frontend/img/calendar.png') }}" alt="">
+                                    <span>Registration Starts </span> <span><b>
+                                            @php
+                                                $stringDate = $game->start_date; // Your string date
+                                                $date = \Carbon\Carbon::parse($stringDate);
+                                                echo $formattedDate = $date->format('j F, Y');
+                                            @endphp
+                                        </b></span>
+                                </div>
+                                <div class="card_footer">
+                                    <div class="entry_fee">
+                                        <h3>Entry Fee : ৳{{ $game->game_fee }}</h3>
+                                    </div>
+                                    @if (auth()->guard('subscriber')->check())
+                                        <div class="play_now-btn">
+                                            <a href="{{ route('tournament.game.details', $game->slug) }}"
+                                                class="primary_btn">Join
+                                                Now</a>
+                                        </div>
+                                    @else
+                                        <div class="play_now-btn">
+                                            <a href="{{ route('user.sign_in') }}" class="primary_btn">Join
+                                                Now</a>
+                                        </div>
+                                    @endif
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                @endforeach
+            </div> --}}
+            @foreach ($games as $game)
+                <div class="card_full_width upcoming_games"
+                    style="background-image: url('{{ asset('uploads/Tournamant/GameImage/' . $game->image) }}')">
+                    <div class="card_overlay"></div>
+                    <div class="card_content">
+                        <div class="game_name">
+                            <div class="game_profile d-md-none d-block">
+                                <img src="{{ asset('uploads/Tournamant/GameIcon/' . $game->game_small_icon) }}" alt="">
+                            </div>
+                            <h2>{{ $game->game_name }}</h2>
+                            <span>Registration Starts </span> <span><b>
+                                    @php
+                                        $stringDate = $game->start_date; // Your string date
+                                        $date = \Carbon\Carbon::parse($stringDate);
+                                        echo $formattedDate = $date->format('j F, Y');
+                                    @endphp
+                                </b></span>
+                            <div class="entry_fee">
+                                <h3>Entry Fee : ৳{{ $game->game_fee }}</h3>
+                            </div>
+                            <div class="play_now-btn m-0">
+                                @if (auth()->guard('subscriber')->check())
+                                    <a href="{{ route('tournament.game.details', $game->slug) }}" class="primary_btn">Join
+                                        Now</a>
+                                @else
+                                    <a href="{{ route('user.sign_in') }}" class="primary_btn">Join
+                                        Now</a>
+                                @endif
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+        </div>
         </div>
 
     </section>
