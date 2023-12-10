@@ -14,10 +14,12 @@ class FrontendController extends Controller
     public function index()
     {
         $games = TournamentGame::latest()->get();
+        $launcing_game = TournamentGame::where('slug', 'cricket-world-cup')->first();
         $prizes = Prize::latest()->get();
         return view('frontend.tournament.index', [
             'games' => $games,
             'prizes' => $prizes,
+            'launcing_game' => $launcing_game,
         ]);
     }
 
