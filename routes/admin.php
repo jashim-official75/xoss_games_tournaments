@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Backend\BannerController;
 use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Backend\LoginController;
 use App\Http\Controllers\Backend\Prizecontroller;
@@ -33,5 +34,6 @@ Route::get('/admin/login', [LoginController::class, 'login'])->name('admin.login
         Route::get('game_prize/status/{id}', [TournamentPrizeController::class, 'change_status'])->name('game_prize.status');
         //----prizes
         Route::resource('/prize', Prizecontroller::class);
+        Route::resource('/banner', BannerController::class);
         
     });

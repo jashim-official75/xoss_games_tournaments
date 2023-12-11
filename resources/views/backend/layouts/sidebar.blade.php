@@ -54,6 +54,11 @@
                             class="mdi mdi-gauge"></i><span class="hide-menu">User </span></a>
                 </li>
 
+                <!---user---->
+                <li> <a class="waves-effect waves-dark" href="{{ route('banner.index') }}" aria-expanded="false"><i
+                            class="mdi mdi-gauge"></i><span class="hide-menu">Banner</span></a>
+                </li>
+
                 <!---prize---->
                 <li> <a class="waves-effect waves-dark" href="{{ route('prize.index') }}" aria-expanded="false"><i
                             class="mdi mdi-gauge"></i><span class="hide-menu">Prize </span></a>

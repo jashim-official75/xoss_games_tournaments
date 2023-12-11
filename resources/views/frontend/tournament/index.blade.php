@@ -32,7 +32,7 @@
                     <div class="slider_content">
                         <h1 class="sm-hide"><a>Tournament</a>
                         </h1>
-                        <h2 class="sm-hide bangla_font">খেলে জিতে নাও <br> আকর্ষণীয় সব পুরস্কার</h2>
+                        <h2 class="sm-hide bangla_font">গেম খেলে জিতে নাও আকর্ষণীয় সব পুরস্কার</h2>
                         <a href="{{ route('prizes') }}" class="primary_btn mt-5">Prizes</a>
                     </div>
                 </div>
