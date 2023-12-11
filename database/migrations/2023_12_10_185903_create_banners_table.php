@@ -22,7 +22,7 @@ class CreateBannersTable extends Migration
             $table->string('btn_text')->nullable();
             $table->string('btn_link')->nullable();
             $table->string('banner_image')->nullable();
-            $table->tinyInteger('status')->nullable();
+            $table->tinyInteger('status')->default(0);
             $table->timestamps();
         });
     }

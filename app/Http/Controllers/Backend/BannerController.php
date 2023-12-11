@@ -3,8 +3,11 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Backend\BannerRequest;
 use App\Models\Backend\Banner;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Str;
 
 class BannerController extends Controller
 {
@@ -16,7 +19,7 @@ class BannerController extends Controller
     public function index()
     {
         $banners = Banner::latest()->get();
-        return view('backend.pages.banner.index',compact('banners'));
+        return view('backend.pages.banner.index', compact('banners'));
     }
 
     /**
@@ -29,15 +32,25 @@ class BannerController extends Controller
         return view('backend.pages.banner.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        //
+        $banner = new Banner();
+        $banner->title = $request->title;
+        $banner->title_font_size = $request->title_font_size;
+        $banner->sub_title = $request->sub_title;
+        $banner->sub_title_font_size = $request->sub_title_font_size;
+        $banner->btn_text = $request->btn_text;
+        $banner->btn_link = $request->btn_link;
+        if ($request->hasFile('banner_image')) {
+            $image = $request->file('banner_image')->getClientOriginalExtension();
+            $file_name = Str::slug($request->title) . '.' . $image;
+            $image_path_name = 'uploads/Banner/' . $file_name;
+            $request->file('banner_image')->move(public_path('uploads/Banner'), $file_name);
+            $banner->banner_image = $image_path_name;
+        }
+        if ($banner->save()) {
+            return redirect()->route('banner.index')->with('success', 'Banner Created Successfully!');
+        }
     }
 
     /**
@@ -57,9 +70,9 @@ class BannerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Banner $banner)
     {
-        //
+        return view('backend.pages.banner.edit', compact('banner'));
     }
 
     /**
@@ -71,7 +84,26 @@ class BannerController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $banner = Banner::where('id', $id)->first();
+        $banner->title = $request->title;
+        $banner->title_font_size = $request->title_font_size;
+        $banner->sub_title = $request->sub_title;
+        $banner->sub_title_font_size = $request->sub_title_font_size;
+        $banner->btn_text = $request->btn_text;
+        $banner->btn_link = $request->btn_link;
+        if ($request->hasFile('banner_image')) {
+            if ($banner->banner_image) {
+                File::delete(public_path($banner->banner_image));
+            }
+            $image = $request->file('banner_image')->getClientOriginalExtension();
+            $file_name = Str::slug($request->title) . '.' . $image;
+            $image_path_name = 'uploads/Banner/' . $file_name;
+            $request->file('banner_image')->move(public_path('uploads/Banner'), $file_name);
+            $banner->banner_image = $image_path_name;
+        }
+        if ($banner->save()) {
+            return redirect()->route('banner.index')->with('success', 'Banner Created Successfully!');
+        }
     }
 
     /**
