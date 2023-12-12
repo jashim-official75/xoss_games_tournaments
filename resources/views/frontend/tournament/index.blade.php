@@ -391,10 +391,10 @@
     <!-- --------------------------TOURNAMENT PRIZES END ------------------------ -->
 
     <!-- --------------------------TOURNAMENT GAMES ADS GRAPHICS START ------------------------ -->
-    <section id="tournmanet_games_banner " class="section_margin ">
+    {{-- <section id="tournmanet_games_banner " class="section_margin ">
         <img src="{{ asset('assets/frontend/img/cricket-games-tournament-banner.png') }}" alt=""
             class="img-fluid">
-    </section>
+    </section> --}}
     <!-- --------------------------TOURNAMENT GAMES ADS GRAPHICS END ------------------------ -->
 
     <!-- --------------------------SOCAIL MEDIA BANNER START ------------------------ -->
@@ -439,10 +439,10 @@
     <!-- --------------------------SOCAIL MEDIA BANNER END ------------------------ -->
 
     <!-- --------------------------TOURNAMENT GAMES ADS GRAPHICS START ------------------------ -->
-    <section id="tournmanet_games_banner " class="section_margin ">
+    {{-- <section id="tournmanet_games_banner " class="section_margin ">
         <img src="{{ asset('assets/frontend/img/football-games-tournament-banner.png') }}" alt=""
             class="img-fluid">
-    </section>
+    </section> --}}
     <!-- --------------------------TOURNAMENT GAMES ADS GRAPHICS END ------------------------ -->
 
     <!-- --------------------------SOCAIL MEDIA BANNER START ------------------------ -->
@@ -482,28 +482,12 @@
 
     <!-- -------------------------- DWONLOAD APPS START -------------------------->
     <section id="download_apps">
-        <div class="custom_container">
             <div class="apps_inner row align-items-center">
-                <div class="apps_content col-md-6 text-center">
-                    <h1>App ডাউনলোড করে <br> Experience করো <br> টুর্নামেন্টের আসল মজা</h1>
-                    <h2>Download our app today!</h2>
-                    <div class="download_btn">
-                        <a href="https://play.google.com/store/apps/details?id=com.naptechlabs.xoss.games"
-                            target="_blank">
-                            <img src="{{ asset('assets/frontend/img/google-playstore.webp') }}" alt=""
-                                width="200">
-                        </a>
-                    </div>
-                </div>
-                <div class="apps_mockup col-md-6 text-center">
-
                     <a href="https://play.google.com/store/apps/details?id=com.naptechlabs.xoss.games" target="_blank">
-                        <img src="{{ asset('assets/frontend/img/xoss-games-app-download-mockup.png') }}" alt=""
+                        <img src="{{ asset('assets/frontend/img/Page-Footer-Banner-with-QR-code.png') }}" alt=""
                             class="img-fluid">
                     </a>
-                </div>
             </div>
-        </div>
     </section>
     <!-- -------------------------- DWONLOAD APPS END ---------------------------->
 @endsection

@@ -29,12 +29,12 @@
                 <div class="bar"></div>
             </div>
         </div>
-        <div class="container">
+        <div class="custom_container">
 
-            <div class="single_game_prizes">
+            <div class="game_prizes">
                 <div class="prizes_inner">
                     @foreach ($prizes as $prize)
-                        <div class="prize_card second_prize">
+                        <div class="prizes_card">
                             <div class="prizes_img">
                                 <img src="{{ asset($prize->image) }}" alt="">
                             </div>
