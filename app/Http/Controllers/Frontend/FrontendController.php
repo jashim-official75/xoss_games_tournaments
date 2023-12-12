@@ -44,6 +44,7 @@ class FrontendController extends Controller
     //--prizes
     public function prizes()
     {
-        return view('frontend.pages.prizes');
+        $prizes = Prize::latest()->get();
+        return view('frontend.pages.prizes', compact('prizes'));
     }
 }

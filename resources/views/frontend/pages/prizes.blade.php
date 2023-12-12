@@ -14,10 +14,9 @@
 
 
 @section('content')
-
-<div class="prizes_header">
-    <img src="{{ asset('assets/frontend/img/tournament-prizes-banner.webp') }}" alt="" class="img-fluid">
- </div>
+    <div class="prizes_header">
+        <img src="{{ asset('assets/frontend/img/tournament-prizes-banner.webp') }}" alt="" class="img-fluid">
+    </div>
     <section id="prizes_page">
         <div class="title mt-5">
             <h1 class="mostPopular__title__text"> <img src="{{ asset('assets/frontend/img/prizes-icon.png') }}"
@@ -31,65 +30,20 @@
             </div>
         </div>
         <div class="container">
-           
+
             <div class="single_game_prizes">
                 <div class="prizes_inner">
-
-                    <div class="prize_card first_prize d-md-none d-flex">
-                        <div class="prizes_position">
-                            <h2>1st Prize</h2>
+                    @foreach ($prizes as $prize)
+                        <div class="prize_card second_prize">
+                            <div class="prizes_img">
+                                <img src="{{ asset($prize->image) }}" alt="">
+                            </div>
+                            <div class="prize_name">
+                                <h3>{{ $prize->name }}</h3>
+                            </div>
                         </div>
-                        <div class="prizes_img">
-                            <img src="{{ asset('assets/frontend/img/prizes/smart-watch.png') }}" alt="">
-                        </div>
-                        <div class="prize_name">
-                            <h3>Smart Watch</h3>
-                        </div>
-
-                    </div>
-
-                    <div class="prize_card second_prize">
-
-                        <div class="prizes_position">
-                            <h2>2nd Prize</h2>
-                        </div>
-                        <div class="prizes_img">
-                            <img src="{{ asset('assets/frontend/img/prizes/bluetooth-speaker.png') }}" alt="">
-                        </div>
-                        <div class="prize_name">
-                            <h3>Bluetooth Speaker</h3>
-                        </div>
-
-                    </div>
-
-                    <div class="prize_card first_prize d-md-flex d-none">
-                        <div class="prizes_position">
-                            <h2>1st Prize</h2>
-                        </div>
-                        <div class="prizes_img">
-                            <img src="{{ asset('assets/frontend/img/prizes/smart-watch.png') }}" alt="">
-                        </div>
-                        <div class="prize_name">
-                            <h3>Smart Watch</h3>
-                        </div>
-
-                    </div>
-
-
-                    <div class="prize_card third_prize">
-                        <div class="prizes_position">
-                            <h2>3rd Prize</h2>
-                        </div>
-                        <div class="prizes_img">
-                            <img src="{{ asset('assets/frontend/img/prizes/headphone.png') }}" alt="">
-                        </div>
-                        <div class="prize_name">
-                            <h3>Headphone</h3>
-                        </div>
-                    </div>
-
+                    @endforeach
                 </div>
             </div>
-
     </section>
 @endsection
