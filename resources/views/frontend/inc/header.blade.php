@@ -93,12 +93,12 @@
                         <span><i class="fas fa-sign-out-alt"></i></span> <a
                             href="{{ route('user.logout') }}">LogOut</a>
                     </li>
-                    <div class="language py-5">
+                    {{-- <div class="language py-5">
                         <select name="language" id="language">
                             <option value="0">বাংলা</option>
                             <option value="1">English</option>
                         </select>
-                    </div>
+                    </div> --}}
                     <ul>
                         <li>
                             <span><i class="fas fa-phone-volume"></i></span> <a href="{{ route('tournament_support') }}">Contact Us</a>
