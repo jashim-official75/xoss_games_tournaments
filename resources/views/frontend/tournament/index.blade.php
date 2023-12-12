@@ -145,7 +145,7 @@
                     <div class="bar"></div>
                 </div>
             </div>
-            <div class="card_full_width"
+            <div class="card_full_width mb-0"
                 style="background-image: url('{{ asset('uploads/Tournamant/GameImage/' . $launcing_game->image) }}')">
                 <div class="card_overlay"></div>
                 <div class="card_content">
@@ -399,7 +399,7 @@
 
     <!-- --------------------------SOCAIL MEDIA BANNER START ------------------------ -->
 
-    <section id="socail_media">
+    <section id="socail_media" class="section_margin">
         <div class="custom_container">
             <div class="socail_media_inner">
                 <div class="socail_media_character">

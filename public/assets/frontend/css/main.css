@@ -1526,7 +1526,7 @@ div#social-links ul li a {
 position: relative;
 width: 100%;
 min-height: 500px;
-height: 800px;
+height: 868px;
 z-index: 1;
 
 }
@@ -5380,15 +5380,12 @@ box-shadow: 0px 6px 15px rgba(60, 30, 110, 0.12);
   height: 715px;
 }
 
-
-
 #wAuto {
   width: auto;
 }
 
-
 .containerBody {
-  min-height: 100vh;
+  height: 100vh;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -5402,7 +5399,6 @@ box-shadow: 0px 6px 15px rgba(60, 30, 110, 0.12);
   margin-bottom: 50px;
 }
 .containerBody .contant_body_profile {
-  height: 100vh;
   width: 341px;
   background-color: transparent;
   margin: 8rem auto 0;
@@ -5795,7 +5791,81 @@ box-shadow: 0px 6px 15px rgba(60, 30, 110, 0.12);
     height: 500px;
   }
 .section-top {
-  padding: 2rem 0 0;
+  padding: 5rem 0 0;
+}
+.single_slider-item {
+  height: 450px;
+}
+.confetti-container {
+  height: 150px;
+}
+.socail_media_character img {
+  width: 400px;
+}
+#socail_media h1 {
+  font-size: clamp(2rem,5vw,3rem);
+}
+.socail_media_character {
+  top: -35px;
+}
+.reffer_img {
+  width: 350px;
+}
+.reffer_invitaion_text h2 {
+  font-size: clamp(2rem,5vw,2.5rem);
+}
+.reffer_invitaion_text h3 {
+  font-size: clamp(2rem,5vw,2.5rem);
+}
+.reffer_invitaion_text .primary_btn {
+  padding: 1rem 1rem;
+  width: 180px;
+  font-size: 1.8rem;
+}
+.mobile_gift img {
+  width: 130px;
+}
+.refeer_frinds {
+  justify-content: space-around;
+  gap: 3rem;
+}
+.mt-5, .my-5 {
+  margin-top: 2rem!important;
+}
+.prizes_card {
+  width: 250px;
+}
+.prizes_card .prizes_img img {
+  height: 250px;
+}
+.title {
+  padding: 0rem 0 0rem;
+}
+.common_padding {
+  padding-top: 4rem;
+}
+.support-customer {
+  height: 600px;
+}
+#support_contact {
+  padding: 4rem 0;
+}
+.tournament_singlebanner {
+  height: 650px;
+}
+.game_content {
+  top: 2rem;
+  transform: scale(0.8);
+}
+#howtoplayModal h1 {
+  font-size: clamp(2rem , 5vw ,3rem);
+}
+.containerBody .contant_body_profile {
+  height: 100vh;
+  width: 340px;
+}
+.containerBody {
+  padding-top: 3rem;
 }
 }
 @media (min-width: 1200px) {
@@ -5894,10 +5964,9 @@ box-shadow: 0px 6px 15px rgba(60, 30, 110, 0.12);
 #referr_header {
   position: relative;
   width: 100%;
-  height: 1000px;
+  height: 600px;
   background: #F8F8F8;
   display: flex;
-  /* align-items: center; */
  
 }
 }
@@ -5982,11 +6051,17 @@ box-shadow: 0px 6px 15px rgba(60, 30, 110, 0.12);
   background-position: -56px 46px;
 
 }
+#social-links ul {
+  gap: 0rem;
+}
+.reffaral_dashboard {
+  padding: 0 1rem 1rem 1rem;
+}
 .color_shape {
   display: none;
 }
 .refferal_img img {
-  width: 100%;
+  width: 80%;
 }
 #referr_header .referral_content {
   padding-left: 0;
@@ -6281,6 +6356,7 @@ main#questions {
   .tournament_card .card_img  .cover_img {
     height: 200px;
 }
+
 .reffer_img img {
   width: 300px;
 }
@@ -6318,7 +6394,7 @@ main#questions {
   height: 400px;
 }
 .section {
-  padding: 10rem 0;
+  padding: 3rem 0;
 }
 .entry_fee h3 {
   font-size: clamp(1.4rem , 5vw ,1.6rem);
