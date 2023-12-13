@@ -655,6 +655,7 @@
   width: 150px;
   height: 150px;
   margin: 2rem auto;
+  object-fit: contain;
 } 
 .prize_item h3 
 {
@@ -2889,7 +2890,7 @@ body {
   display: none; 
 } */
 .section-top {
-  padding: 10rem 0 0;
+  padding: 5rem 0 0;
 }
 .section-bottom {
   padding:0 0 5rem;
@@ -5842,7 +5843,7 @@ box-shadow: 0px 6px 15px rgba(60, 30, 110, 0.12);
   padding: 0rem 0 0rem;
 }
 .common_padding {
-  padding-top: 4rem;
+  padding-top: 10rem;
 }
 .support-customer {
   height: 600px;

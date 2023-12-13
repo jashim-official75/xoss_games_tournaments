@@ -352,6 +352,13 @@
     </section>
     <!-- --------------------------TOP 3 OPTIONS START ------------------------ -->
 
+        <!-- --------------------------TOURNAMENT GAMES ADS GRAPHICS START ------------------------ -->
+        <section id="tournmanet_games_banner " class="m-0">
+            <img src="{{ asset('assets/frontend/img/cricket-games-tournament-banner.png') }}" alt=""
+                class="img-fluid">
+        </section>
+        <!-- --------------------------TOURNAMENT GAMES ADS GRAPHICS END ------------------------ -->
+
     <!-- --------------------------TOURNAMENT PRIZES START ------------------------ -->
     <section id="tournament_card" class="section-top">
         <div class="container-fluid">
@@ -390,12 +397,7 @@
     </section>
     <!-- --------------------------TOURNAMENT PRIZES END ------------------------ -->
 
-    <!-- --------------------------TOURNAMENT GAMES ADS GRAPHICS START ------------------------ -->
-    {{-- <section id="tournmanet_games_banner " class="section_margin ">
-        <img src="{{ asset('assets/frontend/img/cricket-games-tournament-banner.png') }}" alt=""
-            class="img-fluid">
-    </section> --}}
-    <!-- --------------------------TOURNAMENT GAMES ADS GRAPHICS END ------------------------ -->
+
 
     <!-- --------------------------SOCAIL MEDIA BANNER START ------------------------ -->
 
