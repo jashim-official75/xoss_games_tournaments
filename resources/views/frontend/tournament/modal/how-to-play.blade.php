@@ -5,7 +5,7 @@
         
           <h1>Game Play Steps:</h1>
           <ol>
-             <li>{{ $game->control }}</li>
+             <li>{!! $game->control !!}</li>
           
           </ol>
  
