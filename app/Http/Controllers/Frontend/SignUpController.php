@@ -59,17 +59,17 @@ class SignUpController extends Controller
             'referr_code' => $referr_code,
             'get_referr' => $get_referr,
         ]);
-        if ($subscriber) {
-            SubscriberNumberVerify::create([
-                'number' => $subscriber->phone_num,
-                'otp' => $otp,
-            ]);
-            $url = Http::get('https://api.infobuzzer.net/v3.1/TransmitSMS?username=hosain@naptechlabs.com&password=NapTechLabs&from=09610537609&to=' . $subscriber->phone_num . '&text= Xoss Game Tournamnet OTP : ' . $otp);
-            $request->session()->put('verify_sub_id', $subscriber->id);
-            return redirect()->route('user.signup.verify');
-            // Auth::guard('subscriber')->login($subscriber);
-            // return redirect()->route('home')->with('success', 'Registration Successfully');
-        }
+        // if ($subscriber) {
+        //     SubscriberNumberVerify::create([
+        //         'number' => $subscriber->phone_num,
+        //         'otp' => $otp,
+        //     ]);
+        //     $url = Http::get('https://api.infobuzzer.net/v3.1/TransmitSMS?username=hosain@naptechlabs.com&password=NapTechLabs&from=09610537609&to=' . $subscriber->phone_num . '&text= Xoss Game Tournamnet OTP : ' . $otp);
+        //     $request->session()->put('verify_sub_id', $subscriber->id);
+        //     return redirect()->route('user.signup.verify');
+            Auth::guard('subscriber')->login($subscriber);
+            return redirect()->route('home')->with('success', 'Registration Successfully');
+        // }
     }
     //--verify_number
     public function verify_number()
