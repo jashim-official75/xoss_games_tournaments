@@ -81,13 +81,6 @@
             </div>
 
             <div class="accordion-item">
-              <button id="accordion-button-6" aria-expanded="false"><span class="accordion-title">আমি কখন আমার পুরস্কার পাব? </span><span class="icon" aria-hidden="true"></span></button>
-              <div class="accordion-content">
-                <p>সাত কার্যদিবসের মধ্যে আপনার পুরস্কার পেয়ে যাবেন</p>
-              </div>
-            </div>
-
-            <div class="accordion-item">
               <button id="accordion-button-6" aria-expanded="false"><span class="accordion-title">আমি কিভাবে আমার পুরস্কার গ্রহণ করব?</span><span class="icon" aria-hidden="true"></span></button>
               <div class="accordion-content">
                 <p>আয়োজকরা আপনার নিবন্ধিত মোবাইল নম্বরে আপনার সাথে যোগাযোগ করবে।</p>

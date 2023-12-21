@@ -111,7 +111,7 @@
                         </div>
                     </div>
                     <div class="referral_header">
-                        <div class="level_progress">
+                        {{-- <div class="level_progress">
                             <span class="level-one level"></span>
                             <span class="level-two level"></span>
                             <span class="level-three level"></span>
@@ -122,25 +122,114 @@
                             <span class="level-eight level"></span>
                             <span class="level-nine level"></span>
                             <span class="level-ten level"></span>
-                        </div>
+                        </div> --}}
+
                         <div class="refferal_text">
                             <h2>Rewards</h2>
                         </div>
+
+                        <div class="refferal_point">
+                            <span class="refferal_score"> <img src="{{ asset('assets/frontend/img/referral-point.png') }}" alt=""></span>
+                            <span class="all_points">10000</span>
+                        </div>
+                       
                         <hr>
                     </div>
                     <div class="rewardcard">
                         <div class="reaward_box">
-
+                            <div class="gift_intro">
+                                <div class="gift_img">
+                                    <img src="{{ asset('assets/frontend/img/gift-box.png') }}" alt="">
+                                </div>
+                                <div class="gift_info">
+                                    <p>Get a Branded Mug</p>
+                                </div>
+                            </div>
+                            <div class="gift_claimed">
+                                <div class="gift_point">
+                                    <div class="referall_points">
+                                        <span> <img src="{{ asset('assets/frontend/img/referral-point.png') }}" alt=""></span>
+                                        <span class="points">500 Points</span>
+                                    </div>
+                                </div>
+                                <div class="claimed_btn">
+                                    <a href="#" class="claim_btn">Claim</a>
+                                </div>
+                            </div>
                         </div>
+                    
+                    </div>
+                    <div class="rewardcard">
                         <div class="reaward_box">
-
+                            <div class="gift_intro">
+                                <div class="gift_img">
+                                    <img src="{{ asset('assets/frontend/img/gift-box.png') }}" alt="">
+                                </div>
+                                <div class="gift_info">
+                                    <p>Get a Branded T-Shirt</p>
+                                </div>
+                            </div>
+                            <div class="gift_claimed">
+                                <div class="gift_point">
+                                    <div class="referall_points">
+                                        <span> <img src="{{ asset('assets/frontend/img/referral-point.png') }}" alt=""></span>
+                                        <span class="points">600 Points</span>
+                                    </div>
+                                </div>
+                                <div class="claimed_btn">
+                                    <a href="#" class="claim_btn">Claim</a>
+                                </div>
+                            </div>
                         </div>
+                    
+                    </div>
+                    <div class="rewardcard">
                         <div class="reaward_box">
-
+                            <div class="gift_intro">
+                                <div class="gift_img">
+                                    <img src="{{ asset('assets/frontend/img/gift-box.png') }}" alt="">
+                                </div>
+                                <div class="gift_info">
+                                    <p>Get a Earphone</p>
+                                </div>
+                            </div>
+                            <div class="gift_claimed">
+                                <div class="gift_point">
+                                    <div class="referall_points">
+                                        <span> <img src="{{ asset('assets/frontend/img/referral-point.png') }}" alt=""></span>
+                                        <span class="points">700 Points</span>
+                                    </div>
+                                </div>
+                                <div class="claimed_btn">
+                                    <a href="#" class="claim_btn">Claim</a>
+                                </div>
+                            </div>
                         </div>
+                    
+                    </div>
+                    <div class="rewardcard">
                         <div class="reaward_box">
-
+                            <div class="gift_intro">
+                                <div class="gift_img">
+                                    <img src="{{ asset('assets/frontend/img/gift-box.png') }}" alt="">
+                                </div>
+                                <div class="gift_info">
+                                    <p>Get a Neckband</p>
+                                </div>
+                            </div>
+                            <div class="gift_claimed">
+                                <div class="gift_point">
+                                    <div class="referall_points">
+                                        <span> <img src="{{ asset('assets/frontend/img/referral-point.png') }}" alt=""></span>
+                                        <span class="points">800 Points</span>
+                                    </div>
+                                </div>
+                                <div class="claimed_btn">
+                                    <a href="#" class="claim_btn">Claim</a>
+                                </div>
+                            </div>
                         </div>
+                    
                     </div>
                 </div>
             </div>

@@ -145,7 +145,7 @@
                     <div class="bar"></div>
                 </div>
             </div>
-            <div class="card_full_width mb-0"
+            <div class="card_full_width mb-0 upcoming_games"
                 style="background-image: url('{{ asset('uploads/Tournamant/GameImage/' . $launcing_game->image) }}')">
                 <div class="card_overlay"></div>
                 <div class="card_content">
@@ -175,6 +175,7 @@
                         </div>
                     </div>
                 </div>
+           
             </div>
         </div>
     </section>
