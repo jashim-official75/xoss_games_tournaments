@@ -1,3 +1,24 @@
+.comming_soon 
+{
+  position: absolute;
+  top: 1rem;
+  right: 0rem;
+  z-index: 100;
+}
+.comming_soon span
+{
+  background: #fff;
+  color: #3C1E6E;
+  display: inline-block;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 0.5rem 1rem;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  border-radius: 8px;
+  transform: scale(0.8);
+}
+
 .popup_container 
 {
   position: fixed;
@@ -620,7 +641,7 @@
 .prize_item 
 {
   position: relative;
-  background: #ddd;
+  background: radial-gradient(circle , #fff 50% , #ddd);
   border-radius: 15px;
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
   height: auto;
@@ -694,6 +715,12 @@
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
 }
+.referral_header 
+{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .refferal_text h2
 {
    margin: 2rem 0!important;
@@ -701,7 +728,32 @@
   font-weight: 500 !important;
 
 }
-
+.refferal_point {
+  position: relative;
+  display: block;
+  border: 1px solid #0c357e;
+  padding: 0.5rem 2rem;
+  width: 120px;
+  margin-left: auto;
+  border-radius: 50px;
+}
+.refferal_score {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: scale(1.2);
+}
+.refferal_score img
+{
+  width: 35px;
+}
+.all_points 
+{
+  font-size: 1.6rem;
+  display: block;
+  text-align: center;
+  padding-left: 2rem;
+}
 .referral_info 
 {
   display: flex;
@@ -731,6 +783,69 @@
   font-weight: 600;
   color: rgba(61, 30, 110, 0.678);
 }
+/* rewardcard */
+.rewardcard 
+{
+  position: relative;
+}
+.reaward_box 
+{
+  background: #eee;
+  padding: 0.8rem 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.gift_intro 
+{
+  display: flex;
+  align-items: center;
+}
+.gift_intro  .gift_img img 
+{
+  width: 40px;
+}
+.gift_intro .gift_info p
+{
+  font-size: 1.6rem;
+  margin-bottom: 0;
+}
+.gift_claimed .gift_point .referall_points 
+{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 1rem;
+}
+.gift_claimed .gift_point .referall_points img
+{
+  width: 20px;
+}
+.claim_btn {
+  background: #7d41dd;
+  color: #fff;
+  padding: 0rem 1rem;
+  border-radius: 50px;
+  width: 100%;
+  display: block;
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 12px;
+  border: 2px solid transparent;
+  transition: all .3s ease;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+.claim_btn:hover 
+{
+  background: #ddd;
+  color: #55328f;
+  border: 2px solid #7d41dd;
+}
+/* rewardcard */
 /* referral dasboard */
 
 
@@ -975,15 +1090,7 @@
 {
   width: 50%;
 }
-/* rewards */
-.reaward_box 
-{
-  background: #eee;
-  padding: 3rem 1rem;
-  margin-bottom: 1rem;
-  border-radius: 8px;
-}
-/* rewards */
+
 /* reffer section */
 /* profile user */
 #profile_pic 
@@ -1256,7 +1363,7 @@ font-size: 1.6rem;
 /* custom btn */
 .custom_btn 
 {
-  background: rgba(255, 255, 255, 0.1);
+  background: #7d41dd;
   border-radius: 8px;
   border: 1px solid rgba(255,255,255,0.1);   
   padding:  1rem 2rem;
@@ -1265,6 +1372,15 @@ font-size: 1.6rem;
   margin-left: auto;
   transition: all .5s ease-in-out;
 }
+.sign_in_btn 
+{
+  border-color: #7d41dd;
+  background: transparent;
+}
+.sign_in_btn:hover 
+{
+  border-color: transparent;
+} 
 .custom_btn:hover 
 {
   background: #2AB4F9;
@@ -1471,9 +1587,8 @@ div#social-links ul li a {
 
 #howtoplayModal ol li
 { 
-  font-size: 1.6rem;
+  font-size: 2rem;
   color: #222;
-  padding: 1rem;
   border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 #howtoplayModal ol li:last-child
@@ -1923,7 +2038,7 @@ min-height: 100vh;
   
 }
 .points {
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   color: #000;
 
 }
@@ -5975,6 +6090,16 @@ box-shadow: 0px 6px 15px rgba(60, 30, 110, 0.12);
   .card__wrapper .card__body {
     margin: 1rem 1rem !important;
   }
+  .sign_in_btn 
+  {
+    display: none;
+  }
+  section#header .custom_container {
+    width: 100%;
+}
+  .section-top {
+    padding: 0rem 0 0;
+}
   .support_text p {
     padding: 0 4rem;
 }
@@ -6341,6 +6466,18 @@ main#questions {
   }
   .mostPopular {
     padding: 15px 0px;
+}
+}
+@media only screen and (max-width:1536px)
+{
+  .card_full_width {
+    background-position: 0;
+  }
+  .socail_media_character img {
+    width: 490px;
+}
+#socail_media h1 {
+  font-size: clamp(2rem,5vw,3.5rem);
 }
 }
 

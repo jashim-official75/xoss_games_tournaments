@@ -39,8 +39,10 @@
 
                     </div>
                 @else
-                    <a class="nav-link text-white custom_btn" href="{{ route('user.sign_in') }}">
+                    <a class="nav-link text-white custom_btn sign_in_btn ml-auto" href="{{ route('user.sign_in') }}">
                         Login</a>
+             
+                        <a class="nav-link text-white custom_btn ml-4" href="{{ route('user.sign_up') }}">SignUp</a>
                 @endif
             </nav>
         </div>
