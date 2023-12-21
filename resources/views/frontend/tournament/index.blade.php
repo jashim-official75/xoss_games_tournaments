@@ -145,7 +145,7 @@
                     <div class="bar"></div>
                 </div>
             </div>
-            <div class="card_full_width"
+            <div class="card_full_width mb-0"
                 style="background-image: url('{{ asset('uploads/Tournamant/GameImage/' . $launcing_game->image) }}')">
                 <div class="card_overlay"></div>
                 <div class="card_content">
@@ -352,6 +352,13 @@
     </section>
     <!-- --------------------------TOP 3 OPTIONS START ------------------------ -->
 
+        <!-- --------------------------TOURNAMENT GAMES ADS GRAPHICS START ------------------------ -->
+        <section id="tournmanet_games_banner " class="m-0">
+            <img src="{{ asset('assets/frontend/img/cricket-games-tournament-banner.png') }}" alt=""
+                class="img-fluid">
+        </section>
+        <!-- --------------------------TOURNAMENT GAMES ADS GRAPHICS END ------------------------ -->
+
     <!-- --------------------------TOURNAMENT PRIZES START ------------------------ -->
     <section id="tournament_card" class="section-top">
         <div class="container-fluid">
@@ -390,16 +397,11 @@
     </section>
     <!-- --------------------------TOURNAMENT PRIZES END ------------------------ -->
 
-    <!-- --------------------------TOURNAMENT GAMES ADS GRAPHICS START ------------------------ -->
-    <section id="tournmanet_games_banner " class="section_margin ">
-        <img src="{{ asset('assets/frontend/img/cricket-games-tournament-banner.png') }}" alt=""
-            class="img-fluid">
-    </section>
-    <!-- --------------------------TOURNAMENT GAMES ADS GRAPHICS END ------------------------ -->
+
 
     <!-- --------------------------SOCAIL MEDIA BANNER START ------------------------ -->
 
-    <section id="socail_media">
+    <section id="socail_media" class="section_margin">
         <div class="custom_container">
             <div class="socail_media_inner">
                 <div class="socail_media_character">
@@ -439,10 +441,10 @@
     <!-- --------------------------SOCAIL MEDIA BANNER END ------------------------ -->
 
     <!-- --------------------------TOURNAMENT GAMES ADS GRAPHICS START ------------------------ -->
-    <section id="tournmanet_games_banner " class="section_margin ">
+    {{-- <section id="tournmanet_games_banner " class="section_margin ">
         <img src="{{ asset('assets/frontend/img/football-games-tournament-banner.png') }}" alt=""
             class="img-fluid">
-    </section>
+    </section> --}}
     <!-- --------------------------TOURNAMENT GAMES ADS GRAPHICS END ------------------------ -->
 
     <!-- --------------------------SOCAIL MEDIA BANNER START ------------------------ -->
@@ -482,28 +484,12 @@
 
     <!-- -------------------------- DWONLOAD APPS START -------------------------->
     <section id="download_apps">
-        <div class="custom_container">
             <div class="apps_inner row align-items-center">
-                <div class="apps_content col-md-6 text-center">
-                    <h1>App ডাউনলোড করে <br> Experience করো <br> টুর্নামেন্টের আসল মজা</h1>
-                    <h2>Download our app today!</h2>
-                    <div class="download_btn">
-                        <a href="https://play.google.com/store/apps/details?id=com.naptechlabs.xoss.games"
-                            target="_blank">
-                            <img src="{{ asset('assets/frontend/img/google-playstore.webp') }}" alt=""
-                                width="200">
-                        </a>
-                    </div>
-                </div>
-                <div class="apps_mockup col-md-6 text-center">
-
                     <a href="https://play.google.com/store/apps/details?id=com.naptechlabs.xoss.games" target="_blank">
-                        <img src="{{ asset('assets/frontend/img/xoss-games-app-download-mockup.png') }}" alt=""
+                        <img src="{{ asset('assets/frontend/img/Page-Footer-Banner-with-QR-code.png') }}" alt=""
                             class="img-fluid">
                     </a>
-                </div>
             </div>
-        </div>
     </section>
     <!-- -------------------------- DWONLOAD APPS END ---------------------------->
 @endsection
