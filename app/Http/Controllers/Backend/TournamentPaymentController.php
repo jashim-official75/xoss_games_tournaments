@@ -44,9 +44,8 @@ class TournamentPaymentController extends Controller
         // $url = "https://api.dob.telenordigital.com/partner/v3/consent/prepare";
         $url = "https://api.dob-staging.telenordigital.com/partner/v3/consent/prepare";
 
-        // Send Request to the API 
+        // Send Request to the Staging API 
         $response = Http::withBasicAuth('naptechlabs', 'RPV3Oey44OIXfL3rjwfWEz2fFuyevIsl')->withBody($jsonData, 'application/json')->acceptJson()->post($url);
-
         // Receive data and redirect for subscription process
         $subscriptionData = json_decode($response->body(), true);
         return redirect($subscriptionData['url']);

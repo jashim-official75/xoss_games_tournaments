@@ -52,8 +52,18 @@
                 </div>
                 <div class="gamePlaybtn">
                     @if ($subscriber == 1)
-                        <a href="{{ route('tournament.game.play', $game->slug) }}" class="play_btn">Play Now <i
-                                class="fa-regular fa-circle-play"></i> </a>
+                        @php
+                            $tournamentStartDate = \Carbon\Carbon::parse('2024-01-01');
+                            $currentDate = \Carbon\Carbon::now();
+                            $isTournamentStarted = $currentDate->greaterThanOrEqualTo($tournamentStartDate);
+                        @endphp
+                        @if ($isTournamentStarted)
+                            <a href="{{ route('tournament.game.play', $game->slug) }}" class="play_btn">Play Now <i
+                                    class="fa-regular fa-circle-play"></i> </a>
+                        @else
+                            <a href="#" class="play_btn">Play Now <i
+                                    class="fa-regular fa-circle-play"></i> </a>
+                        @endif
                     @else
                         <a href="{{ route('tournament.payment', $game->slug) }}" class="play_btn">Enter <i
                                 class="fa-solid fa-cart-shopping"></i></a>

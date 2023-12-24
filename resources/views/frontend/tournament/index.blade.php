@@ -145,7 +145,7 @@
                     <div class="bar"></div>
                 </div>
             </div>
-            <div class="card_full_width mb-0 upcoming_games"
+            <div class="card_full_width mb-0"
                 style="background-image: url('{{ asset('uploads/Tournamant/GameImage/' . $launcing_game->image) }}')">
                 <div class="card_overlay"></div>
                 <div class="card_content">
@@ -172,6 +172,8 @@
                                 <a href="{{ route('user.sign_in') }}" class="primary_btn">Join
                                     Now</a>
                             @endif
+                            {{-- <a href="{{ route('tournament.game.details', $launcing_game->slug) }}" class="primary_btn">Join
+                                Now</a> --}}
                         </div>
                     </div>
                 </div>

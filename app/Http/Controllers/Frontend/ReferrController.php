@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Subscriber;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class ReferrController extends Controller

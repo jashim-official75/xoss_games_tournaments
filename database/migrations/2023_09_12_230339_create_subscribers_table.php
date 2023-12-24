@@ -23,6 +23,7 @@ class CreateSubscribersTable extends Migration
             $table->string('country')->nullable();
             $table->string('referr_code')->nullable();
             $table->string('get_referr')->nullable();
+            $table->string('get_point')->nullable();
             $table->timestamps();
         });
     }

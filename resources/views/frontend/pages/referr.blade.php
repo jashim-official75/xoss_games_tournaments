@@ -101,10 +101,10 @@
                         <hr>
                     </div>
                     <div class="referral_info">
-                        <div class="total_registered referral_card">
+                        {{-- <div class="total_registered referral_card">
                             <h3>Registered</h3>
                             <span class="number">{{ $total_register }}</span>
-                        </div>
+                        </div> --}}
                         <div class="total_purchased referral_card">
                             <h3>Purchased</h3>
                             <span class="number">{{ $total_purchase }}</span>
