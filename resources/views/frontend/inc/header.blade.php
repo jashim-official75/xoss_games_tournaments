@@ -3,13 +3,13 @@
     <section id="header">
         <div class="custom_container">
             <nav class="navbar navbar-expand-lg navber-fixed">
-                <a class="navbar-brand" href="{{ route('home') }}"><img src="{{ asset('assets/frontend/img/logo.png') }}"
+                <a class="navbar-brand" href="{{ route('home') }}" onclick="navigateTo('{{ route('home') }}')"><img src="{{ asset('assets/frontend/img/logo.png') }}"
                         class="logo__img" alt="" /></a>
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('tournament_rules') }}">
-                            <img src="{{ asset('assets/frontend/img/rules.png') }}" alt="" />Tournamnet
-                            Rules</a>
+                        <a class="nav-link" href="{{ route('tournament_rules') }}" onclick="navigateTo('{{ route('tournament_rules') }}')">
+                            <img src="{{ asset('assets/frontend/img/rules.png') }}" alt="" />Tournament Rules
+                        </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('prizes') }}">
@@ -145,3 +145,38 @@
 
 <!-- Overlay -->
 <div class="overlay" onclick="closeSidebar()"></div>
+
+<script>
+    
+function navigateTo(url) {
+  // Use pushState to change the URL without reloading the page
+  history.pushState(null, null, url);
+
+  // Load the content of the new page
+  loadContent(url);
+}
+
+function loadContent(url) {
+  // You can use AJAX to fetch the content of the new page
+  // Here, we'll just simulate loading content for demonstration purposes
+  const contentDiv = document.getElementById('content');
+  contentDiv.innerHTML = '<p>Loading...</p>';
+
+  // Simulate loading content after a short delay
+  setTimeout(() => {
+    contentDiv.innerHTML = `<p>Content for ${url}</p>`;
+  }, 1000);
+}
+
+// Listen for the popstate event to handle back and forward button clicks
+window.addEventListener('popstate', () => {
+  // Get the current URL when the back or forward button is clicked
+  const currentUrl = window.location.pathname;
+
+  // Load the content for the current URL
+  loadContent(currentUrl);
+});
+
+// Initial load of content based on the current URL
+loadContent(window.location.pathname);
+</script>

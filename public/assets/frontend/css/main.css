@@ -1,3 +1,90 @@
+/* gallery popup */
+
+.popup_image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 10000000000000;
+}
+
+.popup_image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  max-width: 90%;
+ height: 600px;
+ max-height: 80%;
+  transform: translate(-50%, -50%) scale(1);
+  object-fit: contain;
+  transform-origin: center;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.8);
+  transition: all 0.5s ease;
+  transform-origin: top left;
+  background: #fff;
+}
+
+.close_icon {
+  position: absolute;
+  right: 2rem;
+  top: 0;
+  font-size: 5rem;
+  cursor: pointer;
+  color: #fff;
+  z-index: 100;
+  transition: all 0.3s ease;
+}
+.close_icon:hover {
+  color: #f00;
+  transform: scale(1.2);
+}
+
+/* gallery popup */
+
+
+.action_btns 
+{
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.get_coupon 
+{
+  background: transparent !important;
+  border-color: #FEC202 !important;
+  cursor: pointer;
+  color: #FEC202 !important;
+}
+.get_coupon:hover 
+{
+  border-color: #fff !important;
+  color: #fff !important;
+} 
+.accept_terms 
+{
+  margin-top: 3rem;
+  font-size: 2rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.accept_terms  input 
+{
+  width: 30px;
+  height: 20px;
+}
+.accept_terms label 
+{
+  font-size: 1.6rem;
+  margin-bottom: 0;
+
+}
 .comming_soon 
 {
   position: absolute;
@@ -5,10 +92,9 @@
   right: 0rem;
   z-index: 100;
 }
-.comming_soon span
-{
-  background: #fff;
-  color: #3C1E6E;
+.comming_soon span {
+  background: #000;
+  color: #ffffff;
   display: inline-block;
   font-weight: 600;
   letter-spacing: 1px;
@@ -17,6 +103,7 @@
   text-transform: uppercase;
   border-radius: 8px;
   transform: scale(0.8);
+  box-shadow: 0 0 6px 2px #fff;
 }
 
 .popup_container 
@@ -186,7 +273,7 @@
   text-transform: uppercase;
   text-shadow: 1px 3px 2px #0002;
   letter-spacing: 1px;
-  background: #eaec70;
+  background: #FEC202;
   padding: 0 1rem;
 }
 .reffer_invitaion_text h3
@@ -374,10 +461,13 @@
   margin: 1rem 0;
   font-size: 2rem;
 }
-.card_content h2 
-{
- font-size: clamp(2.5rem , 5vw , 3.4rem);
- margin-top: 1rem;
+.card_content h2 {
+  font-size: clamp(2.5rem , 5vw , 3.4rem);
+  margin-top: 1rem;
+  color: #FEC202;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 /* full width tournament card */
 
@@ -482,7 +572,7 @@
 }
 .prelanching_text h1 span 
 {
-  color: #eaec70;
+  color: #FEC202;
 }
 .confetti {
   position: absolute;
@@ -556,11 +646,36 @@
 }
 .prizes_card 
 {
+  position: relative;
   width: 300px;
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   overflow: hidden;
  
+}
+.prizes_card:hover  .zoom_overlay  
+{
+  opacity: 1;
+}
+.zoom_overlay 
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.54s ease;
+  cursor: pointer;
+}
+.zoom_overlay i 
+{
+  color: #fff;
+  font-size: 3rem;
 }
 .prizes_card .prizes_img  
 {
@@ -2363,12 +2478,12 @@ margin-left: 1rem;
   position: absolute;
   top: 0;
   left: 0;
-  content: 'Comming Soon';
+  content: '';
   font-size: clamp(1.6rem,5vw,2rem);
   font-weight: 400;
   width: 100%;
   height: 100%;
-  color:#eaec70;
+  color:#FEC202;
   z-index: 10;
   background: rgba(0, 0, 0, 0.4);
   display: flex;
@@ -4162,7 +4277,7 @@ font-size: 18px;
 .bannar__body__btn button::before {
    content: '';
     /* background: linear-gradient(45deg, #12ACF8, #9f69fa ,#aa7cf5,#12ACF8); */
-     background: linear-gradient(120deg, #12ACF8 , #eaec70, rgb(241, 165, 165) ,#9f69fa,#aa7cf5,rgb(114, 238, 141));
+     background: linear-gradient(120deg, #12ACF8 , #FEC202, rgb(241, 165, 165) ,#9f69fa,#aa7cf5,rgb(114, 238, 141));
     position: absolute;
     top: -2px;
     left:-2px;
@@ -6090,6 +6205,9 @@ box-shadow: 0px 6px 15px rgba(60, 30, 110, 0.12);
   .card__wrapper .card__body {
     margin: 1rem 1rem !important;
   }
+  #popup {
+    width: 85%;
+}
   .sign_in_btn 
   {
     display: none;

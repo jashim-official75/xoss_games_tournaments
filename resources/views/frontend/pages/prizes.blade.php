@@ -36,14 +36,40 @@
                     @foreach ($prizes as $prize)
                         <div class="prizes_card">
                             <div class="prizes_img">
-                                <img src="{{ asset($prize->image) }}" alt="">
+                                <img src="{{ asset($prize->image) }}" alt="" >
+
                             </div>
                             <div class="prize_name">
                                 <h3>{{ $prize->name }}</h3>
+                            </div>
+                            <div class="zoom_overlay">
+                                <span><i class="fas fa-search-plus"></i></span>
                             </div>
                         </div>
                     @endforeach
                 </div>
             </div>
+            <div class="popup_image">
+                <span class="close_icon">&times;</span>
+                <img src="{{ asset($prize->image) }}" alt="">
+              </div>
     </section>
+    <script>
+document.querySelectorAll(".prizes_card .zoom_overlay").forEach((overlay) => {
+  overlay.onclick = () => {
+    // Get the corresponding image within the clicked card
+    const image = overlay.closest('.prizes_card').querySelector('img');
+
+    // Display the popup and set the image source
+    document.querySelector(".popup_image").style.display = "block";
+    document.querySelector(".popup_image img").src = image.getAttribute("src");
+  };
+});
+
+document.querySelector(".popup_image span").onclick = () => {
+  // Close the popup when the close button is clicked
+  document.querySelector(".popup_image").style.display = "none";
+};
+
+    </script>
 @endsection

@@ -1,4 +1,5 @@
 
+
 $(".prizes_slider").slick({
   infinite: true,
   speed: 500,
@@ -11,7 +12,7 @@ $(".prizes_slider").slick({
   dots:true,
   touchMove:true,
   responsive: [
-    {
+    {  
       breakpoint: 1440,
       settings: {
         slidesToShow: 3,
@@ -286,6 +287,10 @@ Confettiful.prototype._renderConfetti = function () {
 };
 
 window.confettiful = new Confettiful(document.querySelector(".js-container"));
+// Event listener for window onload
+window.onload = function () {
+  showPopup();
+};
 
   // Function to show the popup
   function showPopup() {
@@ -300,8 +305,5 @@ function closePopup() {
     document.querySelector('.popup_container').style.display = 'none';
 }
 
-// Event listener for window onload
-window.onload = function () {
-    showPopup();
-};
+
 

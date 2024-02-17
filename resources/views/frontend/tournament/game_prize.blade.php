@@ -72,6 +72,7 @@
                             <div class="prize_name">
                                 <h3>{{ $first_prize->prize_name }}</h3>
                             </div>
+                            
                         </div>
                     @endif
 
@@ -90,8 +91,23 @@
                         </div>
                     @endif
 
+            
+
                 </div>
             </div>
+        
 
     </section>
+    <script>
+        document.querySelectorAll(".prizes_card img").forEach((image) => {
+  image.onclick = () => {
+    document.querySelector(".popup_image").style.display = "block";
+    document.querySelector(".popup_image img").src = image.getAttribute("src");
+  };
+});
+
+document.querySelector(".popup_image span").onclick = () => {
+  document.querySelector(".popup_image").style.display = "none";
+};
+    </script>
 @endsection

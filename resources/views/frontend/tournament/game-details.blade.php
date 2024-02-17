@@ -50,6 +50,12 @@
                                 class="fa-solid fa-circle-info"></i></a>
                     </div>
                 </div>
+                <div class="accept_terms">
+                    <input type="checkbox" checked id="checkbox" >
+                    <label class="checkbox-container" for="checkbox"> আমি টুর্নামেন্টে অংশগ্রহনের <a href="{{ route('tournament_rules') }}">শর্তাবলীর</a> সাথে একমত
+                     
+                      </label>
+                </div>
                 <div class="gamePlaybtn">
                     @if ($subscriber == 1)
                         <a href="{{ route('tournament.game.play', $game->slug) }}" class="play_btn">Play Now <i

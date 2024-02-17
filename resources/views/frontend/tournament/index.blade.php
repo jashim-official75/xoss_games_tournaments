@@ -11,17 +11,17 @@
     <title>Tournament | Enjoy a Wide Range of Online Games on Xoss Games</title>
 @endsection
 @section('content')
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+
 
     <!-- Popup content -->
-    {{-- <div class="popup_container" onclick="closePopup()">
+    <div class="popup_container" onclick="closePopup()">
     <div id="popup">
-        <p>This is a popup!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos voluptate placeat libero fugiat! Minima ea dolorum, quo hic reprehenderit obcaecati debitis officia molestiae veritatis, vel autem pariatur in accusamus explicabo, labore amet excepturi magni? Ipsa est repudiandae doloremque amet, quia ducimus? Officiis natus cum totam, laboriosam voluptatibus eos pariatur itaque.</p>
-        <a href="https://naptechgames.com/" target="_blank" class="primary_btn">Click Here</a>
+       <img src="{{ asset('assets/frontend/img/giveaway.png') }}" alt="" class="img-fluid">
+        <a href="sms://26969?body=XOSS" target="_blank" class="primary_btn d-md-none">Click Here</a>
         <button class="close_popup" onclick="closePopup()"><i class="fa-solid fa-circle-xmark"></i></button>
+        
     </div>
-</div> --}}
+</div>
     <!-- Popup content -->
     <!-- --------------------------TOURNAMENT HEADER  START ------------------------ -->
     <section id="tournament_header">
@@ -145,7 +145,7 @@
                     <div class="bar"></div>
                 </div>
             </div>
-            <div class="card_full_width mb-0 upcoming_games"
+            <div class="card_full_width mb-0"
                 style="background-image: url('{{ asset('uploads/Tournamant/GameImage/' . $launcing_game->image) }}')">
                 <div class="card_overlay"></div>
                 <div class="card_content">
@@ -154,7 +154,7 @@
                             <img src="{{ asset('uploads/Tournamant/GameIcon/' . $launcing_game->game_small_icon) }}" alt="">
                         </div>
                         <h2>{{ $launcing_game->game_name }}</h2>
-                        <span>Registration Starts </span> <span><b>
+                        <span>Registration Starts :</span> <span><b>
                                 @php
                                     $stringDate = $launcing_game->start_date; // Your string date
                                     $date = \Carbon\Carbon::parse($stringDate);
@@ -166,16 +166,27 @@
                         </div>
                         <div class="play_now-btn m-0">
                             @if (auth()->guard('subscriber')->check())
-                                <a href="{{ route('tournament.game.details', $launcing_game->slug) }}" class="primary_btn">Join
-                                    Now</a>
+                                <div class="action_btns">
+                                    <a href="{{ route('tournament.game.details', $launcing_game->slug) }}" class="primary_btn">Join
+                                        Now</a>
+                                    <div class="primary_btn get_coupon" onclick="showPopup()">Get Coupon
+                                        </div>
+                                </div>
+                            
                             @else
+                               <div class="action_btns">
                                 <a href="{{ route('user.sign_in') }}" class="primary_btn">Join
                                     Now</a>
+                                    <div class="primary_btn get_coupon" onclick="showPopup()">Get Coupon
+                                        </div>
+                               </div>
                             @endif
                         </div>
                     </div>
                 </div>
-           
+                <div class="comming_soon">
+                    <span>comming soon</span>
+                    </div>
             </div>
         </div>
     </section>
@@ -279,6 +290,9 @@
                             </div>
                         </div>
                     </div>
+                    <div class="comming_soon">
+                        <span>comming soon</span>
+                        </div>
                 </div>
             @endforeach
         </div>
@@ -286,6 +300,14 @@
 
     </section>
     <!-- --------------------------TOURNAMENT CARD END ------------------------ -->
+
+    <!-- --------------------------CONTEST WINNER START ------------------------ -->
+    <section id="giveaway_contest_winners">
+        <img src="{{ asset('assets/frontend/img/giveaway-winners-desktop.webp') }}" alt="" class="img-fluid d-none d-md-block">
+        <img src="{{ asset('assets/frontend/img/giveaway-winners-mobile.webp') }}" alt="" class="img-fluid d-md-none">
+    </section>
+    <!-- --------------------------CONTEST WINNER END ------------------------ -->
+
 
     <!-- --------------------------TOP 3 OPTIONS START ------------------------ -->
     <section id="tournament_steps" class="section">
